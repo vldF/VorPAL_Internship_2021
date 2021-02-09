@@ -36,11 +36,11 @@
     "name": "root",
     "package": "bar",
     "scope": [
-      "B",
       "A",
+      "B",
+      "C",
       "T",
-      "X",
-      "C"
+      "X"
     ],
     "children": [
       {
@@ -55,11 +55,11 @@
         "type": "Class Declaration",
         "name": "T",
         "scope": [
-          "B",
           "A",
+          "B",
+          "C",
           "T",
-          "X",
-          "C"
+          "X"
         ],
         "superclasses": [
           "C"
@@ -73,10 +73,10 @@
     "name": "root",
     "package": "foo",
     "scope": [
-      "B",
       "A",
-      "X",
-      "C"
+      "B",
+      "C",
+      "X"
     ],
     "children": [
       {
@@ -87,10 +87,10 @@
         "type": "Class Declaration",
         "name": "X",
         "scope": [
-          "B",
           "A",
-          "X",
-          "C"
+          "B",
+          "C",
+          "X"
         ],
         "superclasses": [
           "A"
@@ -105,10 +105,10 @@
         "type": "Class Declaration",
         "name": "A",
         "scope": [
-          "B",
           "A",
-          "X",
-          "C"
+          "B",
+          "C",
+          "X"
         ],
         "superclasses": [],
         "children": []
@@ -117,10 +117,10 @@
         "type": "Class Declaration",
         "name": "B",
         "scope": [
-          "B",
           "A",
-          "X",
-          "C"
+          "B",
+          "C",
+          "X"
         ],
         "superclasses": [],
         "children": []
@@ -129,10 +129,10 @@
         "type": "Class Declaration",
         "name": "C",
         "scope": [
-          "B",
           "A",
-          "X",
-          "C"
+          "B",
+          "C",
+          "X"
         ],
         "superclasses": [
           "A"

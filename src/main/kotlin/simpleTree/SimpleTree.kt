@@ -75,6 +75,20 @@ class RootNode(
     }
 }
 
+class SimpleBlock(
+    override val scope: Scope
+) : SimpleTreeNode() {
+    override val name = ""
+
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("simple block"))
+            add("scope", scope.json)
+            add("children", children.toJson())
+        }
+    }
+}
+
 class ClassDeclarationNode(
     override val name: String,
     override val scope: Scope,

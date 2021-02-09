@@ -25,7 +25,7 @@ class Scope(
 
     val json: JsonArray
         get() {
-            val declarations = visibleDeclaration
+            val declarations = visibleDeclaration.sortedBy { it.name }
             val array = JsonArray(declarations.size)
             declarations.forEach { array.add(it.name) }
 

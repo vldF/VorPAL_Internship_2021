@@ -6,8 +6,10 @@ import ImportNode
 import ImportPackageNode
 import PackageNameNode
 import RootNode
+import SimpleBlock
 import SimpleTreeNode
 import UnresolvedClass
+import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.tree.TerminalNode
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParserBaseVisitor
@@ -15,21 +17,69 @@ import org.jetbrains.kotlin.spec.grammar.parser.KotlinParserBaseVisitor
 class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private val callStack = mutableListOf<Scope>()
 
-    override fun visitClassDeclaration(p0: KotlinParser.ClassDeclarationContext?): SimpleTreeNode? {
-        if (p0 == null) return null
+    override fun visitClassDeclaration(ctx: KotlinParser.ClassDeclarationContext?): SimpleTreeNode? {
+        return visitClassLikeDeclaration(ctx)
+    }
+
+    override fun visitObjectDeclaration(ctx: KotlinParser.ObjectDeclarationContext?): SimpleTreeNode? {
+        return visitClassLikeDeclaration(ctx)
+    }
+
+    override fun visitBlock(ctx: KotlinParser.BlockContext?): SimpleTreeNode? {
+        if (ctx == null) return null
+
+        val newScope = Scope(callStack.last())
+        callStack.add(newScope)
+
+        val result = SimpleBlock(newScope)
+        for (child in ctx.children) {
+            val newNode = child.accept(this) ?: continue
+            result.children.add(newNode)
+        }
+
+        callStack.removeLast()
+        return result
+    }
+
+    override fun visitObjectLiteral(ctx: KotlinParser.ObjectLiteralContext?): SimpleTreeNode? {
+        return visitClassLikeDeclaration(ctx)
+    }
+
+    private fun visitClassLikeDeclaration(ctx: ParserRuleContext?): SimpleTreeNode? {
+        if (ctx == null) return null
 
         val currentScope = callStack.last()
         val newScope = Scope(currentScope)
         callStack.add(newScope)
 
-        val name = p0.name
-        val supertypeNames = p0.superclassesNames
+        var name = ctx.name
+
+        if (name == null) {
+            if (ctx is KotlinParser.ObjectLiteralContext) {
+                name = "[anonymous object]"
+            } else {
+                throw IllegalArgumentException("declaration name wasn't found")
+            }
+        }
+
+        val supertypeNames = ctx.superclassesNames
         val unresolvedSupertypes = supertypeNames.map { UnresolvedClass(it, newScope) }
 
         val declarationNode = ClassDeclarationNode(name, newScope, unresolvedSupertypes.toMutableList())
         currentScope.declarations.add(declarationNode)
 
-        super.visitClassDeclaration(p0)
+        when (ctx) {
+            is KotlinParser.ClassDeclarationContext -> {
+                super.visitClassDeclaration(ctx)
+            }
+            is KotlinParser.ObjectDeclarationContext -> {
+                super.visitObjectDeclaration(ctx)
+            }
+            is KotlinParser.ObjectLiteralContext -> {
+                super.visitObjectLiteral(ctx)
+            }
+        }
+
         callStack.removeLast()
         return declarationNode
     }
@@ -60,7 +110,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
             val newNode = child.accept(this) ?: continue
             rootNode.children.add(newNode)
         }
-        //super.visitKotlinFile(ctx)
 
         return rootNode
     }
@@ -88,7 +137,7 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         return PackageNameNode(name, callStack.last())
     }
 
-    private val KotlinParser.ClassDeclarationContext.superclassesNames: List<String>
+    private val ParserRuleContext.superclassesNames: List<String>
         get() {
             return children
                 .filterIsInstance<KotlinParser.DelegationSpecifiersContext>()
@@ -109,12 +158,12 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
             ?.symbol
             ?.text
 
-    private val KotlinParser.ClassDeclarationContext.name
+    private val ParserRuleContext.name
         get() = children
             .filterIsInstance<KotlinParser.SimpleIdentifierContext>()
             .firstOrNull()
             ?.children
             ?.firstOrNull { it is TerminalNode }
-            ?.toString() ?: throw IllegalArgumentException("name wasn't found")
+            ?.toString()
 
 }

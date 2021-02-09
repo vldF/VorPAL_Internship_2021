@@ -4,18 +4,20 @@
     "name": "root",
     "package": "DEFAULT",
     "scope": [
-      "I",
       "A",
-      "B"
+      "B",
+      "I",
+      "O"
     ],
     "children": [
       {
         "type": "Class Declaration",
         "name": "I",
         "scope": [
-          "I",
           "A",
-          "B"
+          "B",
+          "I",
+          "O"
         ],
         "superclasses": [],
         "children": []
@@ -24,9 +26,10 @@
         "type": "Class Declaration",
         "name": "A",
         "scope": [
-          "I",
           "A",
-          "B"
+          "B",
+          "I",
+          "O"
         ],
         "superclasses": [],
         "children": []
@@ -35,15 +38,57 @@
         "type": "Class Declaration",
         "name": "B",
         "scope": [
-          "I",
           "A",
-          "B"
+          "B",
+          "I",
+          "O"
         ],
         "superclasses": [
           "A",
           "I"
         ],
         "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "O",
+        "scope": [
+          "A",
+          "B",
+          "I",
+          "O"
+        ],
+        "superclasses": [
+          "I"
+        ],
+        "children": []
+      },
+      {
+        "type": "simple block",
+        "scope": [
+          "A",
+          "B",
+          "I",
+          "O",
+          "[anonymous object]"
+        ],
+        "children": [
+          {
+            "type": "Class Declaration",
+            "name": "[anonymous object]",
+            "scope": [
+              "A",
+              "B",
+              "I",
+              "O",
+              "[anonymous object]"
+            ],
+            "superclasses": [
+              "I"
+            ],
+            "children": []
+          }
+        ]
       }
     ]
   }
