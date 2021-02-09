@@ -75,7 +75,7 @@ class RootNode(
     }
 }
 
-class SimpleBlock(
+class SimpleBlockNode(
     override val scope: Scope
 ) : SimpleTreeNode() {
     override val name = ""
@@ -117,6 +117,8 @@ class ClassDeclarationNode(
             superclasses[i] = resolved
         }
     }
+
+    val resolvedSuperclasses = superclasses.filterIsInstance<ClassDeclarationNode>()
 }
 
 class UnresolvedClass(

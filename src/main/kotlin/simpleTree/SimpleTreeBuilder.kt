@@ -6,7 +6,7 @@ import ImportNode
 import ImportPackageNode
 import PackageNameNode
 import RootNode
-import SimpleBlock
+import SimpleBlockNode
 import SimpleTreeNode
 import UnresolvedClass
 import org.antlr.v4.runtime.ParserRuleContext
@@ -28,10 +28,10 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     override fun visitBlock(ctx: KotlinParser.BlockContext?): SimpleTreeNode? {
         if (ctx == null) return null
 
-        val newScope = Scope(callStack.last())
+        val newScope = Scope("block[${ctx.hashCode()}]", callStack.last())
         callStack.add(newScope)
 
-        val result = SimpleBlock(newScope)
+        val result = SimpleBlockNode(newScope)
         for (child in ctx.children) {
             val newNode = child.accept(this) ?: continue
             result.children.add(newNode)
@@ -48,10 +48,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private fun visitClassLikeDeclaration(ctx: ParserRuleContext?): SimpleTreeNode? {
         if (ctx == null) return null
 
-        val currentScope = callStack.last()
-        val newScope = Scope(currentScope)
-        callStack.add(newScope)
-
         var name = ctx.name
 
         if (name == null) {
@@ -61,6 +57,10 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
                 throw IllegalArgumentException("declaration name wasn't found")
             }
         }
+
+        val currentScope = callStack.last()
+        val newScope = Scope(name, currentScope)
+        callStack.add(newScope)
 
         val supertypeNames = ctx.superclassesNames
         val unresolvedSupertypes = supertypeNames.map { UnresolvedClass(it, newScope) }
@@ -101,7 +101,7 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     }
 
     override fun visitKotlinFile(ctx: KotlinParser.KotlinFileContext?): SimpleTreeNode? {
-        val rootScope = Scope()
+        val rootScope = Scope("global")
         callStack.add(rootScope)
 
         val rootNode = RootNode("root", rootScope)
