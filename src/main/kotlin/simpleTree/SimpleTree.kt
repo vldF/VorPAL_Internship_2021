@@ -118,7 +118,9 @@ class ClassDeclarationNode(
         }
     }
 
-    val resolvedSuperclasses = superclasses.filterIsInstance<ClassDeclarationNode>()
+    val resolvedSuperclasses
+        get() = superclasses.filterIsInstance<ClassDeclarationNode>()
+
 }
 
 class UnresolvedClass(
