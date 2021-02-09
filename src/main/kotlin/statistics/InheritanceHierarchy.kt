@@ -42,6 +42,4 @@ class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
 
         super.visitClassDeclarationNode(node)
     }
-
-    override fun mergeResults(previous: Unit, next: Unit) { }
 }

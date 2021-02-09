@@ -1,13 +1,15 @@
 package simpleTree
 
 import ClassDeclarationNode
+import SimpleTreeNode
 import com.google.gson.JsonArray
 
 class Scope(
-    val name: String,
+    private val name: String,
     var previousScope: Scope? = null
 ) {
     val declarations = hashSetOf<ClassDeclarationNode>()
+    var scopeOwner: SimpleTreeNode? = null
 
     internal fun getResolvedDeclaration(name: String): ClassDeclarationNode? {
         return declarations.firstOrNull { it.name == name } ?: previousScope?.getResolvedDeclaration(name)

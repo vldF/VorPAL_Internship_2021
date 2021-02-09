@@ -4,7 +4,9 @@ import ClassDeclarationNode
 import ImportListNode
 import ImportNode
 import ImportPackageNode
+import OverrideFunctionNode
 import PackageNameNode
+import PropertyNode
 import RootNode
 import SimpleBlockNode
 import UnresolvedClass
@@ -42,5 +44,13 @@ open class BasicSimpleTreeVisitorVoid : BasicSimpleTreeVisitor<Unit>() {
         node.children.map { visitSimpleTreeNode(it) }
     }
 
-    override fun mergeResults(previous: Unit, next: Unit) { }
+    override fun visitPropertyNode(node: PropertyNode) {
+        node.children.map { visitSimpleTreeNode(it) }
+    }
+
+    override fun visitOverrideFunctionNode(node: OverrideFunctionNode) {
+        node.children.map { visitSimpleTreeNode(it) }
+    }
+
+    override fun List<Unit>.mergeResults() { }
 }

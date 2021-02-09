@@ -192,6 +192,36 @@ class PackageNameNode(
     }
 }
 
+class OverrideFunctionNode(
+    override val name: String,
+    override val scope: Scope
+
+) : SimpleTreeNode() {
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("override function"))
+            add("name", JsonPrimitive(name))
+            add("scope", scope.json)
+            add("children", children.toJson())
+        }
+    }
+}
+
+class PropertyNode(
+    override val name: String,
+    override val scope: Scope
+
+) : SimpleTreeNode() {
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("property"))
+            add("name", JsonPrimitive(name))
+            add("scope", scope.json)
+            add("children", children.toJson())
+        }
+    }
+}
+
 private fun Collection<SimpleTreeNode>.toJson(): JsonArray {
     val result = JsonArray()
     for (element in this) {

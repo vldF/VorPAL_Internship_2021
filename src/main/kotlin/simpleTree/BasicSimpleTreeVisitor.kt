@@ -4,7 +4,9 @@ import ClassDeclarationNode
 import ImportListNode
 import ImportNode
 import ImportPackageNode
+import OverrideFunctionNode
 import PackageNameNode
+import PropertyNode
 import RootNode
 import SimpleBlockNode
 import SimpleTreeNode
@@ -21,42 +23,52 @@ abstract class BasicSimpleTreeVisitor<T> : AbstractSimpleTreeVisitor<T>() {
             is ImportNode -> visitImportNode(node)
             is ImportPackageNode -> visitImportPackageNode(node)
             is PackageNameNode -> visitPackageNameNode(node)
+            is PropertyNode -> visitPropertyNode(node)
+            is OverrideFunctionNode -> visitOverrideFunctionNode(node)
 
             else -> throw IllegalArgumentException("unknown node type: ${node::class}")
         }
     }
 
     override fun visitRootNode(node: RootNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitSimpleBlockNode(node: SimpleBlockNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitClassDeclarationNode(node: ClassDeclarationNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitUnresolvedClass(node: UnresolvedClass): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitImportListNode(node: ImportListNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitImportNode(node: ImportNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitImportPackageNode(node: ImportPackageNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
     override fun visitPackageNameNode(node: PackageNameNode): T {
-        return node.children.map { visitSimpleTreeNode(it) }.reduce(::mergeResults)
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 
-    abstract fun mergeResults(previous: T, next: T): T
+    override fun visitOverrideFunctionNode(node: OverrideFunctionNode): T {
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
+    }
+
+    override fun visitPropertyNode(node: PropertyNode): T {
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
+    }
+
+    abstract fun List<T>.mergeResults(): T
 }

@@ -1,3 +1,4 @@
+import statistics.ClassInfoCollector
 import statistics.InheritanceHierarchy
 import java.io.File
 
@@ -9,6 +10,9 @@ fun main() {
             val hierarchyTree = InheritanceHierarchy()
             hierarchyTree.visitRootNode(treeRoot)
             println(hierarchyTree.inheritanceChains)
+
+            val classInfo = ClassInfoCollector().visitRootNode(treeRoot)
+            println(classInfo)
         }
 
     }
