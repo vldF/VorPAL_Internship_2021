@@ -4,6 +4,7 @@ import ClassDeclarationNode
 import com.google.gson.JsonArray
 
 class Scope(
+    val name: String,
     var previousScope: Scope? = null
 ) {
     val declarations = hashSetOf<ClassDeclarationNode>()
@@ -13,7 +14,7 @@ class Scope(
     }
 
     fun merge(other: Scope): Scope {
-        val newScope = Scope()
+        val newScope = Scope(name)
         newScope.declarations.addAll(this.declarations)
         newScope.declarations.addAll(other.declarations)
 
@@ -31,4 +32,11 @@ class Scope(
 
             return array
         }
+
+    override fun toString(): String {
+        return "scope[$fullName]"
+    }
+
+    val fullName: String
+        get() = (previousScope?.fullName ?: "") + "." + name
 }
