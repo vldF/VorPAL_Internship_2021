@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import java.io.File
 import java.io.FileNotFoundException
 
-const val testData = "./src/test/kotlin/testData/"
+const val testData = "./src/test/testData/"
 
 class TestRunner {
     @Test

@@ -27,6 +27,10 @@ class RootNode(
     override val name: String,
     override val scope: Scope
 ) : SimpleTreeNode() {
+    var assignmentsCount = 0
+    var branchesCount = 0
+    var conditionsCount = 0
+
     val packageName
         get() = children.firstOrNull { it is PackageNameNode }?.name ?: "DEFAULT"
 

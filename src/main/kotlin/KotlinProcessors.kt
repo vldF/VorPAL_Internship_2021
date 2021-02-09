@@ -55,7 +55,7 @@ private fun processFile(file: File): RootNode? {
     val tokens = CommonTokenStream(lexer)
     val parser = KotlinParser(tokens)
     val context = parser.kotlinFile()
-    val simpleTree = context.accept(SimpleTreeBuilder()) ?: return null
+    val simpleTree = context.accept(SimpleTreeBuilder(parser)) ?: return null
 
     return simpleTree as? RootNode
 }

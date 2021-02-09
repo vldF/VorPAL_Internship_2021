@@ -11,8 +11,16 @@ fun main() {
             hierarchyTree.visitRootNode(treeRoot)
             println(hierarchyTree.inheritanceChains)
 
+            println()
+            println("classesInfo")
             val classInfo = ClassInfoCollector().visitRootNode(treeRoot)
             println(classInfo)
+
+            println()
+            println("ABC metric")
+            println("A: " + treeRoot.assignmentsCount)
+            println("B: " + treeRoot.branchesCount)
+            println("C: " + treeRoot.conditionsCount)
         }
 
     }

@@ -1,0 +1,21 @@
+[
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "DEFAULT",
+    "scope": [],
+    "children": [
+      {
+        "type": "simple block",
+        "scope": [],
+        "children": [
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

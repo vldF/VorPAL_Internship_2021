@@ -137,7 +137,30 @@
         "superclasses": [
           "A"
         ],
-        "children": []
+        "children": [
+          {
+            "type": "property",
+            "name": "prop",
+            "scope": [
+              "A",
+              "B",
+              "C",
+              "X"
+            ],
+            "children": []
+          },
+          {
+            "type": "override function",
+            "name": "toString",
+            "scope": [
+              "A",
+              "B",
+              "C",
+              "X"
+            ],
+            "children": []
+          }
+        ]
       }
     ]
   }
