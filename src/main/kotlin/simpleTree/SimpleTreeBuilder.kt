@@ -14,7 +14,6 @@ import org.jetbrains.kotlin.spec.grammar.parser.KotlinParserBaseVisitor
 
 class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private val callStack = mutableListOf<Scope>()
-    private val knownImports = mutableSetOf<Pair<String, String>>() // Package to Name
 
     override fun visitClassDeclaration(p0: KotlinParser.ClassDeclarationContext?): SimpleTreeNode? {
         if (p0 == null) return null
@@ -96,7 +95,7 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
                 .firstOrNull()
                 ?.children
                 ?.filterIsInstance<KotlinParser.AnnotatedDelegationSpecifierContext>()
-                ?.mapNotNull { it.simpleIdentifierName }
+                ?.mapNotNull { it.simpleIdentifierName ?: it.text }
                 ?.toList() ?: listOf()
         }
 

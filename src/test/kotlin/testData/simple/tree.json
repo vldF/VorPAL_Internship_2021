@@ -1,0 +1,144 @@
+[
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "fourth",
+    "scope": [
+      "C",
+      "F"
+    ],
+    "children": [
+      {
+        "type": "package name",
+        "name": "fourth"
+      },
+      {
+        "type": "import",
+        "packageName": "foo",
+        "name": "C"
+      },
+      {
+        "type": "Class Declaration",
+        "name": "F",
+        "scope": [
+          "C",
+          "F"
+        ],
+        "superclasses": [
+          "C"
+        ],
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "bar",
+    "scope": [
+      "B",
+      "A",
+      "T",
+      "X",
+      "C"
+    ],
+    "children": [
+      {
+        "type": "package name",
+        "name": "bar"
+      },
+      {
+        "type": "import package",
+        "packageName": "foo"
+      },
+      {
+        "type": "Class Declaration",
+        "name": "T",
+        "scope": [
+          "B",
+          "A",
+          "T",
+          "X",
+          "C"
+        ],
+        "superclasses": [
+          "C"
+        ],
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "foo",
+    "scope": [
+      "B",
+      "A",
+      "X",
+      "C"
+    ],
+    "children": [
+      {
+        "type": "package name",
+        "name": "foo"
+      },
+      {
+        "type": "Class Declaration",
+        "name": "X",
+        "scope": [
+          "B",
+          "A",
+          "X",
+          "C"
+        ],
+        "superclasses": [
+          "A"
+        ],
+        "children": []
+      },
+      {
+        "type": "package name",
+        "name": "foo"
+      },
+      {
+        "type": "Class Declaration",
+        "name": "A",
+        "scope": [
+          "B",
+          "A",
+          "X",
+          "C"
+        ],
+        "superclasses": [],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "B",
+        "scope": [
+          "B",
+          "A",
+          "X",
+          "C"
+        ],
+        "superclasses": [],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "C",
+        "scope": [
+          "B",
+          "A",
+          "X",
+          "C"
+        ],
+        "superclasses": [
+          "A"
+        ],
+        "children": []
+      }
+    ]
+  }
+]

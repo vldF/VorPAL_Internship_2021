@@ -1,9 +1,14 @@
+import com.google.gson.JsonArray
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
+import com.google.gson.JsonPrimitive
 import simpleTree.Scope
-import javax.swing.tree.TreeNode
 
 abstract class SimpleTreeNode {
     abstract val name: String
     abstract val scope: Scope
+
+    abstract fun json(): JsonElement
 
     val children: MutableList<SimpleTreeNode> = mutableListOf()
 
@@ -24,6 +29,16 @@ class RootNode(
 ) : SimpleTreeNode() {
     val packageName
         get() = children.firstOrNull { it is PackageNameNode }?.name ?: "DEFAULT"
+
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("Root"))
+            add("name", JsonPrimitive(name))
+            add("package", JsonPrimitive(packageName))
+            add("scope", scope.json)
+            add("children", children.toJson())
+        }
+    }
 
     fun merge(other: RootNode): RootNode {
         val newScope = scope.merge(other.scope)
@@ -65,7 +80,22 @@ class ClassDeclarationNode(
     override val scope: Scope,
     val superclasses: MutableList<SimpleTreeNode>
 ) : SimpleTreeNode() {
-    val knewSubclasses = mutableListOf<ClassDeclarationNode>()
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("Class Declaration"))
+            add("name", JsonPrimitive(name))
+            add("scope", scope.json)
+
+            val superclassesArray = JsonArray().apply {
+                superclasses
+                    .map { if (it is ClassDeclarationNode) JsonPrimitive(it.name) else it.json() }
+                    .forEach { add(it) }
+            }
+
+            add("superclasses", superclassesArray)
+            add("children", children.toJson())
+        }
+    }
 
     internal fun resolveAllSuperclasses() {
         for ((i, superclass) in superclasses.filterIsInstance<UnresolvedClass>().withIndex()) {
@@ -79,6 +109,14 @@ class UnresolvedClass(
     override val name: String,
     override val scope: Scope
 ) : SimpleTreeNode() {
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("unresolved class"))
+            add("name", JsonPrimitive(name))
+            add("scope", scope.json)
+        }
+    }
+
     internal val resolved: ClassDeclarationNode?
         get() = scope.getResolvedDeclaration(name)
 }
@@ -87,21 +125,60 @@ class ImportListNode(
     override val scope: Scope
 ) : SimpleTreeNode() {
     override val name = "import list"
+
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("import list"))
+            add("name", JsonPrimitive(name))
+            add("children", children.toJson())
+        }
+    }
 }
 
 class ImportNode(
     override val name: String,
     override val scope: Scope,
     val packageName: String
-) : SimpleTreeNode()
+) : SimpleTreeNode() {
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("import"))
+            add("packageName", JsonPrimitive(packageName))
+            add("name", JsonPrimitive(name))
+        }
+    }
+}
 
 class ImportPackageNode(
     override val name: String,
     override val scope: Scope
-) : SimpleTreeNode()
+) : SimpleTreeNode() {
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("import package"))
+            add("packageName", JsonPrimitive(name))
+        }
+    }
+}
 
 class PackageNameNode(
     override val name: String,
     override val scope: Scope
 
-) : SimpleTreeNode()
+) : SimpleTreeNode() {
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("package name"))
+            add("name", JsonPrimitive(name))
+        }
+    }
+}
+
+private fun Collection<SimpleTreeNode>.toJson(): JsonArray {
+    val result = JsonArray()
+    for (element in this) {
+        result.add(element.json())
+    }
+
+    return result
+}

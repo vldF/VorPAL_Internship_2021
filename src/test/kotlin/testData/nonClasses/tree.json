@@ -1,0 +1,50 @@
+[
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "DEFAULT",
+    "scope": [
+      "I",
+      "A",
+      "B"
+    ],
+    "children": [
+      {
+        "type": "Class Declaration",
+        "name": "I",
+        "scope": [
+          "I",
+          "A",
+          "B"
+        ],
+        "superclasses": [],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "A",
+        "scope": [
+          "I",
+          "A",
+          "B"
+        ],
+        "superclasses": [],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "B",
+        "scope": [
+          "I",
+          "A",
+          "B"
+        ],
+        "superclasses": [
+          "A",
+          "I"
+        ],
+        "children": []
+      }
+    ]
+  }
+]
