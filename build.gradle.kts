@@ -12,6 +12,7 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven("https://jitpack.io")
+    maven("https://kotlin.bintray.com/kotlinx")
 }
 
 dependencies {
@@ -20,6 +21,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
     antlr("org.antlr:antlr4:4.+")
     implementation("com.google.code.gson:gson:2.8.6")
+    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.1")
 }
 
 tasks.test {

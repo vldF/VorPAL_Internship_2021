@@ -53,6 +53,10 @@ class RootNode(
 
         result.children.addAll(this.children)
         result.children.addAll(other.children)
+        result.assignmentsCount = assignmentsCount + other.assignmentsCount
+        result.branchesCount = branchesCount + other.branchesCount
+        result.conditionsCount = conditionsCount + other.conditionsCount
+
         return result
     }
 
@@ -68,11 +72,15 @@ class RootNode(
                 if (declaration != null) {
                     scope.declarations.add(declaration)
                 } else {
-                    throw IllegalStateException("unresolved import: $importPackageName.$importName")
+                    System.err.println("unresolved import: $importPackageName.$importName")
                 }
             } else if (import is ImportPackageNode) {
                 val importPackageNode = import.name
-                val foreignTree = fileMap[importPackageNode] ?: throw IllegalStateException("unresolved import: $importPackageNode.*")
+                val foreignTree = fileMap[importPackageNode]
+                if (foreignTree == null) {
+                    System.err.println("unresolved import: $importPackageNode.*")
+                    continue
+                }
                 scope.declarations.addAll(foreignTree.children.filterIsInstance<ClassDeclarationNode>())
             }
         }
@@ -122,8 +130,35 @@ class ClassDeclarationNode(
         }
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as ClassDeclarationNode
+
+        if (name != other.name) return false
+        if (scope != other.scope) return false
+        if (superclasses != other.superclasses) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = name.hashCode()
+        result = 31 * result + scope.hashCode()
+        result = 31 * result + superclasses.hashCode()
+        return result
+    }
+
+    override fun toString(): String {
+        return "ClassDeclarationNode(name='$name', scope=$scope, superclasses=$superclasses)"
+    }
+
+
     val resolvedSuperclasses
         get() = superclasses.filterIsInstance<ClassDeclarationNode>()
+
+
 
 }
 

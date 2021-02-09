@@ -18,7 +18,7 @@ import org.jetbrains.kotlin.spec.grammar.parser.KotlinLexer
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParserBaseVisitor
 
-class SimpleTreeBuilder(private val parser: KotlinParser) : KotlinParserBaseVisitor<SimpleTreeNode?>() {
+class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private val callStack = mutableListOf<Scope>()
 
     private val conditionalTokens = setOf(
@@ -89,7 +89,10 @@ class SimpleTreeBuilder(private val parser: KotlinParser) : KotlinParserBaseVisi
     // ABC metric
 
     override fun visitVariableDeclaration(ctx: KotlinParser.VariableDeclarationContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).assignmentsCount++
+        val parent = ctx?.parent
+        if (parent is KotlinParser.PropertyDeclarationContext && parent.ASSIGNMENT() != null) {
+            (callStack[0].scopeOwner as RootNode).assignmentsCount++
+        }
         return super.visitVariableDeclaration(ctx)
     }
 
@@ -98,22 +101,34 @@ class SimpleTreeBuilder(private val parser: KotlinParser) : KotlinParserBaseVisi
         return super.visitAssignment(ctx)
     }
 
+    override fun visitPrefixUnaryOperator(ctx: KotlinParser.PrefixUnaryOperatorContext?): SimpleTreeNode? {
+        processOperator(ctx)
+        return super.visitPrefixUnaryOperator(ctx)
+    }
+
+    override fun visitPostfixUnaryOperator(ctx: KotlinParser.PostfixUnaryOperatorContext?): SimpleTreeNode? {
+        processOperator(ctx)
+        return super.visitPostfixUnaryOperator(ctx)
+    }
+
+    private fun processOperator(ctx: ParserRuleContext?) {
+        val firstChild = ctx?.children?.firstOrNull()
+        if (firstChild is TerminalNode) {
+            val type = firstChild.symbol.type
+            if (type == KotlinLexer.INCR || type == KotlinLexer.DECR) {
+                (callStack[0].scopeOwner as RootNode).assignmentsCount++
+            }
+        }
+    }
+
     override fun visitCallableReference(ctx: KotlinParser.CallableReferenceContext?): SimpleTreeNode? {
         // todo (callStack[0].scopeOwner as RootNode).branchesCount++
         return super.visitCallableReference(ctx)
     }
 
-    override fun visitPostfixUnaryExpression(ctx: KotlinParser.PostfixUnaryExpressionContext?): SimpleTreeNode? {
-        if (ctx != null) {
-            val children = ctx.children
-            val firstChildren = (children[0] as? KotlinParser.PrimaryExpressionContext)?.children
-            if (children.size == 2 && firstChildren != null && firstChildren.size == 1 && firstChildren[0] is KotlinParser.SimpleIdentifierContext) {
-                if (children[1] is KotlinParser.PostfixUnarySuffixContext) {
-                    (callStack[0].scopeOwner as RootNode).branchesCount++
-                }
-            }
-        }
-        return super.visitPostfixUnaryExpression(ctx)
+    override fun visitCallSuffix(ctx: KotlinParser.CallSuffixContext?): SimpleTreeNode? {
+        (callStack[0].scopeOwner as RootNode).branchesCount++
+        return super.visitCallSuffix(ctx)
     }
 
     override fun visitEqualityOperator(ctx: KotlinParser.EqualityOperatorContext?): SimpleTreeNode? {
@@ -145,6 +160,7 @@ class SimpleTreeBuilder(private val parser: KotlinParser) : KotlinParserBaseVisi
         return super.visitDisjunction(ctx)
     }
 
+    // todo: add supportion of else in when
     override fun visitIfExpression(ctx: KotlinParser.IfExpressionContext?): SimpleTreeNode? {
         if (ctx != null) {
             (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count { it is TerminalNode && it.symbol.type == KotlinLexer.ELSE }
@@ -152,6 +168,7 @@ class SimpleTreeBuilder(private val parser: KotlinParser) : KotlinParserBaseVisi
         return super.visitIfExpression(ctx)
     }
 
+    // todo: add supportion of else in when
     override fun visitTryExpression(ctx: KotlinParser.TryExpressionContext?): SimpleTreeNode? {
         if (ctx != null) {
             (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count {

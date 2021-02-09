@@ -5,6 +5,7 @@ import simpleTree.BasicSimpleTreeVisitorVoid
 
 class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
     private val hierarchy = mutableMapOf<ClassDeclarationNode, MutableList<ClassDeclarationNode>>()
+    private val builtPaths = mutableMapOf<ClassDeclarationNode, MutableList<MutableList<ClassDeclarationNode>>>()
 
     val inheritanceChains: List<List<ClassDeclarationNode>>
         get() {
@@ -23,11 +24,18 @@ class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
         }
 
     private fun hierarchyWalker(node: ClassDeclarationNode): MutableList<MutableList<ClassDeclarationNode>> {
-        val n = hierarchy[node] ?: return mutableListOf(mutableListOf(node))
+        if (node in builtPaths.keys) return builtPaths[node]!!.copy
+        val superclasses = hierarchy[node] ?: return mutableListOf(mutableListOf())
         val result = mutableListOf<MutableList<ClassDeclarationNode>>()
-        for (superClass in n) {
-            result.addAll(hierarchyWalker(superClass))
+        for (superClass in superclasses) {
+            result.addAll(hierarchyWalker(superClass).map {
+                it.add(0, superClass)
+                it
+            }.toMutableList())
         }
+
+        builtPaths[node] = result.copy
+
         return result
     }
 
@@ -42,4 +50,11 @@ class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
 
         super.visitClassDeclarationNode(node)
     }
+
+    private val MutableList<MutableList<ClassDeclarationNode>>.copy
+        get() = mutableListOf<MutableList<ClassDeclarationNode>>().also {
+            for (list in this) {
+                it.add(list.toMutableList())
+            }
+        }
 }

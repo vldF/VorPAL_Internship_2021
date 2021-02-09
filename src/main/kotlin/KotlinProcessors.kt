@@ -7,7 +7,7 @@ import java.io.File
 import java.io.FileNotFoundException
 
 fun processAllFilesInDirectory(directory: File): MutableMap<String, RootNode> {
-    if (!directory.isDirectory) throw FileNotFoundException("this directory doesn't exist")
+    if (!directory.isDirectory) throw FileNotFoundException("this directory doesn't exist: $directory")
 
     var result = mutableMapOf<String, RootNode>()
 
@@ -47,7 +47,7 @@ private fun processDirectory(dir: File): Map<String, RootNode> {
     return result
 }
 
-private fun processFile(file: File): RootNode? {
+fun processFile(file: File): RootNode? {
     val content = file.readText()
 
     val iStream = CharStreams.fromString(content)
@@ -55,7 +55,7 @@ private fun processFile(file: File): RootNode? {
     val tokens = CommonTokenStream(lexer)
     val parser = KotlinParser(tokens)
     val context = parser.kotlinFile()
-    val simpleTree = context.accept(SimpleTreeBuilder(parser)) ?: return null
+    val simpleTree = context.accept(SimpleTreeBuilder()) ?: return null
 
     return simpleTree as? RootNode
 }
