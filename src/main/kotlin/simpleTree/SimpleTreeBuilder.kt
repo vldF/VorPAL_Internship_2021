@@ -13,7 +13,6 @@ import SimpleTreeNode
 import UnresolvedClass
 import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.tree.TerminalNode
-import org.antlr.v4.runtime.tree.xpath.XPath
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinLexer
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParserBaseVisitor
@@ -121,11 +120,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         }
     }
 
-    override fun visitCallableReference(ctx: KotlinParser.CallableReferenceContext?): SimpleTreeNode? {
-        // todo (callStack[0].scopeOwner as RootNode).branchesCount++
-        return super.visitCallableReference(ctx)
-    }
-
     override fun visitCallSuffix(ctx: KotlinParser.CallSuffixContext?): SimpleTreeNode? {
         (callStack[0].scopeOwner as RootNode).branchesCount++
         return super.visitCallSuffix(ctx)
@@ -160,7 +154,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         return super.visitDisjunction(ctx)
     }
 
-    // todo: add supportion of else in when
     override fun visitIfExpression(ctx: KotlinParser.IfExpressionContext?): SimpleTreeNode? {
         if (ctx != null) {
             (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count { it is TerminalNode && it.symbol.type == KotlinLexer.ELSE }
@@ -168,7 +161,17 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         return super.visitIfExpression(ctx)
     }
 
-    // todo: add supportion of else in when
+    override fun visitWhenExpression(ctx: KotlinParser.WhenExpressionContext?): SimpleTreeNode? {
+        if (ctx != null && ctx.children.any { c ->
+                c is KotlinParser.WhenEntryContext && c.children.any {
+                    it is TerminalNode && it.symbol.type == KotlinLexer.ELSE
+                }
+        }) {
+            (callStack[0].scopeOwner as RootNode).conditionsCount++
+        }
+        return super.visitWhenExpression(ctx)
+    }
+
     override fun visitTryExpression(ctx: KotlinParser.TryExpressionContext?): SimpleTreeNode? {
         if (ctx != null) {
             (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count {
@@ -187,13 +190,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         return super.visitCatchBlock(ctx)
     }
 
-
-
-    override fun visitWhenEntry(ctx: KotlinParser.WhenEntryContext?): SimpleTreeNode? {
-        // todo: is it needed?
-        return super.visitWhenEntry(ctx)
-    }
-
     override fun visitElvis(ctx: KotlinParser.ElvisContext?): SimpleTreeNode? {
         (callStack[0].scopeOwner as RootNode).conditionsCount++
         return super.visitElvis(ctx)
@@ -208,7 +204,9 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
             if (ctx is KotlinParser.ObjectLiteralContext) {
                 name = "[anonymous object]"
             } else {
-                throw IllegalArgumentException("declaration name wasn't found")
+                System.err.println("declaration $name wasn't found")
+                visitClassLikeDefaults(ctx)
+                return null
             }
         }
 
@@ -223,6 +221,13 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         currentScope.declarations.add(declarationNode)
         newScope.scopeOwner = declarationNode
 
+        visitClassLikeDefaults(ctx)
+
+        callStack.removeLast()
+        return declarationNode
+    }
+
+    private fun visitClassLikeDefaults(ctx: ParserRuleContext) {
         when (ctx) {
             is KotlinParser.ClassDeclarationContext -> {
                 super.visitClassDeclaration(ctx)
@@ -234,9 +239,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
                 super.visitObjectLiteral(ctx)
             }
         }
-
-        callStack.removeLast()
-        return declarationNode
     }
 
     override fun aggregateResult(aggregate: SimpleTreeNode?, nextResult: SimpleTreeNode?): SimpleTreeNode? {
