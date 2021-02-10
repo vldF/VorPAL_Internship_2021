@@ -17,7 +17,7 @@ fun foo() {
     }
 
     try { // c = 5
-        foo()
+        foo() // b = 5
     } catch (e: java.lang.Exception) { // c = 6
 
     }

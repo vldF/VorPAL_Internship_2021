@@ -1,0 +1,48 @@
+{
+  "fourth": {
+    "ABC": "(0, 0, 0)",
+    "chains": [
+      [
+        "C",
+        "F"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "F",
+      "overridens": 0,
+      "properties count": 0
+    }
+  },
+  "bar": {
+    "ABC": "(0, 0, 0)",
+    "chains": [
+      [
+        "C",
+        "T"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "T",
+      "overridens": 0,
+      "properties count": 0
+    }
+  },
+  "foo": {
+    "ABC": "(2, 1, 0)",
+    "chains": [
+      [
+        "A",
+        "X"
+      ],
+      [
+        "A",
+        "C"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "C",
+      "overridens": 1,
+      "properties count": 1
+    }
+  }
+}

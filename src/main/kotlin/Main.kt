@@ -1,8 +1,7 @@
 import kotlinx.cli.ArgParser
 import kotlinx.cli.ArgType
-import statistics.ClassInfoCollector
 import statistics.ClassUsage
-import statistics.InheritanceHierarchy
+import statistics.MetricsReport
 import java.io.File
 
 fun main(args: Array<String>) {
@@ -22,18 +21,13 @@ private fun processProjectDir(projectPath: String, outputPath: String) {
     val tree = processAllFilesInDirectory(directory)
     val resultString = buildString {
         for ((packageName, treeRoot) in tree) {
+            val report = MetricsReport(treeRoot)
+            val abc = report.abc
             appendTextWithOffset("package: $packageName", 0)
-            val hierarchyTree = InheritanceHierarchy()
-            hierarchyTree.visitRootNode(treeRoot)
-            appendTextWithOffset(chainsToPrettyText(hierarchyTree.inheritanceChains), 4)
-
-            val classInfo = ClassInfoCollector().visitRootNode(treeRoot)
-            appendTextWithOffset(classInfoToPrettyText(classInfo), 4)
-
+            appendTextWithOffset(chainsToPrettyText(report.inheritanceChains), 4)
+            appendTextWithOffset(classInfoToPrettyText(report.classInfo), 4)
             appendTextWithOffset("ABC metric", 4)
-            appendTextWithOffset("A: " + treeRoot.assignmentsCount, 4)
-            appendTextWithOffset("B: " + treeRoot.branchesCount, 4)
-            appendTextWithOffset("C: " + treeRoot.conditionsCount, 4)
+            appendTextWithOffset("A = ${abc.first}, B = ${abc.second}, C = ${abc.third}", 4)
         }
     }
 

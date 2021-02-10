@@ -1,0 +1,28 @@
+{
+  "DEFAULT": {
+    "ABC": "(1, 0, 0)",
+    "chains": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "I",
+        "B"
+      ],
+      [
+        "I",
+        "O"
+      ],
+      [
+        "I",
+        "[anonymous object]"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "[anonymous object]",
+      "overridens": 0,
+      "properties count": 0
+    }
+  }
+}
