@@ -8,6 +8,7 @@ import java.io.FileNotFoundException
 
 fun processAllFilesInDirectory(directory: File): MutableMap<String, RootNode> {
     if (!directory.isDirectory) throw FileNotFoundException("this directory doesn't exist: $directory")
+    println("analyzing: ${directory.path}")
 
     var result = mutableMapOf<String, RootNode>()
 

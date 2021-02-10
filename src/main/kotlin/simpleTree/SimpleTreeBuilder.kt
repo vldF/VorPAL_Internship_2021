@@ -303,7 +303,23 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
                 .firstOrNull()
                 ?.children
                 ?.filterIsInstance<KotlinParser.AnnotatedDelegationSpecifierContext>()
-                ?.mapNotNull { it.simpleIdentifierName ?: it.text }
+                ?.flatMap { it.children }
+                ?.filterIsInstance<KotlinParser.DelegationSpecifierContext>()
+                ?.flatMap { it.children }
+                ?.mapNotNull {
+                    val userType = when (it) {
+                        is KotlinParser.ConstructorInvocationContext -> {
+                            it.userType()
+                        }
+                        is KotlinParser.UserTypeContext -> {
+                            it
+                        }
+                        else -> {
+                            null
+                        }
+                    }
+                    userType?.simpleUserType()?.firstOrNull()?.simpleIdentifier()?.Identifier()?.text
+                }
                 ?.toList() ?: listOf()
         }
 
@@ -337,7 +353,7 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private val KotlinParser.ClassMemberDeclarationsContext.properties
         get() = children
             ?.filterIsInstance<KotlinParser.ClassMemberDeclarationContext>()
-            //.filter { it.children.any { it is KotlinParser.DeclarationContext && it.children.any { it is KotlinParser.PropertyDeclarationContext } } }
+            ?.filter { it.children != null }
             ?.flatMap { it.children.filterIsInstance<KotlinParser.DeclarationContext>() }
             ?.mapNotNull { it.propertyDeclaration()?.variableDeclaration()?.name }
             .orEmpty()
