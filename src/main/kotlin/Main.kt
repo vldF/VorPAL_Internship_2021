@@ -20,21 +20,24 @@ fun main(args: Array<String>) {
 private fun processProjectDir(projectPath: String, outputPath: String) {
     val directory = File(projectPath)
     val tree = processAllFilesInDirectory(directory)
+    val resultString = buildString {
+        for ((packageName, treeRoot) in tree) {
+            appendTextWithOffset("package: $packageName", 0)
+            val hierarchyTree = InheritanceHierarchy()
+            hierarchyTree.visitRootNode(treeRoot)
+            appendTextWithOffset(chainsToPrettyText(hierarchyTree.inheritanceChains), 4)
 
-    for ((packageName, treeRoot) in tree) {
-        println("package: $packageName")
-        val hierarchyTree = InheritanceHierarchy()
-        hierarchyTree.visitRootNode(treeRoot)
-        println(chainsToPrettyText(hierarchyTree.inheritanceChains))
+            val classInfo = ClassInfoCollector().visitRootNode(treeRoot)
+            appendTextWithOffset(classInfoToPrettyText(classInfo), 4)
 
-        val classInfo = ClassInfoCollector().visitRootNode(treeRoot)
-        println(classInfoToPrettyText(classInfo))
-
-        println("ABC metric")
-        println("A: " + treeRoot.assignmentsCount)
-        println("B: " + treeRoot.branchesCount)
-        println("C: " + treeRoot.conditionsCount)
+            appendTextWithOffset("ABC metric", 4)
+            appendTextWithOffset("A: " + treeRoot.assignmentsCount, 4)
+            appendTextWithOffset("B: " + treeRoot.branchesCount, 4)
+            appendTextWithOffset("C: " + treeRoot.conditionsCount, 4)
+        }
     }
+
+    print(resultString)
 }
 
 private fun chainsToPrettyText(chains: List<List<ClassDeclarationNode>>): String {
@@ -79,6 +82,13 @@ private fun classInfoToPrettyText(infos: Set<ClassUsage>): String {
         } else {
             appendLine("No classes were found")
         }
+    }
+}
+
+private fun StringBuilder.appendTextWithOffset(text: String, offset: Int) {
+    for (line in text.lines()) {
+        append(" ".repeat(offset))
+        appendLine(line)
     }
 }
 
