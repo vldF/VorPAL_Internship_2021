@@ -1,5 +1,6 @@
-{
-  "fourth": {
+[
+  {
+    "package": "fourth",
     "ABC": "(0, 0, 0)",
     "chains": [
       [
@@ -13,7 +14,8 @@
       "properties count": 0
     }
   },
-  "bar": {
+  {
+    "package": "bar",
     "ABC": "(0, 0, 0)",
     "chains": [
       [
@@ -27,7 +29,8 @@
       "properties count": 0
     }
   },
-  "foo": {
+  {
+    "package": "foo",
     "ABC": "(2, 1, 0)",
     "chains": [
       [
@@ -45,4 +48,4 @@
       "properties count": 1
     }
   }
-}
+]

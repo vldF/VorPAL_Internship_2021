@@ -1,3 +1,4 @@
+import com.google.gson.GsonBuilder
 import kotlinx.cli.ArgParser
 import kotlinx.cli.ArgType
 import statistics.ClassUsage
@@ -7,21 +8,22 @@ import java.io.File
 fun main(args: Array<String>) {
     val parser = ArgParser("kotlin code analyzer")
     val inputProjectPath by parser.option(ArgType.String, shortName = "p", description = "path to code dir")
-    val inputOutputPath by parser.option(ArgType.String, shortName = "o", description = "path to results dir")
+    val outputPath by parser.option(ArgType.String, shortName = "o", description = "path to results dir")
     parser.parse(args)
 
     val projectPath = inputProjectPath ?: "./src/test/testData"
-    val outputPath = inputOutputPath ?: "./"
 
     processProjectDir(projectPath, outputPath)
 }
 
-private fun processProjectDir(projectPath: String, outputPath: String) {
+private fun processProjectDir(projectPath: String, outputPath: String?) {
     val directory = File(projectPath)
     val tree = processAllFilesInDirectory(directory)
-    val resultString = buildString {
+    val metrics = mutableListOf<MetricsReport>()
+    val reportText = buildString {
         for ((packageName, treeRoot) in tree) {
             val report = MetricsReport(treeRoot)
+            metrics.add(report)
             val abc = report.abc
             appendTextWithOffset("package: $packageName", 0)
             appendTextWithOffset(chainsToPrettyText(report.inheritanceChains), 4)
@@ -31,7 +33,14 @@ private fun processProjectDir(projectPath: String, outputPath: String) {
         }
     }
 
-    print(resultString)
+    print(reportText)
+
+    if (outputPath != null) {
+        val gson = GsonBuilder().setPrettyPrinting().create()
+        File("$outputPath/report.txt").writeText(reportText)
+        val jsonReport = gson.toJson(MetricsReport.getJsonForMetricsList(metrics))
+        File("$outputPath/report.json").writeText(jsonReport)
+    }
 }
 
 private fun chainsToPrettyText(chains: List<List<ClassDeclarationNode>>): String {

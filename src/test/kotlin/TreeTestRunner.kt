@@ -47,13 +47,8 @@ class TestRunner {
 
     private fun compareMetrics(dirTrees: Map<String, RootNode>, dir: File) {
         val exceptedMetrics = dir.listFiles(File::isFile)!!.firstOrNull { it.name == "metrics.json" }
-        val actualMetrics = JsonObject().apply {
-            dirTrees.map { (packageName, root) ->
-                val metrics = MetricsReport(root)
-                add(packageName, metrics.dumpJson())
-            }
-        }
-        val actualMetricsJson = gson.toJson(actualMetrics)
+        val actualMetrics = dirTrees.map { MetricsReport(it.value) }
+        val actualMetricsJson = gson.toJson(MetricsReport.getJsonForMetricsList(actualMetrics))
 
         if (exceptedMetrics == null) {
             val newFile = File("${dir.path}/metrics.json")

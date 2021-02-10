@@ -3,6 +3,7 @@ package statistics
 import ClassDeclarationNode
 import RootNode
 import com.google.gson.Gson
+import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 
 class MetricsReport(
@@ -11,6 +12,8 @@ class MetricsReport(
     val abc: Triple<Int, Int, Int>
     val inheritanceChains: List<List<ClassDeclarationNode>>
     val classInfo: Set<ClassUsage>
+    val packageName: String
+
     init {
         abc = Triple(treeRoot.assignmentsCount, treeRoot.branchesCount, treeRoot.conditionsCount)
 
@@ -20,10 +23,12 @@ class MetricsReport(
         inheritanceChains = hierarchyTree.inheritanceChains
 
         classInfo = ClassInfoCollector().visitRootNode(treeRoot)
+        packageName = treeRoot.packageName
     }
 
     fun dumpJson(): JsonObject {
         return JsonObject().apply {
+            addProperty("package", packageName)
             addProperty("ABC", abc.toString())
             add("chains", Gson().toJsonTree(inheritanceChains.map { chain ->
                 chain.map {
@@ -37,6 +42,12 @@ class MetricsReport(
                     addProperty("properties count", it.propertiesCount)
                 }
             })
+        }
+    }
+
+    companion object {
+        fun getJsonForMetricsList(list: List<MetricsReport>) = JsonArray().apply {
+            list.forEach { add(it.dumpJson()) }
         }
     }
 }

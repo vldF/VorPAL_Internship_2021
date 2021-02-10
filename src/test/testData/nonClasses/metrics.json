@@ -1,5 +1,6 @@
-{
-  "DEFAULT": {
+[
+  {
+    "package": "DEFAULT",
     "ABC": "(1, 0, 0)",
     "chains": [
       [
@@ -25,4 +26,4 @@
       "properties count": 0
     }
   }
-}
+]
