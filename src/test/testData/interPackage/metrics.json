@@ -1,0 +1,66 @@
+[
+  {
+    "package": "foo",
+    "ABC": "(0, 0, 0)",
+    "chains": [
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "B",
+      "overridens": 0,
+      "properties count": 0
+    }
+  },
+  {
+    "package": "bar",
+    "ABC": "(0, 0, 0)",
+    "chains": [
+      [
+        "A",
+        "B",
+        "T",
+        "D"
+      ],
+      [
+        "A",
+        "B",
+        "T",
+        "D"
+      ],
+      [
+        "A",
+        "B",
+        "T",
+        "D"
+      ],
+      [
+        "A",
+        "B",
+        "T",
+        "D"
+      ],
+      [
+        "B",
+        "T",
+        "D"
+      ],
+      [
+        "B",
+        "T",
+        "D"
+      ],
+      [
+        "T",
+        "D"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "D",
+      "overridens": 0,
+      "properties count": 0
+    }
+  }
+]

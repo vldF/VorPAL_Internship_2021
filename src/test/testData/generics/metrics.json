@@ -1,0 +1,17 @@
+[
+  {
+    "package": "DEFAULT",
+    "ABC": "(0, 0, 0)",
+    "chains": [
+      [
+        "G",
+        "C"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "C",
+      "overridens": 0,
+      "properties count": 0
+    }
+  }
+]

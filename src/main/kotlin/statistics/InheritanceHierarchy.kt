@@ -1,12 +1,14 @@
 package statistics
 
 import ClassDeclarationNode
+import SimpleTreeNode
 import UnresolvedClass
 import simpleTree.BasicSimpleTreeVisitorVoid
 
 class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
     private val hierarchy = mutableMapOf<ClassDeclarationNode, MutableList<ClassDeclarationNode>>()
     private val builtPaths = mutableMapOf<ClassDeclarationNode, MutableList<MutableList<ClassDeclarationNode>>>()
+    private val visitedDeclarations = hashSetOf<SimpleTreeNode>()
 
     val inheritanceChains: List<List<ClassDeclarationNode>>
         get() {
@@ -41,8 +43,10 @@ class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
     }
 
     override fun visitClassDeclarationNode(node: ClassDeclarationNode) {
+        if (node in visitedDeclarations) return
         for (superClass in node.superclasses) {
             val virtualSuperClass = if (superClass is ClassDeclarationNode) {
+                visitClassDeclarationNode(superClass)
                 superClass
             } else {
                 superClass as UnresolvedClass
@@ -55,6 +59,7 @@ class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
             }
         }
 
+        visitedDeclarations.add(node)
         super.visitClassDeclarationNode(node)
     }
 

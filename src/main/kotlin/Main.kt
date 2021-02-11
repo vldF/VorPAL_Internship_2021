@@ -19,6 +19,9 @@ fun main(args: Array<String>) {
 private fun processProjectDir(projectPath: String, outputPath: String?) {
     val directory = File(projectPath)
     val tree = processAllFilesInDirectory(directory)
+    tree.doAllImports()
+    tree.resolveAllTrees()
+
     val metrics = mutableListOf<MetricsReport>()
     val reportText = buildString {
         for ((packageName, treeRoot) in tree) {

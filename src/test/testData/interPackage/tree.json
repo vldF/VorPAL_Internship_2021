@@ -1,0 +1,86 @@
+[
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "foo",
+    "scope": [
+      "A",
+      "B"
+    ],
+    "children": [
+      {
+        "type": "package name",
+        "name": "foo"
+      },
+      {
+        "type": "Class Declaration",
+        "name": "A",
+        "scope": [
+          "A",
+          "B"
+        ],
+        "superclasses": [],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "B",
+        "scope": [
+          "A",
+          "B"
+        ],
+        "superclasses": [
+          "A"
+        ],
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "bar",
+    "scope": [
+      "B",
+      "D",
+      "T"
+    ],
+    "children": [
+      {
+        "type": "package name",
+        "name": "bar"
+      },
+      {
+        "type": "import",
+        "packageName": "foo",
+        "name": "B"
+      },
+      {
+        "type": "Class Declaration",
+        "name": "T",
+        "scope": [
+          "B",
+          "D",
+          "T"
+        ],
+        "superclasses": [
+          "B"
+        ],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "D",
+        "scope": [
+          "B",
+          "D",
+          "T"
+        ],
+        "superclasses": [
+          "T"
+        ],
+        "children": []
+      }
+    ]
+  }
+]

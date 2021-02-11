@@ -25,9 +25,6 @@ fun processAllFilesInDirectory(directory: File): MutableMap<String, RootNode> {
         }
     }
 
-    result.doAllImports()
-    result.resolveAllTrees()
-
     return result
 }
 
@@ -80,13 +77,13 @@ private fun Map<String, RootNode>.merge(other: Map<String, RootNode>): MutableMa
     return result
 }
 
-private fun Map<String, RootNode>.doAllImports() {
+fun Map<String, RootNode>.doAllImports() {
     for ((_, v) in this) {
         v.doImports(this)
     }
 }
 
-private fun Map<String, RootNode>.resolveAllTrees() {
+fun Map<String, RootNode>.resolveAllTrees() {
     for ((_, v) in this) {
         v.resolveAll()
     }

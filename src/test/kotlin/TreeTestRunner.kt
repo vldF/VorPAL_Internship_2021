@@ -23,6 +23,8 @@ class TestRunner {
 
     private fun runTest(dir: File) {
         val dirTree = processAllFilesInDirectory(dir)
+        dirTree.doAllImports()
+        dirTree.resolveAllTrees()
         compareTree(dirTree, dir)
         compareMetrics(dirTree, dir)
     }

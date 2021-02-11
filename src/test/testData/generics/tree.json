@@ -1,0 +1,35 @@
+[
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "DEFAULT",
+    "scope": [
+      "C",
+      "G"
+    ],
+    "children": [
+      {
+        "type": "Class Declaration",
+        "name": "G",
+        "scope": [
+          "C",
+          "G"
+        ],
+        "superclasses": [],
+        "children": []
+      },
+      {
+        "type": "Class Declaration",
+        "name": "C",
+        "scope": [
+          "C",
+          "G"
+        ],
+        "superclasses": [
+          "G"
+        ],
+        "children": []
+      }
+    ]
+  }
+]
