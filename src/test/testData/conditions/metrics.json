@@ -1,7 +1,11 @@
 [
   {
     "package": "DEFAULT",
-    "ABC": "(0, 6, 8)",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 0, b \u003d 6, c \u003d 8"
+      }
+    ],
     "chains": [],
     "classes usages": {}
   }

@@ -13,21 +13,14 @@ import SimpleTreeNode
 import UnresolvedClass
 import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.tree.TerminalNode
-import org.jetbrains.kotlin.spec.grammar.parser.KotlinLexer
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParserBaseVisitor
+import statistics.ABCCollector
+import statistics.ABCMetric
 
 class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private val callStack = mutableListOf<Scope>()
-
-    private val conditionalTokens = setOf(
-        KotlinLexer.CONJ,
-        KotlinLexer.DISJ,
-        KotlinLexer.EXCL_WS,
-        KotlinLexer.EXCL_NO_WS,
-        KotlinLexer.EQEQ,
-        KotlinLexer.EQEQEQ
-    )
+    private val abcCollector = ABCCollector()
 
     override fun visitClassDeclaration(ctx: KotlinParser.ClassDeclarationContext?): SimpleTreeNode? {
         return visitClassLikeDeclaration(ctx)
@@ -85,116 +78,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         return super.visitClassMemberDeclarations(ctx)
     }
 
-    // ABC metric
-
-    override fun visitVariableDeclaration(ctx: KotlinParser.VariableDeclarationContext?): SimpleTreeNode? {
-        val parent = ctx?.parent
-        if (parent is KotlinParser.PropertyDeclarationContext && parent.ASSIGNMENT() != null) {
-            (callStack[0].scopeOwner as RootNode).assignmentsCount++
-        }
-        return super.visitVariableDeclaration(ctx)
-    }
-
-    override fun visitAssignment(ctx: KotlinParser.AssignmentContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).assignmentsCount++
-        return super.visitAssignment(ctx)
-    }
-
-    override fun visitPrefixUnaryOperator(ctx: KotlinParser.PrefixUnaryOperatorContext?): SimpleTreeNode? {
-        processOperator(ctx)
-        return super.visitPrefixUnaryOperator(ctx)
-    }
-
-    override fun visitPostfixUnaryOperator(ctx: KotlinParser.PostfixUnaryOperatorContext?): SimpleTreeNode? {
-        processOperator(ctx)
-        return super.visitPostfixUnaryOperator(ctx)
-    }
-
-    private fun processOperator(ctx: ParserRuleContext?) {
-        val firstChild = ctx?.children?.firstOrNull()
-        if (firstChild is TerminalNode) {
-            val type = firstChild.symbol.type
-            if (type == KotlinLexer.INCR || type == KotlinLexer.DECR) {
-                (callStack[0].scopeOwner as RootNode).assignmentsCount++
-            }
-        }
-    }
-
-    override fun visitCallSuffix(ctx: KotlinParser.CallSuffixContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).branchesCount++
-        return super.visitCallSuffix(ctx)
-    }
-
-    override fun visitEqualityOperator(ctx: KotlinParser.EqualityOperatorContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).conditionsCount++
-        return super.visitEqualityOperator(ctx)
-    }
-
-    override fun visitExcl(ctx: KotlinParser.ExclContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).conditionsCount++
-        return super.visitExcl(ctx)
-    }
-
-    override fun visitComparisonOperator(ctx: KotlinParser.ComparisonOperatorContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).conditionsCount++
-        return super.visitComparisonOperator(ctx)
-    }
-
-    override fun visitConjunction(ctx: KotlinParser.ConjunctionContext?): SimpleTreeNode? {
-        if (ctx != null) {
-            (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count { it is TerminalNode && it.symbol.type in conditionalTokens }
-        }
-        return super.visitConjunction(ctx)
-    }
-
-    override fun visitDisjunction(ctx: KotlinParser.DisjunctionContext?): SimpleTreeNode? {
-        if (ctx != null) {
-            (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count { it is TerminalNode && it.symbol.type in conditionalTokens }
-        }
-        return super.visitDisjunction(ctx)
-    }
-
-    override fun visitIfExpression(ctx: KotlinParser.IfExpressionContext?): SimpleTreeNode? {
-        if (ctx != null) {
-            (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count { it is TerminalNode && it.symbol.type == KotlinLexer.ELSE }
-        }
-        return super.visitIfExpression(ctx)
-    }
-
-    override fun visitWhenExpression(ctx: KotlinParser.WhenExpressionContext?): SimpleTreeNode? {
-        if (ctx != null && ctx.children.any { c ->
-                c is KotlinParser.WhenEntryContext && c.children.any {
-                    it is TerminalNode && it.symbol.type == KotlinLexer.ELSE
-                }
-        }) {
-            (callStack[0].scopeOwner as RootNode).conditionsCount++
-        }
-        return super.visitWhenExpression(ctx)
-    }
-
-    override fun visitTryExpression(ctx: KotlinParser.TryExpressionContext?): SimpleTreeNode? {
-        if (ctx != null) {
-            (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count {
-                it is TerminalNode && (it.symbol.type == KotlinLexer.TRY)
-            }
-        }
-        return super.visitTryExpression(ctx)
-    }
-
-    override fun visitCatchBlock(ctx: KotlinParser.CatchBlockContext?): SimpleTreeNode? {
-        if (ctx != null) {
-            (callStack[0].scopeOwner as RootNode).conditionsCount += ctx.children.count {
-                it is TerminalNode && (it.symbol.type == KotlinLexer.CATCH)
-            }
-        }
-        return super.visitCatchBlock(ctx)
-    }
-
-    override fun visitElvis(ctx: KotlinParser.ElvisContext?): SimpleTreeNode? {
-        (callStack[0].scopeOwner as RootNode).conditionsCount++
-        return super.visitElvis(ctx)
-    }
-
     private fun visitClassLikeDeclaration(ctx: ParserRuleContext?): SimpleTreeNode? {
         if (ctx == null) return null
 
@@ -221,10 +104,35 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         currentScope.declarations.add(declarationNode)
         newScope.scopeOwner = declarationNode
 
+        // getting ABC
+        // yeah, this is wrong place to get it
+        declarationNode.abcMetric = collectClassABC(ctx)
+
         visitClassLikeDefaults(ctx)
 
         callStack.removeLast()
         return declarationNode
+    }
+
+    private fun collectClassABC(ctx: ParserRuleContext): ABCMetric {
+        return when (ctx) {
+            is KotlinParser.ClassDeclarationContext -> {
+                ctx.classBody()?.let {
+                    abcCollector.visit(ctx.classBody())
+                } ?: ABCMetric.empty
+            }
+            is KotlinParser.ObjectDeclarationContext -> {
+                ctx.classBody()?.let {
+                    abcCollector.visit(ctx.classBody())
+                } ?: ABCMetric.empty
+            }
+            is KotlinParser.ObjectLiteralContext -> {
+                ctx.classBody()?.let {
+                    abcCollector.visit(ctx.classBody())
+                } ?: ABCMetric.empty
+            }
+            else -> throw IllegalStateException()
+        }
     }
 
     private fun visitClassLikeDefaults(ctx: ParserRuleContext) {
@@ -263,6 +171,10 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
 
         val rootNode = RootNode("root", rootScope)
         rootScope.scopeOwner = rootNode
+
+        // getting ABC for non-class functions, declarations, etc.
+        val globalABC = abcCollector.visitKotlinFile(ctx)
+        rootNode.globalABC = globalABC
 
         if (ctx == null) return null
         for (child in ctx.children) {
@@ -322,16 +234,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
                 }
                 ?.toList() ?: listOf()
         }
-
-    private val KotlinParser.AnnotatedDelegationSpecifierContext.simpleIdentifierName
-        get() = delegationSpecifier()
-            ?.constructorInvocation()
-            ?.userType()
-            ?.simpleUserType(0)
-            ?.simpleIdentifier()
-            ?.Identifier()
-            ?.symbol
-            ?.text
 
     private val ParserRuleContext.name
         get() = children

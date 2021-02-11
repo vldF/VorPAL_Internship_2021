@@ -1,7 +1,14 @@
 [
   {
     "package": "fourth",
-    "ABC": "(0, 0, 0)",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "F": "a \u003d 0, b \u003d 0, c \u003d 0"
+      }
+    ],
     "chains": [
       [
         "A",
@@ -21,7 +28,14 @@
   },
   {
     "package": "bar",
-    "ABC": "(0, 0, 0)",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "T": "a \u003d 0, b \u003d 0, c \u003d 0"
+      }
+    ],
     "chains": [
       [
         "A",
@@ -41,7 +55,23 @@
   },
   {
     "package": "foo",
-    "ABC": "(2, 1, 0)",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "X": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "A": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "B": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "C": "a \u003d 1, b \u003d 1, c \u003d 0"
+      }
+    ],
     "chains": [
       [
         "A",

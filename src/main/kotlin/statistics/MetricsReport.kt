@@ -7,15 +7,15 @@ import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 
 class MetricsReport(
-    treeRoot: RootNode
+    private val treeRoot: RootNode
 ) {
-    val abc: Triple<Int, Int, Int>
+    val abc: Map<ClassDeclarationNode, ABCMetric>
     val inheritanceChains: List<List<ClassDeclarationNode>>
     val classInfo: Set<ClassUsage>
-    val packageName: String
+    private val packageName: String
 
     init {
-        abc = Triple(treeRoot.assignmentsCount, treeRoot.branchesCount, treeRoot.conditionsCount)
+        abc = SimpleTreeABCCollector.visitRootNode(treeRoot)
 
         val hierarchyTree = InheritanceHierarchy()
         hierarchyTree.visitRootNode(treeRoot)
@@ -29,7 +29,14 @@ class MetricsReport(
     fun dumpJson(): JsonObject {
         return JsonObject().apply {
             addProperty("package", packageName)
-            addProperty("ABC", abc.toString())
+            add("ABC", JsonArray().apply{
+                add(JsonObject().apply { addProperty("<global>", treeRoot.globalABC.toString())  })
+                abc.forEach { (k, v) ->
+                    add(JsonObject().apply {
+                        addProperty(k.name, v.toString())
+                    }) }
+                }
+            )
             add("chains", Gson().toJsonTree(inheritanceChains.map { chain ->
                 chain.map {
                     it.name

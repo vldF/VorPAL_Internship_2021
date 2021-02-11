@@ -1,6 +1,7 @@
 import com.google.gson.GsonBuilder
 import kotlinx.cli.ArgParser
 import kotlinx.cli.ArgType
+import statistics.ABCMetric
 import statistics.ClassUsage
 import statistics.MetricsReport
 import java.io.File
@@ -32,7 +33,7 @@ private fun processProjectDir(projectPath: String, outputPath: String?) {
             appendTextWithOffset(chainsToPrettyText(report.inheritanceChains), 4)
             appendTextWithOffset(classInfoToPrettyText(report.classInfo), 4)
             appendTextWithOffset("ABC metric", 4)
-            appendTextWithOffset("A = ${abc.first}, B = ${abc.second}, C = ${abc.third}", 4)
+            appendTextWithOffset(abcToPrettyTest(abc, treeRoot.globalABC), 4)
         }
     }
 
@@ -88,6 +89,19 @@ private fun classInfoToPrettyText(infos: Set<ClassUsage>): String {
         } else {
             appendLine("No classes were found")
         }
+    }
+}
+
+private fun abcToPrettyTest(abc: Map<ClassDeclarationNode, ABCMetric>, rootABC: ABCMetric): String {
+    var sumABC = ABCMetric.empty
+    return buildString {
+        appendLine("global ABC: $rootABC")
+        abc.forEach { (klass, value) ->
+            appendLine("${klass.name}: $value")
+            sumABC += value
+        }
+        appendLine()
+        appendLine("ABC summary: $sumABC")
     }
 }
 

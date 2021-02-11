@@ -3,6 +3,7 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
 import simpleTree.Scope
+import statistics.ABCMetric
 
 abstract class SimpleTreeNode {
     abstract val name: String
@@ -27,10 +28,7 @@ class RootNode(
     override val name: String,
     override val scope: Scope
 ) : SimpleTreeNode() {
-    var assignmentsCount = 0
-    var branchesCount = 0
-    var conditionsCount = 0
-
+    var globalABC = ABCMetric.empty
     val packageName
         get() = children.firstOrNull { it is PackageNameNode }?.name ?: "DEFAULT"
 
@@ -53,9 +51,6 @@ class RootNode(
 
         result.children.addAll(this.children)
         result.children.addAll(other.children)
-        result.assignmentsCount = assignmentsCount + other.assignmentsCount
-        result.branchesCount = branchesCount + other.branchesCount
-        result.conditionsCount = conditionsCount + other.conditionsCount
 
         return result
     }
@@ -106,6 +101,8 @@ class ClassDeclarationNode(
     override val scope: Scope,
     val superclasses: MutableList<SimpleTreeNode>
 ) : SimpleTreeNode() {
+    var abcMetric = ABCMetric.empty
+
     override fun json(): JsonElement {
         return JsonObject().apply {
             add("type", JsonPrimitive("Class Declaration"))

@@ -1,7 +1,26 @@
 [
   {
     "package": "DEFAULT",
-    "ABC": "(1, 0, 0)",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 1, b \u003d 0, c \u003d 0"
+      },
+      {
+        "I": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "A": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "B": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "O": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "[anonymous object]": "a \u003d 0, b \u003d 0, c \u003d 0"
+      }
+    ],
     "chains": [
       [
         "A",
