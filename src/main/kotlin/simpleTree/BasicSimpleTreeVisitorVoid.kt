@@ -4,6 +4,7 @@ import ClassDeclarationNode
 import ImportListNode
 import ImportNode
 import ImportPackageNode
+import NodeGroup
 import OverrideFunctionNode
 import PackageNameNode
 import PropertyNode
@@ -49,6 +50,10 @@ open class BasicSimpleTreeVisitorVoid : BasicSimpleTreeVisitor<Unit>() {
     }
 
     override fun visitOverrideFunctionNode(node: OverrideFunctionNode) {
+        node.children.map { visitSimpleTreeNode(it) }
+    }
+
+    override fun visitNodeGroup(node: NodeGroup) {
         node.children.map { visitSimpleTreeNode(it) }
     }
 

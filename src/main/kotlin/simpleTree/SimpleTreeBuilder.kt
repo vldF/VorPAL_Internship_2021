@@ -4,6 +4,7 @@ import ClassDeclarationNode
 import ImportListNode
 import ImportNode
 import ImportPackageNode
+import NodeGroup
 import OverrideFunctionNode
 import PackageNameNode
 import PropertyNode
@@ -40,7 +41,9 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
 
         for (child in ctx.children) {
             val newNode = child.accept(this) ?: continue
-            block.children.add(newNode)
+            if (!(newNode is NodeGroup && newNode.children.isEmpty())) {
+                block.children.add(newNode)
+            }
         }
 
         callStack.removeLast()
@@ -59,9 +62,9 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
 
         val name = ctx.name ?: "no name"
 
-        val lastClassLikeDeclarationNodeScope = lastClassLikeScope
-        lastClassLikeDeclarationNodeScope?.scopeOwner?.children?.add(
-            OverrideFunctionNode(name, lastClassLikeDeclarationNodeScope)
+        val lastScopedDeclaration = lastScopedDeclaration
+        lastScopedDeclaration?.scopeOwner?.children?.add(
+            OverrideFunctionNode(name, lastScopedDeclaration)
         )
 
         return super.visitFunctionDeclaration(ctx)
@@ -71,7 +74,7 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         if (ctx == null) return super.visitClassMemberDeclarations(ctx)
 
         val propertiesNames = ctx.properties
-        val lastClassScope = lastClassLikeScope ?: return super.visitClassMemberDeclarations(ctx)
+        val lastClassScope = lastScopedDeclaration ?: return super.visitClassMemberDeclarations(ctx)
 
         lastClassScope.scopeOwner?.children?.addAll(propertiesNames.map { PropertyNode(it, lastClassScope) })
 
@@ -150,19 +153,30 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     }
 
     override fun aggregateResult(aggregate: SimpleTreeNode?, nextResult: SimpleTreeNode?): SimpleTreeNode? {
-        if (aggregate is ImportNode || aggregate is ImportPackageNode) {
+        if (nextResult == null) return aggregate
+        if (aggregate == null) return nextResult
+
+        return if (aggregate is ImportNode || aggregate is ImportPackageNode) {
             val importList = ImportListNode(callStack.last())
             importList.children.add(aggregate)
-            if (nextResult != null) {
-                importList.children.add(nextResult)
-            }
-            return importList
+            importList.children.add(nextResult)
+
+            importList
         } else if (aggregate is ImportListNode) {
-            if (nextResult != null) {
-                aggregate.children.add(nextResult)
-            }
+            aggregate.children.add(nextResult)
+
+            aggregate
+        } else if (aggregate is NodeGroup && nextResult is NodeGroup) {
+            NodeGroup(aggregate.scope, (aggregate.children + nextResult.children).toMutableList())
+        } else if (aggregate is NodeGroup || nextResult is NodeGroup){
+            val nodeGroup = setOf(aggregate, nextResult).first { it is NodeGroup }
+            val nonNodeGroup = (setOf(aggregate, nextResult) - nodeGroup).first()
+            nodeGroup.children.add(nonNodeGroup)
+
+            nodeGroup
+        } else {
+            NodeGroup(aggregate.scope, mutableListOf(aggregate, nextResult))
         }
-        return aggregate ?: nextResult
     }
 
     override fun visitKotlinFile(ctx: KotlinParser.KotlinFileContext?): SimpleTreeNode? {
@@ -179,7 +193,11 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         if (ctx == null) return null
         for (child in ctx.children) {
             val newNode = child.accept(this) ?: continue
-            rootNode.children.add(newNode)
+            if (newNode !is NodeGroup) {
+                rootNode.children.add(newNode)
+            } else {
+                rootNode.children.addAll(newNode.children)
+            }
         }
 
         return rootNode
@@ -260,6 +278,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
             ?.mapNotNull { it.propertyDeclaration()?.variableDeclaration()?.name }
             .orEmpty()
 
-    private val lastClassLikeScope
-        get() = callStack.findLast { it.scopeOwner is ClassDeclarationNode }
+    private val lastScopedDeclaration
+        get() = callStack.findLast { it.scopeOwner is ClassDeclarationNode || it.scopeOwner is SimpleBlockNode }
 }

@@ -1,0 +1,98 @@
+[
+  {
+    "type": "Root",
+    "name": "root",
+    "package": "DEFAULT",
+    "scope": [],
+    "children": [
+      {
+        "type": "simple block",
+        "scope": [],
+        "children": [
+          {
+            "type": "node group",
+            "children": [
+              {
+                "type": "simple block",
+                "scope": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "children": [
+                  {
+                    "type": "node group",
+                    "children": [
+                      {
+                        "type": "Class Declaration",
+                        "name": "A",
+                        "scope": [
+                          "A",
+                          "B",
+                          "C"
+                        ],
+                        "superclasses": [],
+                        "children": []
+                      },
+                      {
+                        "type": "Class Declaration",
+                        "name": "B",
+                        "scope": [
+                          "A",
+                          "B",
+                          "C"
+                        ],
+                        "superclasses": [
+                          "A"
+                        ],
+                        "children": []
+                      },
+                      {
+                        "type": "Class Declaration",
+                        "name": "C",
+                        "scope": [
+                          "A",
+                          "B",
+                          "C"
+                        ],
+                        "superclasses": [
+                          "B"
+                        ],
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "simple block",
+                "scope": [
+                  "D"
+                ],
+                "children": [
+                  {
+                    "type": "Class Declaration",
+                    "name": "D",
+                    "scope": [
+                      "D"
+                    ],
+                    "superclasses": [
+                      {
+                        "type": "unresolved class",
+                        "name": "C",
+                        "scope": [
+                          "D"
+                        ]
+                      }
+                    ],
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

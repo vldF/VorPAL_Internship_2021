@@ -1,0 +1,12 @@
+[
+  {
+    "package": "DEFAULT",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 1, b \u003d 1, c \u003d 1"
+      }
+    ],
+    "chains": [],
+    "classes usages": {}
+  }
+]

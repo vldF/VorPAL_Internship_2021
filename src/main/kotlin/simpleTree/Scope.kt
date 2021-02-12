@@ -41,4 +41,8 @@ class Scope(
 
     val fullName: String
         get() = (previousScope?.fullName ?: "") + "." + name
+
+    companion object {
+        val empty = Scope("empty scope")
+    }
 }

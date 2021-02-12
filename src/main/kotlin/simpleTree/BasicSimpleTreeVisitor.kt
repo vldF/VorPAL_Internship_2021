@@ -4,6 +4,7 @@ import ClassDeclarationNode
 import ImportListNode
 import ImportNode
 import ImportPackageNode
+import NodeGroup
 import OverrideFunctionNode
 import PackageNameNode
 import PropertyNode
@@ -25,6 +26,7 @@ abstract class BasicSimpleTreeVisitor<T> : AbstractSimpleTreeVisitor<T>() {
             is PackageNameNode -> visitPackageNameNode(node)
             is PropertyNode -> visitPropertyNode(node)
             is OverrideFunctionNode -> visitOverrideFunctionNode(node)
+            is NodeGroup -> visitNodeGroup(node)
 
             else -> throw IllegalArgumentException("unknown node type: ${node::class}")
         }
@@ -67,6 +69,10 @@ abstract class BasicSimpleTreeVisitor<T> : AbstractSimpleTreeVisitor<T>() {
     }
 
     override fun visitPropertyNode(node: PropertyNode): T {
+        return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
+    }
+
+    override fun visitNodeGroup(node: NodeGroup): T {
         return node.children.map { visitSimpleTreeNode(it) }.mergeResults()
     }
 

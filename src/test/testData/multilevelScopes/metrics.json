@@ -1,0 +1,42 @@
+[
+  {
+    "package": "DEFAULT",
+    "ABC": [
+      {
+        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "A": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "B": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "C": "a \u003d 0, b \u003d 0, c \u003d 0"
+      },
+      {
+        "D": "a \u003d 0, b \u003d 0, c \u003d 0"
+      }
+    ],
+    "chains": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "classes usages": {
+      "class node name": "D",
+      "overridens": 0,
+      "properties count": 0
+    }
+  }
+]

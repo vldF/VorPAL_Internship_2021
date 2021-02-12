@@ -4,6 +4,7 @@ import ClassDeclarationNode
 import ImportListNode
 import ImportNode
 import ImportPackageNode
+import NodeGroup
 import OverrideFunctionNode
 import PackageNameNode
 import PropertyNode
@@ -34,4 +35,6 @@ abstract class AbstractSimpleTreeVisitor<T> {
     abstract fun visitPropertyNode(node: PropertyNode): T
 
     abstract fun visitOverrideFunctionNode(node: OverrideFunctionNode): T
+
+    abstract fun visitNodeGroup(node: NodeGroup): T
 }

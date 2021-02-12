@@ -11,7 +11,7 @@ abstract class SimpleTreeNode {
 
     abstract fun json(): JsonElement
 
-    val children: MutableList<SimpleTreeNode> = mutableListOf()
+    open val children: MutableList<SimpleTreeNode> = mutableListOf()
 
     fun resolveAll() {
         for (child in children) {
@@ -221,13 +221,26 @@ class OverrideFunctionNode(
 class PropertyNode(
     override val name: String,
     override val scope: Scope
-
 ) : SimpleTreeNode() {
     override fun json(): JsonElement {
         return JsonObject().apply {
             add("type", JsonPrimitive("property"))
             add("name", JsonPrimitive(name))
             add("scope", scope.json)
+            add("children", children.toJson())
+        }
+    }
+}
+
+class NodeGroup(
+    override val scope: Scope,
+    override val children: MutableList<SimpleTreeNode>
+) : SimpleTreeNode() {
+    override val name: String = "nodes group"
+
+    override fun json(): JsonElement {
+        return JsonObject().apply {
+            add("type", JsonPrimitive("node group"))
             add("children", children.toJson())
         }
     }
