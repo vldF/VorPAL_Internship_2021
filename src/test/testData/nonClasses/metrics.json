@@ -1,50 +1,38 @@
 [
   {
     "package": "DEFAULT",
-    "ABC": [
-      {
-        "\u003cglobal\u003e": {
-          "assignments": 1,
-          "branches": 0,
-          "conditions": 0
-        }
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 1,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "I": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "I": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "A": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "A": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "B": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "B": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "O": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "O": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "[anonymous object]": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "[anonymous object]": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       }
-    ],
+    },
     "chains": [
       [
         "A",
@@ -63,31 +51,31 @@
         "[anonymous object]"
       ]
     ],
-    "classes usages": [
+    "classesUsages": [
       {
-        "class node name": "I",
+        "name": "I",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "A",
+        "name": "A",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "B",
+        "name": "B",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "O",
+        "name": "O",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "[anonymous object]",
+        "name": "[anonymous object]",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       }
     ]
   }

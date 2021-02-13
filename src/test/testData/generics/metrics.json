@@ -1,45 +1,39 @@
 [
   {
     "package": "DEFAULT",
-    "ABC": [
-      {
-        "\u003cglobal\u003e": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "G": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "G": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "C": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "C": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       }
-    ],
+    },
     "chains": [
       [
         "G",
         "C"
       ]
     ],
-    "classes usages": [
+    "classesUsages": [
       {
-        "class node name": "G",
+        "name": "G",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "C",
+        "name": "C",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       }
     ]
   }

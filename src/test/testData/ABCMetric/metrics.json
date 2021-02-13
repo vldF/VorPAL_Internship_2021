@@ -1,16 +1,14 @@
 [
   {
     "package": "DEFAULT",
-    "ABC": [
-      {
-        "\u003cglobal\u003e": {
-          "assignments": 6,
-          "branches": 5,
-          "conditions": 6
-        }
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 6,
+        "branches": 5,
+        "conditions": 6
       }
-    ],
+    },
     "chains": [],
-    "classes usages": []
+    "classesUsages": []
   }
 ]

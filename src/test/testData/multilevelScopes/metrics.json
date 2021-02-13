@@ -1,43 +1,33 @@
 [
   {
     "package": "DEFAULT",
-    "ABC": [
-      {
-        "\u003cglobal\u003e": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "A": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "A": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "B": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "B": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "C": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "C": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       },
-      {
-        "D": {
-          "assignments": 0,
-          "branches": 0,
-          "conditions": 0
-        }
+      "D": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
       }
-    ],
+    },
     "chains": [
       [
         "A",
@@ -53,26 +43,26 @@
         "D"
       ]
     ],
-    "classes usages": [
+    "classesUsages": [
       {
-        "class node name": "A",
+        "name": "A",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "B",
+        "name": "B",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "C",
+        "name": "C",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       },
       {
-        "class node name": "D",
+        "name": "D",
         "overrides": 0,
-        "properties count": 0
+        "properties": 0
       }
     ]
   }

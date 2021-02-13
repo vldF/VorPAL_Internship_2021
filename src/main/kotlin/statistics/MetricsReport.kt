@@ -29,12 +29,10 @@ class MetricsReport(
     fun dumpJson(): JsonObject {
         return JsonObject().apply {
             addProperty("package", packageName)
-            add("ABC", JsonArray().apply{
-                add(JsonObject().apply { add("<global>", treeRoot.globalABC.toJson())  })
+            add("ABC", JsonObject().apply {
+                add("<global>", treeRoot.globalABC.toJson())
                 abc.forEach { (k, v) ->
-                    add(JsonObject().apply {
-                        add(k.name, v.toJson())
-                    }) }
+                    add(k.name, v.toJson()) }
                 }
             )
             add("chains", Gson().toJsonTree(inheritanceChains.map { chain ->
@@ -42,12 +40,12 @@ class MetricsReport(
                     it.name
                 }
             }))
-            add("classes usages", JsonArray().apply {
+            add("classesUsages", JsonArray().apply {
                 classInfo.forEach {
                     add(JsonObject().apply {
-                        addProperty("class node name", it.classNode.name)
+                        addProperty("name", it.classNode.name)
                         addProperty("overrides", it.overrides)
-                        addProperty("properties count", it.propertiesCount)
+                        addProperty("properties", it.propertiesCount)
                     })
                 }
             })
