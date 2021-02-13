@@ -3,13 +3,25 @@
     "package": "DEFAULT",
     "ABC": [
       {
-        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "\u003cglobal\u003e": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "G": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "G": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "C": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "C": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       }
     ],
     "chains": [

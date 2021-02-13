@@ -3,10 +3,18 @@
     "package": "fourth",
     "ABC": [
       {
-        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "\u003cglobal\u003e": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "F": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "F": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       }
     ],
     "chains": [
@@ -32,10 +40,18 @@
     "package": "bar",
     "ABC": [
       {
-        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "\u003cglobal\u003e": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "T": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "T": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       }
     ],
     "chains": [
@@ -61,19 +77,39 @@
     "package": "foo",
     "ABC": [
       {
-        "\u003cglobal\u003e": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "\u003cglobal\u003e": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "X": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "X": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "A": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "A": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "B": "a \u003d 0, b \u003d 0, c \u003d 0"
+        "B": {
+          "assignments": 0,
+          "branches": 0,
+          "conditions": 0
+        }
       },
       {
-        "C": "a \u003d 1, b \u003d 1, c \u003d 0"
+        "C": {
+          "assignments": 1,
+          "branches": 1,
+          "conditions": 0
+        }
       }
     ],
     "chains": [

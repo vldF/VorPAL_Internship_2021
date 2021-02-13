@@ -1,5 +1,7 @@
 package statistics
 
+import com.google.gson.JsonObject
+
 class ABCMetric (
     var assignments: Int = 0,
     var branches: Int = 0,
@@ -17,6 +19,14 @@ class ABCMetric (
         }
 
         val empty = ABCMetric()
+    }
+
+    fun toJson(): JsonObject {
+        return JsonObject().apply {
+            addProperty("assignments", assignments)
+            addProperty("branches", branches)
+            addProperty("conditions", conditions)
+        }
     }
 
     override fun toString(): String {

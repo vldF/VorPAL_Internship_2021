@@ -30,10 +30,10 @@ class MetricsReport(
         return JsonObject().apply {
             addProperty("package", packageName)
             add("ABC", JsonArray().apply{
-                add(JsonObject().apply { addProperty("<global>", treeRoot.globalABC.toString())  })
+                add(JsonObject().apply { add("<global>", treeRoot.globalABC.toJson())  })
                 abc.forEach { (k, v) ->
                     add(JsonObject().apply {
-                        addProperty(k.name, v.toString())
+                        add(k.name, v.toJson())
                     }) }
                 }
             )

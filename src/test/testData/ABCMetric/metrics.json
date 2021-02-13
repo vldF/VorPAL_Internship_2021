@@ -3,7 +3,11 @@
     "package": "DEFAULT",
     "ABC": [
       {
-        "\u003cglobal\u003e": "a \u003d 6, b \u003d 5, c \u003d 6"
+        "\u003cglobal\u003e": {
+          "assignments": 6,
+          "branches": 5,
+          "conditions": 6
+        }
       }
     ],
     "chains": [],
