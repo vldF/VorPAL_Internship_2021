@@ -83,10 +83,9 @@ class RootNode(
 }
 
 class SimpleBlockNode(
-    override val scope: Scope
+    override val scope: Scope,
+    override val name: String
 ) : SimpleTreeNode() {
-    override val name = ""
-
     override fun json(): JsonElement {
         return JsonObject().apply {
             add("type", JsonPrimitive("simple block"))
@@ -126,12 +125,6 @@ class ClassDeclarationNode(
             superclasses[i] = resolved
         }
     }
-
-    val resolvedSuperclasses
-        get() = superclasses.filterIsInstance<ClassDeclarationNode>()
-
-
-
 }
 
 class UnresolvedClass(

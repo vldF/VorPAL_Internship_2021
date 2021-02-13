@@ -158,7 +158,18 @@
               "C",
               "X"
             ],
-            "children": []
+            "children": [
+              {
+                "type": "simple block",
+                "scope": [
+                  "A",
+                  "B",
+                  "C",
+                  "X"
+                ],
+                "children": []
+              }
+            ]
           }
         ]
       }

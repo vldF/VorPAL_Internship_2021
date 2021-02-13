@@ -10,49 +10,44 @@
         "scope": [],
         "children": [
           {
-            "type": "node group",
-            "children": [
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              },
-              {
-                "type": "simple block",
-                "scope": [],
-                "children": []
-              }
-            ]
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
+          },
+          {
+            "type": "simple block",
+            "scope": [],
+            "children": []
           }
         ]
       }

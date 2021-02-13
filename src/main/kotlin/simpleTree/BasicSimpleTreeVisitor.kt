@@ -26,7 +26,11 @@ abstract class BasicSimpleTreeVisitor<T> : AbstractSimpleTreeVisitor<T>() {
             is PackageNameNode -> visitPackageNameNode(node)
             is PropertyNode -> visitPropertyNode(node)
             is OverrideFunctionNode -> visitOverrideFunctionNode(node)
-            is NodeGroup -> visitNodeGroup(node)
+            is NodeGroup -> {
+                System.err.println("Node group in simple tree. Visiting will be OK, but sometimes it's wired")
+                System.err.println(node.json().toString())
+                visitNodeGroup(node)
+            }
 
             else -> throw IllegalArgumentException("unknown node type: ${node::class}")
         }

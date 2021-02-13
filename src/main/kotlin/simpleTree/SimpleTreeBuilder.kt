@@ -36,12 +36,14 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
 
         val newScope = Scope("block[${ctx.hashCode()}]", callStack.last())
         callStack.add(newScope)
-        val block = SimpleBlockNode(newScope)
+        val block = SimpleBlockNode(newScope, "")
         newScope.scopeOwner = block
 
         for (child in ctx.children) {
             val newNode = child.accept(this) ?: continue
-            if (!(newNode is NodeGroup && newNode.children.isEmpty())) {
+            if (newNode is NodeGroup) {
+                block.children.addAll(newNode.children)
+            } else {
                 block.children.add(newNode)
             }
         }
@@ -63,9 +65,16 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         val name = ctx.name ?: "no name"
 
         val lastScopedDeclaration = lastScopedDeclaration
-        lastScopedDeclaration?.scopeOwner?.children?.add(
-            OverrideFunctionNode(name, lastScopedDeclaration)
-        )
+        if (lastScopedDeclaration != null) {
+            val functionNode = OverrideFunctionNode(name, lastScopedDeclaration)
+
+            val child =  super.visitFunctionDeclaration(ctx)
+            if (child != null) {
+                functionNode.children.add(child)
+            }
+
+            return functionNode
+        }
 
         return super.visitFunctionDeclaration(ctx)
     }
@@ -107,11 +116,16 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         currentScope.declarations.add(declarationNode)
         newScope.scopeOwner = declarationNode
 
-        // getting ABC
+        // getting ABC top-name non-classes declarations' ABC
         // yeah, this is wrong place to get it
         declarationNode.abcMetric = collectClassABC(ctx)
 
-        visitClassLikeDefaults(ctx)
+        val resultVisitDeclaration = visitClassLikeDefaults(ctx)
+        if (resultVisitDeclaration is NodeGroup) {
+            declarationNode.children.addAll(resultVisitDeclaration.children)
+        } else if (resultVisitDeclaration != null) {
+            declarationNode.children.add(resultVisitDeclaration)
+        }
 
         callStack.removeLast()
         return declarationNode
@@ -138,8 +152,8 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         }
     }
 
-    private fun visitClassLikeDefaults(ctx: ParserRuleContext) {
-        when (ctx) {
+    private fun visitClassLikeDefaults(ctx: ParserRuleContext): SimpleTreeNode? {
+        return when (ctx) {
             is KotlinParser.ClassDeclarationContext -> {
                 super.visitClassDeclaration(ctx)
             }
@@ -149,6 +163,7 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
             is KotlinParser.ObjectLiteralContext -> {
                 super.visitObjectLiteral(ctx)
             }
+            else -> visit(ctx)
         }
     }
 
