@@ -22,7 +22,7 @@
     ],
     "classes usages": {
       "class node name": "F",
-      "overridens": 0,
+      "overrides": 0,
       "properties count": 0
     }
   },
@@ -49,7 +49,7 @@
     ],
     "classes usages": {
       "class node name": "T",
-      "overridens": 0,
+      "overrides": 0,
       "properties count": 0
     }
   },
@@ -84,7 +84,7 @@
     ],
     "classes usages": {
       "class node name": "C",
-      "overridens": 1,
+      "overrides": 1,
       "properties count": 1
     }
   }

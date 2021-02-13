@@ -1,9 +1,9 @@
 package statistics
 
-import ClassDeclarationNode
-import OverrideFunctionNode
-import PropertyNode
 import simpleTree.BasicSimpleTreeVisitor
+import simpleTree.ClassDeclarationNode
+import simpleTree.OverrideFunctionNode
+import simpleTree.PropertyNode
 
 class ClassInfoCollector : BasicSimpleTreeVisitor<Set<ClassUsage>>() {
     override fun visitClassDeclarationNode(node: ClassDeclarationNode): Set<ClassUsage> {
@@ -19,6 +19,6 @@ class ClassInfoCollector : BasicSimpleTreeVisitor<Set<ClassUsage>>() {
 
 data class ClassUsage(
     val classNode: ClassDeclarationNode,
-    val overridens: Int,
+    val overrides: Int,
     val propertiesCount: Int
 )

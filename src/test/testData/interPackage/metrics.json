@@ -20,7 +20,7 @@
     ],
     "classes usages": {
       "class node name": "B",
-      "overridens": 0,
+      "overrides": 0,
       "properties count": 0
     }
   },
@@ -56,7 +56,7 @@
     ],
     "classes usages": {
       "class node name": "D",
-      "overridens": 0,
+      "overrides": 0,
       "properties count": 0
     }
   }

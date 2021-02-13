@@ -1,18 +1,5 @@
 package simpleTree
 
-import ClassDeclarationNode
-import ImportListNode
-import ImportNode
-import ImportPackageNode
-import NodeGroup
-import OverrideFunctionNode
-import PackageNameNode
-import PropertyNode
-import RootNode
-import SimpleBlockNode
-import SimpleTreeNode
-import UnresolvedClass
-
 abstract class AbstractSimpleTreeVisitor<T> {
     abstract fun visitSimpleTreeNode(node: SimpleTreeNode): T
 

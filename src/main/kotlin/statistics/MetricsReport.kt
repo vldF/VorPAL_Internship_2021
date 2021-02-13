@@ -1,10 +1,10 @@
 package statistics
 
-import ClassDeclarationNode
-import RootNode
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import simpleTree.ClassDeclarationNode
+import simpleTree.RootNode
 
 class MetricsReport(
     private val treeRoot: RootNode
@@ -45,7 +45,7 @@ class MetricsReport(
             add("classes usages", JsonObject().apply {
                 classInfo.forEach {
                     addProperty("class node name", it.classNode.name)
-                    addProperty("overridens", it.overridens)
+                    addProperty("overrides", it.overrides)
                     addProperty("properties count", it.propertiesCount)
                 }
             })

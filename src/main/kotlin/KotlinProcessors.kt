@@ -1,10 +1,48 @@
+import com.google.gson.GsonBuilder
 import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.CommonTokenStream
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinLexer
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
+import simpleTree.RootNode
 import simpleTree.SimpleTreeBuilder
+import statistics.MetricsReport
+import utils.abcToPrettyTest
+import utils.appendTextWithOffset
+import utils.chainsToPrettyText
+import utils.classInfoToPrettyText
 import java.io.File
 import java.io.FileNotFoundException
+
+fun processProjectDir(projectPath: String, outputPath: String?) {
+    val directory = File(projectPath)
+    val tree = processAllFilesInDirectory(directory)
+    tree.doAllImports()
+    tree.resolveAllTrees()
+
+    val metrics = mutableListOf<MetricsReport>()
+    val reportText = buildString {
+        for ((packageName, treeRoot) in tree) {
+            val report = MetricsReport(treeRoot)
+            metrics.add(report)
+            val abc = report.abc
+            appendTextWithOffset("package: $packageName", 0)
+            appendTextWithOffset(chainsToPrettyText(report.inheritanceChains), 4)
+            appendTextWithOffset(classInfoToPrettyText(report.classInfo), 4)
+            appendTextWithOffset("ABC metric", 4)
+            appendTextWithOffset(abcToPrettyTest(abc, treeRoot.globalABC), 4)
+        }
+    }
+
+    print(reportText)
+
+    if (outputPath != null) {
+        val gson = GsonBuilder().setPrettyPrinting().create()
+        File("$outputPath/report.txt").writeText(reportText)
+        val jsonReport = gson.toJson(MetricsReport.getJsonForMetricsList(metrics))
+        File("$outputPath/report.json").writeText(jsonReport)
+    }
+}
+
 
 fun processAllFilesInDirectory(directory: File): MutableMap<String, RootNode> {
     if (!directory.isDirectory) throw FileNotFoundException("this directory doesn't exist: $directory")
@@ -45,7 +83,7 @@ private fun processDirectory(dir: File): Map<String, RootNode> {
     return result
 }
 
-fun processFile(file: File): RootNode? {
+private fun processFile(file: File): RootNode? {
     val content = file.readText()
 
     val iStream = CharStreams.fromString(content)
@@ -60,7 +98,6 @@ fun processFile(file: File): RootNode? {
 
 private fun Map<String, RootNode>.merge(other: Map<String, RootNode>): MutableMap<String, RootNode> {
     val result = mutableMapOf<String, RootNode>()
-    // todo: refactor it
     for ((k, v) in this) {
         if (other.containsKey(k)) {
             val otherValue = other[k]!!

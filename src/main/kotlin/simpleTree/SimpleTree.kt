@@ -1,8 +1,9 @@
+package simpleTree
+
 import com.google.gson.JsonArray
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
-import simpleTree.Scope
 import statistics.ABCMetric
 
 abstract class SimpleTreeNode {

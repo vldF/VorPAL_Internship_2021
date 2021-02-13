@@ -1,17 +1,5 @@
 package simpleTree
 
-import ClassDeclarationNode
-import ImportListNode
-import ImportNode
-import ImportPackageNode
-import NodeGroup
-import OverrideFunctionNode
-import PackageNameNode
-import PropertyNode
-import RootNode
-import SimpleBlockNode
-import UnresolvedClass
-
 open class BasicSimpleTreeVisitorVoid : BasicSimpleTreeVisitor<Unit>() {
     override fun visitRootNode(node: RootNode) {
         node.children.map { visitSimpleTreeNode(it) }

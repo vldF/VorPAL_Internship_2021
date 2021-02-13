@@ -1,7 +1,5 @@
 package simpleTree
 
-import ClassDeclarationNode
-import SimpleTreeNode
 import com.google.gson.JsonArray
 
 class Scope(
@@ -39,10 +37,6 @@ class Scope(
         return "scope[$fullName]"
     }
 
-    val fullName: String
+    private val fullName: String
         get() = (previousScope?.fullName ?: "") + "." + name
-
-    companion object {
-        val empty = Scope("empty scope")
-    }
 }

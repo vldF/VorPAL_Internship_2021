@@ -1,17 +1,5 @@
 package simpleTree
 
-import ClassDeclarationNode
-import ImportListNode
-import ImportNode
-import ImportPackageNode
-import NodeGroup
-import OverrideFunctionNode
-import PackageNameNode
-import PropertyNode
-import RootNode
-import SimpleBlockNode
-import SimpleTreeNode
-import UnresolvedClass
 import org.antlr.v4.runtime.ParserRuleContext
 import org.antlr.v4.runtime.tree.TerminalNode
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
@@ -23,6 +11,29 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     private val callStack = mutableListOf<Scope>()
     private val abcCollector = ABCCollector()
 
+    override fun visitKotlinFile(ctx: KotlinParser.KotlinFileContext?): SimpleTreeNode? {
+        val rootScope = Scope("global")
+        callStack.add(rootScope)
+
+        val rootNode = RootNode("root", rootScope)
+        rootScope.scopeOwner = rootNode
+
+        // getting ABC for non-class functions, declarations, etc.
+        rootNode.globalABC = abcCollector.visitKotlinFile(ctx)
+
+        if (ctx == null) return null
+        for (child in ctx.children) {
+            val newNode = child.accept(this) ?: continue
+            if (newNode !is NodeGroup) {
+                rootNode.children.add(newNode)
+            } else {
+                rootNode.children.addAll(newNode.children)
+            }
+        }
+
+        return rootNode
+    }
+
     override fun visitClassDeclaration(ctx: KotlinParser.ClassDeclarationContext?): SimpleTreeNode? {
         return visitClassLikeDeclaration(ctx)
     }
@@ -31,63 +42,8 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         return visitClassLikeDeclaration(ctx)
     }
 
-    override fun visitBlock(ctx: KotlinParser.BlockContext?): SimpleTreeNode? {
-        if (ctx == null) return null
-
-        val newScope = Scope("block[${ctx.hashCode()}]", callStack.last())
-        callStack.add(newScope)
-        val block = SimpleBlockNode(newScope, "")
-        newScope.scopeOwner = block
-
-        for (child in ctx.children) {
-            val newNode = child.accept(this) ?: continue
-            if (newNode is NodeGroup) {
-                block.children.addAll(newNode.children)
-            } else {
-                block.children.add(newNode)
-            }
-        }
-
-        callStack.removeLast()
-        return block
-    }
-
     override fun visitObjectLiteral(ctx: KotlinParser.ObjectLiteralContext?): SimpleTreeNode? {
         return visitClassLikeDeclaration(ctx)
-    }
-
-    override fun visitFunctionDeclaration(ctx: KotlinParser.FunctionDeclarationContext?): SimpleTreeNode? {
-        if (ctx == null) return super.visitFunctionDeclaration(ctx)
-
-        val modifiers = ctx.modifiers
-        if ("override" !in modifiers) return super.visitFunctionDeclaration(ctx)
-
-        val name = ctx.name ?: "no name"
-
-        val lastScopedDeclaration = lastScopedDeclaration
-        if (lastScopedDeclaration != null) {
-            val functionNode = OverrideFunctionNode(name, lastScopedDeclaration)
-
-            val child =  super.visitFunctionDeclaration(ctx)
-            if (child != null) {
-                functionNode.children.add(child)
-            }
-
-            return functionNode
-        }
-
-        return super.visitFunctionDeclaration(ctx)
-    }
-
-    override fun visitClassMemberDeclarations(ctx: KotlinParser.ClassMemberDeclarationsContext?): SimpleTreeNode? {
-        if (ctx == null) return super.visitClassMemberDeclarations(ctx)
-
-        val propertiesNames = ctx.properties
-        val lastClassScope = lastScopedDeclaration ?: return super.visitClassMemberDeclarations(ctx)
-
-        lastClassScope.scopeOwner?.children?.addAll(propertiesNames.map { PropertyNode(it, lastClassScope) })
-
-        return super.visitClassMemberDeclarations(ctx)
     }
 
     private fun visitClassLikeDeclaration(ctx: ParserRuleContext?): SimpleTreeNode? {
@@ -132,24 +88,22 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
     }
 
     private fun collectClassABC(ctx: ParserRuleContext): ABCMetric {
-        return when (ctx) {
+        val classBody = when (ctx) {
             is KotlinParser.ClassDeclarationContext -> {
-                ctx.classBody()?.let {
-                    abcCollector.visit(ctx.classBody())
-                } ?: ABCMetric.empty
+                ctx.classBody()
             }
             is KotlinParser.ObjectDeclarationContext -> {
-                ctx.classBody()?.let {
-                    abcCollector.visit(ctx.classBody())
-                } ?: ABCMetric.empty
+                ctx.classBody()
             }
             is KotlinParser.ObjectLiteralContext -> {
-                ctx.classBody()?.let {
-                    abcCollector.visit(ctx.classBody())
-                } ?: ABCMetric.empty
+                ctx.classBody()
             }
             else -> throw IllegalStateException()
         }
+
+        return classBody?.let {
+            abcCollector.visit(it)
+        } ?: ABCMetric.empty
     }
 
     private fun visitClassLikeDefaults(ctx: ParserRuleContext): SimpleTreeNode? {
@@ -165,6 +119,84 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
             }
             else -> visit(ctx)
         }
+    }
+
+    override fun visitBlock(ctx: KotlinParser.BlockContext?): SimpleTreeNode? {
+        if (ctx == null) return null
+
+        val newScope = Scope("block[${ctx.hashCode()}]", callStack.last())
+        callStack.add(newScope)
+        val block = SimpleBlockNode(newScope, "")
+        newScope.scopeOwner = block
+
+        for (child in ctx.children) {
+            val newNode = child.accept(this) ?: continue
+            if (newNode is NodeGroup) {
+                block.children.addAll(newNode.children)
+            } else {
+                block.children.add(newNode)
+            }
+        }
+
+        callStack.removeLast()
+        return block
+    }
+
+    override fun visitFunctionDeclaration(ctx: KotlinParser.FunctionDeclarationContext?): SimpleTreeNode? {
+        if (ctx == null) return super.visitFunctionDeclaration(ctx)
+
+        val modifiers = ctx.modifiers
+        if ("override" !in modifiers) return super.visitFunctionDeclaration(ctx)
+
+        val name = ctx.name ?: "no name"
+
+        val lastScopedDeclaration = lastScopedDeclaration
+        if (lastScopedDeclaration != null) {
+            val functionNode = OverrideFunctionNode(name, lastScopedDeclaration)
+
+            val child =  super.visitFunctionDeclaration(ctx)
+            if (child != null) {
+                functionNode.children.add(child)
+            }
+
+            return functionNode
+        }
+
+        return super.visitFunctionDeclaration(ctx)
+    }
+
+    override fun visitClassMemberDeclarations(ctx: KotlinParser.ClassMemberDeclarationsContext?): SimpleTreeNode? {
+        if (ctx == null) return super.visitClassMemberDeclarations(ctx)
+
+        val propertiesNames = ctx.properties
+        val lastClassScope = lastScopedDeclaration ?: return super.visitClassMemberDeclarations(ctx)
+
+        lastClassScope.scopeOwner?.children?.addAll(propertiesNames.map { PropertyNode(it, lastClassScope) })
+
+        return super.visitClassMemberDeclarations(ctx)
+    }
+
+    override fun visitImportHeader(ctx: KotlinParser.ImportHeaderContext?): SimpleTreeNode? {
+        if (ctx == null) return null
+
+        return if (ctx.MULT() != null) {
+            // this is import *
+            val packageName = ctx.identifier().text
+            ImportPackageNode(packageName, callStack.last())
+        } else {
+            // this is package import
+            val fullImportName = ctx.identifier().text
+            val fullNameSplit = fullImportName.split(".")
+            val importName = fullNameSplit.last()
+            val packageName = fullImportName.removeSuffix(".$importName")
+
+            ImportNode(importName, callStack.last(), packageName)
+        }
+    }
+
+    override fun visitPackageHeader(ctx: KotlinParser.PackageHeaderContext?): SimpleTreeNode? {
+        val name = ctx?.identifier()?.text ?: return null
+        return PackageNameNode(name, callStack.last())
     }
 
     override fun aggregateResult(aggregate: SimpleTreeNode?, nextResult: SimpleTreeNode?): SimpleTreeNode? {
@@ -192,53 +224,6 @@ class SimpleTreeBuilder : KotlinParserBaseVisitor<SimpleTreeNode?>() {
         } else {
             NodeGroup(aggregate.scope, mutableListOf(aggregate, nextResult))
         }
-    }
-
-    override fun visitKotlinFile(ctx: KotlinParser.KotlinFileContext?): SimpleTreeNode? {
-        val rootScope = Scope("global")
-        callStack.add(rootScope)
-
-        val rootNode = RootNode("root", rootScope)
-        rootScope.scopeOwner = rootNode
-
-        // getting ABC for non-class functions, declarations, etc.
-        val globalABC = abcCollector.visitKotlinFile(ctx)
-        rootNode.globalABC = globalABC
-
-        if (ctx == null) return null
-        for (child in ctx.children) {
-            val newNode = child.accept(this) ?: continue
-            if (newNode !is NodeGroup) {
-                rootNode.children.add(newNode)
-            } else {
-                rootNode.children.addAll(newNode.children)
-            }
-        }
-
-        return rootNode
-    }
-
-    override fun visitImportHeader(ctx: KotlinParser.ImportHeaderContext?): SimpleTreeNode? {
-        if (ctx == null) return null
-
-        return if (ctx.MULT() != null) {
-            // this is import *
-            val packageName = ctx.identifier().text
-            ImportPackageNode(packageName, callStack.last())
-        } else {
-            // this is concrete import
-            val fullImportName = ctx.identifier().text
-            val fullNameSplit = fullImportName.split(".")
-            val importName = fullNameSplit.last()
-            val packageName = fullImportName.removeSuffix(".$importName")
-
-            ImportNode(importName, callStack.last(), packageName)
-        }
-    }
-
-    override fun visitPackageHeader(ctx: KotlinParser.PackageHeaderContext?): SimpleTreeNode? {
-        val name = ctx?.identifier()?.text ?: return null
-        return PackageNameNode(name, callStack.last())
     }
 
     private val ParserRuleContext.superclassesNames: List<String>
