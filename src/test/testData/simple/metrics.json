@@ -20,11 +20,13 @@
         "F"
       ]
     ],
-    "classes usages": {
-      "class node name": "F",
-      "overrides": 0,
-      "properties count": 0
-    }
+    "classes usages": [
+      {
+        "class node name": "F",
+        "overrides": 0,
+        "properties count": 0
+      }
+    ]
   },
   {
     "package": "bar",
@@ -47,11 +49,13 @@
         "T"
       ]
     ],
-    "classes usages": {
-      "class node name": "T",
-      "overrides": 0,
-      "properties count": 0
-    }
+    "classes usages": [
+      {
+        "class node name": "T",
+        "overrides": 0,
+        "properties count": 0
+      }
+    ]
   },
   {
     "package": "foo",
@@ -82,10 +86,27 @@
         "C"
       ]
     ],
-    "classes usages": {
-      "class node name": "C",
-      "overrides": 1,
-      "properties count": 1
-    }
+    "classes usages": [
+      {
+        "class node name": "X",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "A",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "B",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "C",
+        "overrides": 1,
+        "properties count": 1
+      }
+    ]
   }
 ]

@@ -18,10 +18,17 @@
         "C"
       ]
     ],
-    "classes usages": {
-      "class node name": "C",
-      "overrides": 0,
-      "properties count": 0
-    }
+    "classes usages": [
+      {
+        "class node name": "G",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "C",
+        "overrides": 0,
+        "properties count": 0
+      }
+    ]
   }
 ]

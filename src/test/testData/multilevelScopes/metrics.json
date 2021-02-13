@@ -33,10 +33,27 @@
         "D"
       ]
     ],
-    "classes usages": {
-      "class node name": "D",
-      "overrides": 0,
-      "properties count": 0
-    }
+    "classes usages": [
+      {
+        "class node name": "A",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "B",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "C",
+        "overrides": 0,
+        "properties count": 0
+      },
+      {
+        "class node name": "D",
+        "overrides": 0,
+        "properties count": 0
+      }
+    ]
   }
 ]

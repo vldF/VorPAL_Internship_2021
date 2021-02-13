@@ -42,11 +42,13 @@ class MetricsReport(
                     it.name
                 }
             }))
-            add("classes usages", JsonObject().apply {
+            add("classes usages", JsonArray().apply {
                 classInfo.forEach {
-                    addProperty("class node name", it.classNode.name)
-                    addProperty("overrides", it.overrides)
-                    addProperty("properties count", it.propertiesCount)
+                    add(JsonObject().apply {
+                        addProperty("class node name", it.classNode.name)
+                        addProperty("overrides", it.overrides)
+                        addProperty("properties count", it.propertiesCount)
+                    })
                 }
             })
         }
