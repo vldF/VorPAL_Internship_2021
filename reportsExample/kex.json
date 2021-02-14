@@ -1,0 +1,7197 @@
+[
+  {
+    "package": "org.jetbrains.research.kex.smt.z3",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3SolverTest": {
+        "assignments": 43,
+        "branches": 82,
+        "conditions": 6
+      },
+      "Z3Solver": {
+        "assignments": 48,
+        "branches": 144,
+        "conditions": 9
+      },
+      "Z3Unlogic": {
+        "assignments": 17,
+        "branches": 99,
+        "conditions": 26
+      },
+      "[anonymous object]": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 4
+      },
+      "Z3Tactics": {
+        "assignments": 0,
+        "branches": 8,
+        "conditions": 1
+      },
+      "Z3Tactic": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3Params": {
+        "assignments": 1,
+        "branches": 14,
+        "conditions": 3
+      },
+      "Z3Param": {
+        "assignments": 2,
+        "branches": 9,
+        "conditions": 2
+      },
+      "Value": {
+        "assignments": 0,
+        "branches": 6,
+        "conditions": 5
+      },
+      "Z3SMTExpr": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3SMTMemory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3SMTExprFactory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3SMTContext": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3SMTConverter": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Z3Engine": {
+        "assignments": 33,
+        "branches": 205,
+        "conditions": 71
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "Z3SolverTest"
+      ],
+      [
+        "AbstractSMTSolver",
+        "Z3Solver"
+      ],
+      [
+        "Converter",
+        "[anonymous object]"
+      ],
+      [
+        "ArrayList",
+        "Z3Tactics"
+      ],
+      [
+        "Converter",
+        "[anonymous object]"
+      ],
+      [
+        "ArrayList",
+        "Z3Params"
+      ],
+      [
+        "Value",
+        "BoolValue"
+      ],
+      [
+        "Value",
+        "IntValue"
+      ],
+      [
+        "Value",
+        "DoubleValue"
+      ],
+      [
+        "Value",
+        "StringValue"
+      ],
+      [
+        "SMTEngine",
+        "Z3Engine"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Z3SolverTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3Solver",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "Z3Unlogic",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "Z3Tactics",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3Tactic",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "Z3Params",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3Param",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "IntValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "DoubleValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StringValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Value",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3SMTExpr",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3SMTMemory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3SMTExprFactory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3SMTContext",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3SMTConverter",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Z3Engine",
+        "overrides": 53,
+        "properties": 8
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 3.35,
+      "properties": 0.45
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.test",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Icfpc2018Test": {
+        "assignments": 25,
+        "branches": 59,
+        "conditions": 18
+      },
+      "Intrinsics": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ObjectTests": {
+        "assignments": 12,
+        "branches": 21,
+        "conditions": 6
+      },
+      "AnnotatedMethodsThere": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 3
+      },
+      "NotAnnotatedMethods": {
+        "assignments": 7,
+        "branches": 18,
+        "conditions": 19
+      },
+      "ThatClassContainsHighQualityCodeToProf": {
+        "assignments": 6,
+        "branches": 10,
+        "conditions": 3
+      },
+      "ArrayTests": {
+        "assignments": 4,
+        "branches": 8,
+        "conditions": 4
+      },
+      "ArrayLongTests": {
+        "assignments": 2,
+        "branches": 15,
+        "conditions": 13
+      },
+      "BasicTests": {
+        "assignments": 20,
+        "branches": 43,
+        "conditions": 28
+      },
+      "LoopTests": {
+        "assignments": 26,
+        "branches": 26,
+        "conditions": 18
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "ZipWriter",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Results",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Result",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Solution",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RunMode",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Command",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Model",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "State",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "System",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Trace",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Icfpc2018Test",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Intrinsics",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Point",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Line",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DoublePoint",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ObjectTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AnnotatedMethodsThere",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NotAnnotatedMethods",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ThatClassContainsHighQualityCodeToProf",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ArrayTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ArrayLongTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BasicTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LoopTests",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.043478260869565216
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.test.generation",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AbstractClassTests": {
+        "assignments": 0,
+        "branches": 7,
+        "conditions": 5
+      },
+      "BasicGenerationTests": {
+        "assignments": 2,
+        "branches": 11,
+        "conditions": 7
+      },
+      "ObjectGenerationTests": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 4
+      }
+    },
+    "chains": [
+      [
+        "AbstractClass",
+        "Impl"
+      ],
+      [
+        "AbstractClass",
+        "SecondImpl"
+      ],
+      [
+        "AbstractClass",
+        "ThirdImpl"
+      ],
+      [
+        "Interface",
+        "InterfaceImpl"
+      ],
+      [
+        "AbstractClass",
+        "ACAndInterface"
+      ],
+      [
+        "Interface",
+        "ACAndInterface"
+      ],
+      [
+        "Point",
+        "Point4"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "AbstractClass",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Impl",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SecondImpl",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ThirdImpl",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Interface",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "InterfaceImpl",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ACAndInterface",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "AbstractClassTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Point",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Point4",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Line",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "DoublePoint",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BasicGenerationTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Point",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Line",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ObjectGenerationTests",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.375,
+      "properties": 0.125
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.test.debug",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BasicTests": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 3
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "Point",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BasicTests",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.0
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InheritanceInfoProcessor": {
+        "assignments": 13,
+        "branches": 39,
+        "conditions": 6
+      },
+      "KexProcessor": {
+        "assignments": 3,
+        "branches": 9,
+        "conditions": 2
+      },
+      "BaseType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InheritorOf": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InheritanceInfo": {
+        "assignments": 0,
+        "branches": 8,
+        "conditions": 1
+      },
+      "Inheritor": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexTest": {
+        "assignments": 10,
+        "branches": 22,
+        "conditions": 1
+      },
+      "KexRunnerTest": {
+        "assignments": 31,
+        "branches": 81,
+        "conditions": 14
+      },
+      "BasicLongTest": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "ArrayTest": {
+        "assignments": 3,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ObjectTest": {
+        "assignments": 2,
+        "branches": 2,
+        "conditions": 0
+      },
+      "BasicTest": {
+        "assignments": 3,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ArrayLongTest": {
+        "assignments": 3,
+        "branches": 4,
+        "conditions": 0
+      },
+      "Kex": {
+        "assignments": 46,
+        "branches": 134,
+        "conditions": 18
+      },
+      "ExecutionContext": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "AbstractProcessor",
+        "KexProcessor",
+        "InheritanceInfoProcessor"
+      ],
+      [
+        "KexProcessor",
+        "InheritanceInfoProcessor"
+      ],
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "BasicLongTest"
+      ],
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "ArrayTest"
+      ],
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "ObjectTest"
+      ],
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "BasicTest"
+      ],
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "ArrayLongTest"
+      ],
+      [
+        "KexRunnerTest",
+        "BasicLongTest"
+      ],
+      [
+        "KexRunnerTest",
+        "ArrayTest"
+      ],
+      [
+        "KexRunnerTest",
+        "ObjectTest"
+      ],
+      [
+        "KexRunnerTest",
+        "BasicTest"
+      ],
+      [
+        "KexRunnerTest",
+        "ArrayLongTest"
+      ],
+      [
+        "AnalysisLevel",
+        "PACKAGE"
+      ],
+      [
+        "AnalysisLevel",
+        "CLASS"
+      ],
+      [
+        "AnalysisLevel",
+        "METHOD"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "InheritanceInfoProcessor",
+        "overrides": 1,
+        "properties": 4
+      },
+      {
+        "name": "KexProcessor",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "BaseType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InheritorOf",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InheritanceInfo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Inheritor",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KexTest",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "KexRunnerTest",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "BasicLongTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ArrayTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ObjectTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BasicTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ArrayLongTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Mode",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "PACKAGE",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CLASS",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "METHOD",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AnalysisLevel",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Kex",
+        "overrides": 0,
+        "properties": 14
+      },
+      {
+        "name": "ExecutionContext",
+        "overrides": 0,
+        "properties": 3
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.05,
+      "properties": 1.6
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.smt",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ClassGenerator": {
+        "assignments": 3,
+        "branches": 8,
+        "conditions": 0
+      },
+      "SMTExpr": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SMTMemory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SMTExprFactory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SMTContext": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SMTConverter": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AbstractSolver": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Solver": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SolverInfoProcessor": {
+        "assignments": 9,
+        "branches": 35,
+        "conditions": 4
+      },
+      "SMTProcessor": {
+        "assignments": 13,
+        "branches": 47,
+        "conditions": 8
+      },
+      "SMTEngine": {
+        "assignments": 2,
+        "branches": 21,
+        "conditions": 2
+      },
+      "Result": {
+        "assignments": 1,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AbstractSMTSolver": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MemoryShape": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SMTModel": {
+        "assignments": 0,
+        "branches": 12,
+        "conditions": 0
+      },
+      "SMTProxySolver": {
+        "assignments": 6,
+        "branches": 18,
+        "conditions": 3
+      },
+      "Checker": {
+        "assignments": 27,
+        "branches": 70,
+        "conditions": 6
+      },
+      "ReanimatedModel": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ModelReanimator": {
+        "assignments": 4,
+        "branches": 10,
+        "conditions": 4
+      },
+      "ObjectReanimator": {
+        "assignments": 39,
+        "branches": 83,
+        "conditions": 31
+      },
+      "DescriptorReanimator": {
+        "assignments": 33,
+        "branches": 115,
+        "conditions": 25
+      },
+      "FinalDescriptorReanimator": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "InitialDescriptorReanimator": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "KexProcessor",
+        "SolverInfoProcessor"
+      ],
+      [
+        "KexProcessor",
+        "SMTProcessor"
+      ],
+      [
+        "Result",
+        "SatResult"
+      ],
+      [
+        "Result",
+        "UnsatResult"
+      ],
+      [
+        "Result",
+        "UnknownResult"
+      ],
+      [
+        "Closeable",
+        "AbstractSMTSolver"
+      ],
+      [
+        "ModelReanimator",
+        "ObjectReanimator"
+      ],
+      [
+        "ModelReanimator",
+        "DescriptorReanimator",
+        "FinalDescriptorReanimator"
+      ],
+      [
+        "ModelReanimator",
+        "DescriptorReanimator",
+        "InitialDescriptorReanimator"
+      ],
+      [
+        "DescriptorReanimator",
+        "FinalDescriptorReanimator"
+      ],
+      [
+        "DescriptorReanimator",
+        "InitialDescriptorReanimator"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ClassGenerator",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTExpr",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTMemory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTExprFactory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTContext",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTConverter",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AbstractSolver",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Solver",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SolverInfoProcessor",
+        "overrides": 1,
+        "properties": 4
+      },
+      {
+        "name": "SMTProcessor",
+        "overrides": 1,
+        "properties": 5
+      },
+      {
+        "name": "Opcode",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTEngine",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "SatResult",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "UnsatResult",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "UnknownResult",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "Result",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "AbstractSMTSolver",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MemoryShape",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SMTModel",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "SMTProxySolver",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Checker",
+        "overrides": 0,
+        "properties": 8
+      },
+      {
+        "name": "ReanimatedModel",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ModelReanimator",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "ObjectReanimator",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "DescriptorReanimator",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "FinalDescriptorReanimator",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "InitialDescriptorReanimator",
+        "overrides": 3,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.7407407407407407,
+      "properties": 1.1111111111111112
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.asm.state",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "PredicateBuilderTest": {
+        "assignments": 5,
+        "branches": 11,
+        "conditions": 0
+      },
+      "PredicateStateBuilderTest": {
+        "assignments": 4,
+        "branches": 16,
+        "conditions": 0
+      },
+      "InvalidPredicateStateError": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "PredicateStateBuilder": {
+        "assignments": 25,
+        "branches": 49,
+        "conditions": 14
+      },
+      "InvalidInstructionError": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "PredicateBuilder": {
+        "assignments": 64,
+        "branches": 91,
+        "conditions": 6
+      },
+      "PredicateStateAnalysis": {
+        "assignments": 3,
+        "branches": 7,
+        "conditions": 2
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "PredicateBuilderTest"
+      ],
+      [
+        "KexTest",
+        "PredicateStateBuilderTest"
+      ],
+      [
+        "MethodVisitor",
+        "[anonymous object]"
+      ],
+      [
+        "Exception",
+        "InvalidPredicateStateError"
+      ],
+      [
+        "Exception",
+        "InvalidInstructionError"
+      ],
+      [
+        "MethodVisitor",
+        "PredicateBuilder"
+      ],
+      [
+        "MethodVisitor",
+        "PredicateStateAnalysis"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "[anonymous object]",
+        "overrides": 23,
+        "properties": 1
+      },
+      {
+        "name": "PredicateBuilderTest",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "PredicateStateBuilderTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InvalidPredicateStateError",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "PredicateStateBuilder",
+        "overrides": 0,
+        "properties": 6
+      },
+      {
+        "name": "InvalidInstructionError",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "PredicateBuilder",
+        "overrides": 23,
+        "properties": 3
+      },
+      {
+        "name": "PredicateStateAnalysis",
+        "overrides": 2,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 6.0,
+      "properties": 1.75
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.asm.transform",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "LoopDerollerTest": {
+        "assignments": 5,
+        "branches": 20,
+        "conditions": 0
+      },
+      "LoopDeroller": {
+        "assignments": 59,
+        "branches": 142,
+        "conditions": 32
+      },
+      "SystemExitCallException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SystemExitTransformer": {
+        "assignments": 7,
+        "branches": 11,
+        "conditions": 1
+      },
+      "TraceInstrumenter": {
+        "assignments": 30,
+        "branches": 89,
+        "conditions": 3
+      },
+      "RuntimeTraceCollector": {
+        "assignments": 45,
+        "branches": 178,
+        "conditions": 14
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "LoopDerollerTest"
+      ],
+      [
+        "LoopVisitor",
+        "LoopDeroller"
+      ],
+      [
+        "Exception",
+        "InvalidLoopException"
+      ],
+      [
+        "Throwable",
+        "SystemExitCallException"
+      ],
+      [
+        "MethodVisitor",
+        "SystemExitTransformer"
+      ],
+      [
+        "MethodVisitor",
+        "TraceInstrumenter"
+      ],
+      [
+        "MethodVisitor",
+        "RuntimeTraceCollector"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "LoopDerollerTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InvalidLoopException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "State",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LoopDeroller",
+        "overrides": 3,
+        "properties": 4
+      },
+      {
+        "name": "SystemExitCallException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SystemExitTransformer",
+        "overrides": 2,
+        "properties": 4
+      },
+      {
+        "name": "TraceInstrumenter",
+        "overrides": 9,
+        "properties": 4
+      },
+      {
+        "name": "RuntimeTraceCollector",
+        "overrides": 10,
+        "properties": 5
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 3.0,
+      "properties": 2.125
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.serializer",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexSerializerTest": {
+        "assignments": 70,
+        "branches": 102,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "KexSerializerTest"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "KexSerializerTest",
+        "overrides": 0,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.0
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.state",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ChoiceState": {
+        "assignments": 3,
+        "branches": 34,
+        "conditions": 8
+      },
+      "TypeInfo": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "StateBuilder": {
+        "assignments": 18,
+        "branches": 50,
+        "conditions": 4
+      },
+      "PredicateState": {
+        "assignments": 13,
+        "branches": 55,
+        "conditions": 13
+      },
+      "ChainState": {
+        "assignments": 3,
+        "branches": 23,
+        "conditions": 12
+      },
+      "BasicState": {
+        "assignments": 0,
+        "branches": 21,
+        "conditions": 5
+      }
+    },
+    "chains": [
+      [
+        "TypeInfo",
+        "PredicateState",
+        "ChoiceState"
+      ],
+      [
+        "TypeInfo",
+        "PredicateState",
+        "ChainState"
+      ],
+      [
+        "TypeInfo",
+        "PredicateState",
+        "BasicState"
+      ],
+      [
+        "PredicateState",
+        "ChoiceState"
+      ],
+      [
+        "PredicateState",
+        "ChainState"
+      ],
+      [
+        "PredicateState",
+        "BasicState"
+      ],
+      [
+        "Iterable",
+        "ChoiceState"
+      ],
+      [
+        "PredicateBuilder",
+        "StateBuilder"
+      ],
+      [
+        "Iterable",
+        "BasicState"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ChoiceState",
+        "overrides": 9,
+        "properties": 1
+      },
+      {
+        "name": "TypeInfo",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "StateBuilder",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "PredicateState",
+        "overrides": 1,
+        "properties": 8
+      },
+      {
+        "name": "ChainState",
+        "overrides": 8,
+        "properties": 1
+      },
+      {
+        "name": "BasicState",
+        "overrides": 12,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 5.0,
+      "properties": 2.6666666666666665
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.state.term",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ValueTerm": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "NegTerm": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "UndefTerm": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 1
+      },
+      "BinaryTerm": {
+        "assignments": 3,
+        "branches": 9,
+        "conditions": 7
+      },
+      "CallTerm": {
+        "assignments": 3,
+        "branches": 8,
+        "conditions": 4
+      },
+      "ConstByteTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ConstLongTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ConstClassTerm": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "ArrayLengthTerm": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "ArrayLoadTerm": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "ConstCharTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "Term": {
+        "assignments": 5,
+        "branches": 16,
+        "conditions": 9
+      },
+      "BoundTerm": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "ArgumentTerm": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 4
+      },
+      "TermFactory": {
+        "assignments": 4,
+        "branches": 100,
+        "conditions": 6
+      },
+      "TermBuilder": {
+        "assignments": 2,
+        "branches": 144,
+        "conditions": 3
+      },
+      "CastTerm": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "ConstDoubleTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ConstShortTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ConstIntTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "InstanceOfTerm": {
+        "assignments": 2,
+        "branches": 9,
+        "conditions": 4
+      },
+      "ReturnValueTerm": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "FieldLoadTerm": {
+        "assignments": 1,
+        "branches": 7,
+        "conditions": 2
+      },
+      "FieldTerm": {
+        "assignments": 4,
+        "branches": 9,
+        "conditions": 5
+      },
+      "ConstFloatTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ArrayIndexTerm": {
+        "assignments": 3,
+        "branches": 6,
+        "conditions": 4
+      },
+      "ConstBoolTerm": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "CmpTerm": {
+        "assignments": 3,
+        "branches": 9,
+        "conditions": 7
+      },
+      "ConstStringTerm": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "NullTerm": {
+        "assignments": 2,
+        "branches": 3,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "TypeInfo",
+        "Term",
+        "ValueTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "NegTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "UndefTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "BinaryTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "CallTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstByteTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstLongTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstClassTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ArrayLengthTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ArrayLoadTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstCharTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "BoundTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ArgumentTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "CastTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstDoubleTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstShortTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstIntTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "InstanceOfTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ReturnValueTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "FieldLoadTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "FieldTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstFloatTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ArrayIndexTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstBoolTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "CmpTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "ConstStringTerm"
+      ],
+      [
+        "TypeInfo",
+        "Term",
+        "NullTerm"
+      ],
+      [
+        "Term",
+        "ValueTerm"
+      ],
+      [
+        "Term",
+        "NegTerm"
+      ],
+      [
+        "Term",
+        "UndefTerm"
+      ],
+      [
+        "Term",
+        "BinaryTerm"
+      ],
+      [
+        "Term",
+        "CallTerm"
+      ],
+      [
+        "Term",
+        "ConstByteTerm"
+      ],
+      [
+        "Term",
+        "ConstLongTerm"
+      ],
+      [
+        "Term",
+        "ConstClassTerm"
+      ],
+      [
+        "Term",
+        "ArrayLengthTerm"
+      ],
+      [
+        "Term",
+        "ArrayLoadTerm"
+      ],
+      [
+        "Term",
+        "ConstCharTerm"
+      ],
+      [
+        "Term",
+        "BoundTerm"
+      ],
+      [
+        "Term",
+        "ArgumentTerm"
+      ],
+      [
+        "Term",
+        "CastTerm"
+      ],
+      [
+        "Term",
+        "ConstDoubleTerm"
+      ],
+      [
+        "Term",
+        "ConstShortTerm"
+      ],
+      [
+        "Term",
+        "ConstIntTerm"
+      ],
+      [
+        "Term",
+        "InstanceOfTerm"
+      ],
+      [
+        "Term",
+        "ReturnValueTerm"
+      ],
+      [
+        "Term",
+        "FieldLoadTerm"
+      ],
+      [
+        "Term",
+        "FieldTerm"
+      ],
+      [
+        "Term",
+        "ConstFloatTerm"
+      ],
+      [
+        "Term",
+        "ArrayIndexTerm"
+      ],
+      [
+        "Term",
+        "ConstBoolTerm"
+      ],
+      [
+        "Term",
+        "CmpTerm"
+      ],
+      [
+        "Term",
+        "ConstStringTerm"
+      ],
+      [
+        "Term",
+        "NullTerm"
+      ],
+      [
+        "TermBuilder",
+        "Terms"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ValueTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "NegTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "UndefTerm",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "BinaryTerm",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "CallTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ConstByteTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ConstLongTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ConstClassTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "ArrayLengthTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "ArrayLoadTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "ConstCharTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "Term",
+        "overrides": 3,
+        "properties": 7
+      },
+      {
+        "name": "BoundTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "ArgumentTerm",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "TermFactory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TermGenerator",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Terms",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TermBuilder",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CastTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "ConstDoubleTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ConstShortTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ConstIntTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "InstanceOfTerm",
+        "overrides": 3,
+        "properties": 3
+      },
+      {
+        "name": "ReturnValueTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "FieldLoadTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "FieldTerm",
+        "overrides": 1,
+        "properties": 5
+      },
+      {
+        "name": "ConstFloatTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ArrayIndexTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "ConstBoolTerm",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "CmpTerm",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "ConstStringTerm",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "NullTerm",
+        "overrides": 1,
+        "properties": 3
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.21875,
+      "properties": 2.46875
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.state.transformer",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ConstantPropagator": {
+        "assignments": 12,
+        "branches": 73,
+        "conditions": 33
+      },
+      "Optimizer": {
+        "assignments": 14,
+        "branches": 14,
+        "conditions": 20
+      },
+      "ArgumentCollector": {
+        "assignments": 5,
+        "branches": 3,
+        "conditions": 1
+      },
+      "MemorySpacer": {
+        "assignments": 4,
+        "branches": 9,
+        "conditions": 1
+      },
+      "PointerCollector": {
+        "assignments": 2,
+        "branches": 14,
+        "conditions": 0
+      },
+      "AliasAnalysis": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "StensgaardAA": {
+        "assignments": 102,
+        "branches": 144,
+        "conditions": 18
+      },
+      "TermCollector": {
+        "assignments": 4,
+        "branches": 10,
+        "conditions": 0
+      },
+      "PredicateTermCollector": {
+        "assignments": 2,
+        "branches": 2,
+        "conditions": 1
+      },
+      "StringTermCollector": {
+        "assignments": 2,
+        "branches": 3,
+        "conditions": 0
+      },
+      "CFGTracker": {
+        "assignments": 10,
+        "branches": 9,
+        "conditions": 1
+      },
+      "Slicer": {
+        "assignments": 18,
+        "branches": 55,
+        "conditions": 9
+      },
+      "TypeCollector": {
+        "assignments": 3,
+        "branches": 3,
+        "conditions": 0
+      },
+      "Transformer": {
+        "assignments": 10,
+        "branches": 70,
+        "conditions": 2
+      },
+      "RecollectingTransformer": {
+        "assignments": 4,
+        "branches": 12,
+        "conditions": 1
+      },
+      "VariableCollector": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 0
+      },
+      "RandomSlicer": {
+        "assignments": 3,
+        "branches": 5,
+        "conditions": 2
+      },
+      "DeltaDebugger": {
+        "assignments": 8,
+        "branches": 11,
+        "conditions": 4
+      },
+      "IntrinsicAdapter": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 1
+      },
+      "NullityAnnotator": {
+        "assignments": 11,
+        "branches": 28,
+        "conditions": 0
+      },
+      "DoubleTypeAdapter": {
+        "assignments": 5,
+        "branches": 13,
+        "conditions": 3
+      },
+      "AnnotationAdapter": {
+        "assignments": 23,
+        "branches": 32,
+        "conditions": 9
+      },
+      "FieldAccessCollector": {
+        "assignments": 14,
+        "branches": 15,
+        "conditions": 6
+      },
+      "ReflectionInfoAdapter": {
+        "assignments": 43,
+        "branches": 63,
+        "conditions": 19
+      },
+      "PathChecker": {
+        "assignments": 13,
+        "branches": 17,
+        "conditions": 10
+      },
+      "TypeInfoDFA": {
+        "assignments": 2,
+        "branches": 25,
+        "conditions": 3
+      },
+      "TermRemapper": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "ConstStringAdapter": {
+        "assignments": 14,
+        "branches": 49,
+        "conditions": 2
+      },
+      "Nullability": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TypeInfo": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NullabilityInfo": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CastTypeInfo": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TypeInfoMap": {
+        "assignments": 6,
+        "branches": 29,
+        "conditions": 5
+      },
+      "TypeInfoCollector": {
+        "assignments": 27,
+        "branches": 62,
+        "conditions": 3
+      },
+      "PlainTypeInfoCollector": {
+        "assignments": 13,
+        "branches": 10,
+        "conditions": 1
+      },
+      "NullityInfoAdapter": {
+        "assignments": 16,
+        "branches": 28,
+        "conditions": 4
+      },
+      "ChoiceSimplifier": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "AbstractGenerator": {
+        "assignments": 8,
+        "branches": 39,
+        "conditions": 7
+      },
+      "BoolTypeAdapter": {
+        "assignments": 10,
+        "branches": 22,
+        "conditions": 10
+      },
+      "Transformation": {
+        "assignments": 5,
+        "branches": 3,
+        "conditions": 0
+      },
+      "ConcreteImplInliner": {
+        "assignments": 23,
+        "branches": 18,
+        "conditions": 16
+      },
+      "AliasingConcreteImplInliner": {
+        "assignments": 9,
+        "branches": 13,
+        "conditions": 11
+      },
+      "DescriptorGenerator": {
+        "assignments": 8,
+        "branches": 9,
+        "conditions": 3
+      },
+      "ArrayBoundsAdapter": {
+        "assignments": 22,
+        "branches": 56,
+        "conditions": 2
+      },
+      "ModelExecutor": {
+        "assignments": 9,
+        "branches": 10,
+        "conditions": 3
+      },
+      "TermRenamer": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 2
+      },
+      "Inliner": {
+        "assignments": 23,
+        "branches": 23,
+        "conditions": 7
+      },
+      "MethodInliner": {
+        "assignments": 3,
+        "branches": 2,
+        "conditions": 0
+      },
+      "RecursiveInliner": {
+        "assignments": 13,
+        "branches": 4,
+        "conditions": 3
+      }
+    },
+    "chains": [
+      [
+        "Predicate",
+        "Stub"
+      ],
+      [
+        "Transformer",
+        "ConstantPropagator"
+      ],
+      [
+        "Transformer",
+        "Optimizer"
+      ],
+      [
+        "Transformer",
+        "ArgumentCollector"
+      ],
+      [
+        "Transformer",
+        "MemorySpacer"
+      ],
+      [
+        "Transformer",
+        "PointerCollector"
+      ],
+      [
+        "Transformer",
+        "StensgaardAA"
+      ],
+      [
+        "Transformer",
+        "TermCollector"
+      ],
+      [
+        "Transformer",
+        "PredicateTermCollector"
+      ],
+      [
+        "Transformer",
+        "StringTermCollector"
+      ],
+      [
+        "Transformer",
+        "CFGTracker"
+      ],
+      [
+        "Transformer",
+        "Slicer"
+      ],
+      [
+        "Transformer",
+        "TypeCollector"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "NullityAnnotator"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "DoubleTypeAdapter"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "AnnotationAdapter"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "ReflectionInfoAdapter"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "ConstStringAdapter"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "NullityInfoAdapter"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "Inliner",
+        "ConcreteImplInliner"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "Inliner",
+        "AliasingConcreteImplInliner"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "Inliner",
+        "MethodInliner"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "Inliner",
+        "RecursiveInliner"
+      ],
+      [
+        "Transformer",
+        "RecollectingTransformer",
+        "ArrayBoundsAdapter"
+      ],
+      [
+        "Transformer",
+        "VariableCollector"
+      ],
+      [
+        "Transformer",
+        "RandomSlicer"
+      ],
+      [
+        "Transformer",
+        "IntrinsicAdapter"
+      ],
+      [
+        "Transformer",
+        "FieldAccessCollector"
+      ],
+      [
+        "Transformer",
+        "PathChecker"
+      ],
+      [
+        "Transformer",
+        "TypeInfoDFA"
+      ],
+      [
+        "Transformer",
+        "TermRemapper"
+      ],
+      [
+        "Transformer",
+        "TypeInfoCollector"
+      ],
+      [
+        "Transformer",
+        "PlainTypeInfoCollector"
+      ],
+      [
+        "Transformer",
+        "ChoiceSimplifier"
+      ],
+      [
+        "Transformer",
+        "AbstractGenerator",
+        "DescriptorGenerator"
+      ],
+      [
+        "Transformer",
+        "AbstractGenerator",
+        "ModelExecutor"
+      ],
+      [
+        "Transformer",
+        "BoolTypeAdapter"
+      ],
+      [
+        "Transformer",
+        "Transformation"
+      ],
+      [
+        "Transformer",
+        "TermRenamer"
+      ],
+      [
+        "AliasAnalysis",
+        "StensgaardAA"
+      ],
+      [
+        "Viewable",
+        "StensgaardAA"
+      ],
+      [
+        "RecollectingTransformer",
+        "NullityAnnotator"
+      ],
+      [
+        "RecollectingTransformer",
+        "DoubleTypeAdapter"
+      ],
+      [
+        "RecollectingTransformer",
+        "AnnotationAdapter"
+      ],
+      [
+        "RecollectingTransformer",
+        "ReflectionInfoAdapter"
+      ],
+      [
+        "RecollectingTransformer",
+        "ConstStringAdapter"
+      ],
+      [
+        "RecollectingTransformer",
+        "NullityInfoAdapter"
+      ],
+      [
+        "RecollectingTransformer",
+        "Inliner",
+        "ConcreteImplInliner"
+      ],
+      [
+        "RecollectingTransformer",
+        "Inliner",
+        "AliasingConcreteImplInliner"
+      ],
+      [
+        "RecollectingTransformer",
+        "Inliner",
+        "MethodInliner"
+      ],
+      [
+        "RecollectingTransformer",
+        "Inliner",
+        "RecursiveInliner"
+      ],
+      [
+        "RecollectingTransformer",
+        "ArrayBoundsAdapter"
+      ],
+      [
+        "TypeInfo",
+        "NullabilityInfo"
+      ],
+      [
+        "TypeInfo",
+        "CastTypeInfo"
+      ],
+      [
+        "Inliner",
+        "ConcreteImplInliner"
+      ],
+      [
+        "Inliner",
+        "AliasingConcreteImplInliner"
+      ],
+      [
+        "Inliner",
+        "MethodInliner"
+      ],
+      [
+        "Inliner",
+        "RecursiveInliner"
+      ],
+      [
+        "AbstractGenerator",
+        "DescriptorGenerator"
+      ],
+      [
+        "AbstractGenerator",
+        "ModelExecutor"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ConstantPropagator",
+        "overrides": 6,
+        "properties": 1
+      },
+      {
+        "name": "Optimizer",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "ArgumentCollector",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "MemorySpacer",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "PointerCollector",
+        "overrides": 13,
+        "properties": 1
+      },
+      {
+        "name": "AliasAnalysis",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StensgaardAA",
+        "overrides": 13,
+        "properties": 7
+      },
+      {
+        "name": "TermCollector",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "PredicateTermCollector",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "StringTermCollector",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CFGTracker",
+        "overrides": 3,
+        "properties": 3
+      },
+      {
+        "name": "Slicer",
+        "overrides": 3,
+        "properties": 5
+      },
+      {
+        "name": "TypeCollector",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "Stub",
+        "overrides": 2,
+        "properties": 3
+      },
+      {
+        "name": "Transformer",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RecollectingTransformer",
+        "overrides": 3,
+        "properties": 3
+      },
+      {
+        "name": "VariableCollector",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "RandomSlicer",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "DeltaDebugger",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "IntrinsicAdapter",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "NullityAnnotator",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "DoubleTypeAdapter",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "AnnotationAdapter",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "FieldAccessCollector",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "ArrayElementInfo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ReflectionInfoAdapter",
+        "overrides": 3,
+        "properties": 4
+      },
+      {
+        "name": "PathChecker",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "TypeInfoDFA",
+        "overrides": 6,
+        "properties": 2
+      },
+      {
+        "name": "TermRemapper",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ConstStringAdapter",
+        "overrides": 12,
+        "properties": 3
+      },
+      {
+        "name": "Nullability",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TypeInfo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NullabilityInfo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CastTypeInfo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TypeInfoMap",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TypeInfoCollector",
+        "overrides": 7,
+        "properties": 3
+      },
+      {
+        "name": "PlainTypeInfoCollector",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "NullityInfoAdapter",
+        "overrides": 5,
+        "properties": 2
+      },
+      {
+        "name": "ChoiceSimplifier",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "AbstractGenerator",
+        "overrides": 3,
+        "properties": 13
+      },
+      {
+        "name": "BoolTypeAdapter",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "Transformation",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "ConcreteImplInliner",
+        "overrides": 3,
+        "properties": 3
+      },
+      {
+        "name": "AliasingConcreteImplInliner",
+        "overrides": 2,
+        "properties": 3
+      },
+      {
+        "name": "DescriptorGenerator",
+        "overrides": 1,
+        "properties": 4
+      },
+      {
+        "name": "ArrayBoundsAdapter",
+        "overrides": 3,
+        "properties": 3
+      },
+      {
+        "name": "ModelExecutor",
+        "overrides": 1,
+        "properties": 5
+      },
+      {
+        "name": "TermRenamer",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Inliner",
+        "overrides": 2,
+        "properties": 4
+      },
+      {
+        "name": "MethodInliner",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "RecursiveInliner",
+        "overrides": 1,
+        "properties": 4
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 2.549019607843137,
+      "properties": 2.0392156862745097
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.state.predicate",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoundStorePredicate": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 4
+      },
+      "PredicateType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Predicate": {
+        "assignments": 5,
+        "branches": 18,
+        "conditions": 7
+      },
+      "NewArrayPredicate": {
+        "assignments": 3,
+        "branches": 12,
+        "conditions": 4
+      },
+      "NewPredicate": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 1
+      },
+      "ArrayInitializerPredicate": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 4
+      },
+      "CallPredicate": {
+        "assignments": 3,
+        "branches": 16,
+        "conditions": 10
+      },
+      "CatchPredicate": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 1
+      },
+      "InequalityPredicate": {
+        "assignments": 2,
+        "branches": 5,
+        "conditions": 4
+      },
+      "DefaultSwitchPredicate": {
+        "assignments": 4,
+        "branches": 16,
+        "conditions": 4
+      },
+      "ThrowPredicate": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 1
+      },
+      "EqualityPredicate": {
+        "assignments": 2,
+        "branches": 5,
+        "conditions": 4
+      },
+      "PredicateFactory": {
+        "assignments": 2,
+        "branches": 50,
+        "conditions": 1
+      },
+      "PredicateBuilder": {
+        "assignments": 1,
+        "branches": 44,
+        "conditions": 2
+      },
+      "FieldInitializerPredicate": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 4
+      },
+      "FieldStorePredicate": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 4
+      },
+      "ArrayStorePredicate": {
+        "assignments": 2,
+        "branches": 8,
+        "conditions": 5
+      }
+    },
+    "chains": [
+      [
+        "TypeInfo",
+        "Predicate",
+        "BoundStorePredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "NewArrayPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "NewPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "ArrayInitializerPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "CallPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "CatchPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "InequalityPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "DefaultSwitchPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "ThrowPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "EqualityPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "FieldInitializerPredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "FieldStorePredicate"
+      ],
+      [
+        "TypeInfo",
+        "Predicate",
+        "ArrayStorePredicate"
+      ],
+      [
+        "Predicate",
+        "BoundStorePredicate"
+      ],
+      [
+        "Predicate",
+        "NewArrayPredicate"
+      ],
+      [
+        "Predicate",
+        "NewPredicate"
+      ],
+      [
+        "Predicate",
+        "ArrayInitializerPredicate"
+      ],
+      [
+        "Predicate",
+        "CallPredicate"
+      ],
+      [
+        "Predicate",
+        "CatchPredicate"
+      ],
+      [
+        "Predicate",
+        "InequalityPredicate"
+      ],
+      [
+        "Predicate",
+        "DefaultSwitchPredicate"
+      ],
+      [
+        "Predicate",
+        "ThrowPredicate"
+      ],
+      [
+        "Predicate",
+        "EqualityPredicate"
+      ],
+      [
+        "Predicate",
+        "FieldInitializerPredicate"
+      ],
+      [
+        "Predicate",
+        "FieldStorePredicate"
+      ],
+      [
+        "Predicate",
+        "ArrayStorePredicate"
+      ],
+      [
+        "PredicateType",
+        "Path"
+      ],
+      [
+        "PredicateType",
+        "State"
+      ],
+      [
+        "PredicateType",
+        "Assume"
+      ],
+      [
+        "PredicateType",
+        "Axiom"
+      ],
+      [
+        "PredicateType",
+        "Require"
+      ],
+      [
+        "TermBuilder",
+        "PredicateBuilder"
+      ],
+      [
+        "PredicateBuilder",
+        "Assume"
+      ],
+      [
+        "PredicateBuilder",
+        "Axiom"
+      ],
+      [
+        "PredicateBuilder",
+        "State"
+      ],
+      [
+        "PredicateBuilder",
+        "Path"
+      ],
+      [
+        "PredicateBuilder",
+        "Require"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "BoundStorePredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "Path",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "State",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Assume",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Axiom",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Require",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "PredicateType",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Predicate",
+        "overrides": 3,
+        "properties": 8
+      },
+      {
+        "name": "NewArrayPredicate",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "NewPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ArrayInitializerPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CallPredicate",
+        "overrides": 2,
+        "properties": 4
+      },
+      {
+        "name": "CatchPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "InequalityPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "DefaultSwitchPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ThrowPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "EqualityPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "PredicateFactory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Assume",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Axiom",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "State",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Path",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Require",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "PredicateBuilder",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "FieldInitializerPredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "FieldStorePredicate",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ArrayStorePredicate",
+        "overrides": 2,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.2592592592592593,
+      "properties": 1.2962962962962963
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.config",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "FileConfig": {
+        "assignments": 5,
+        "branches": 8,
+        "conditions": 1
+      },
+      "Config": {
+        "assignments": 3,
+        "branches": 38,
+        "conditions": 10
+      },
+      "RuntimeConfig": {
+        "assignments": 1,
+        "branches": 17,
+        "conditions": 0
+      },
+      "GlobalConfig": {
+        "assignments": 3,
+        "branches": 9,
+        "conditions": 1
+      },
+      "CmdConfig": {
+        "assignments": 30,
+        "branches": 55,
+        "conditions": 9
+      }
+    },
+    "chains": [
+      [
+        "Config",
+        "FileConfig"
+      ],
+      [
+        "Config",
+        "RuntimeConfig"
+      ],
+      [
+        "Config",
+        "GlobalConfig"
+      ],
+      [
+        "Config",
+        "CmdConfig"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "FileConfig",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "Config",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RuntimeConfig",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "GlobalConfig",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CmdConfig",
+        "overrides": 1,
+        "properties": 4
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.2,
+      "properties": 1.4
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.asm.manager",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodManager": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CoverageInfo": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CoverageCounter": {
+        "assignments": 8,
+        "branches": 22,
+        "conditions": 1
+      },
+      "AccessInfoCollector": {
+        "assignments": 4,
+        "branches": 9,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "ClassVisitor",
+        "CoverageCounter"
+      ],
+      [
+        "MethodVisitor",
+        "AccessInfoCollector"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "InlineManager",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "IntrinsicManager",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "MethodManager",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CoverageInfo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CoverageCounter",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "AccessInfoCollector",
+        "overrides": 3,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.8333333333333334,
+      "properties": 1.5
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.serialization",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AbstractSerializer": {
+        "assignments": 7,
+        "branches": 5,
+        "conditions": 0
+      },
+      "KexSerializer": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BinaryOpcodeSerializer": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "[anonymous object]": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CmpOpcodeSerializer": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "CallOpcodeSerializer": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "LocationSerializer": {
+        "assignments": 6,
+        "branches": 19,
+        "conditions": 1
+      },
+      "ClassSerializer": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "MethodSerializer": {
+        "assignments": 6,
+        "branches": 31,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "AbstractSerializer",
+        "KexSerializer"
+      ],
+      [
+        "KSerializer",
+        "BinaryOpcodeSerializer"
+      ],
+      [
+        "KSerializer",
+        "[anonymous object]"
+      ],
+      [
+        "KSerializer",
+        "CmpOpcodeSerializer"
+      ],
+      [
+        "KSerializer",
+        "[anonymous object]"
+      ],
+      [
+        "KSerializer",
+        "CallOpcodeSerializer"
+      ],
+      [
+        "KSerializer",
+        "[anonymous object]"
+      ],
+      [
+        "KSerializer",
+        "LocationSerializer"
+      ],
+      [
+        "KSerializer",
+        "ClassSerializer"
+      ],
+      [
+        "KSerializer",
+        "[anonymous object]"
+      ],
+      [
+        "KSerializer",
+        "MethodSerializer"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "AbstractSerializer",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "KexSerializer",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BinaryOpcodeSerializer",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CmpOpcodeSerializer",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CallOpcodeSerializer",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "LocationSerializer",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ClassSerializer",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "MethodSerializer",
+        "overrides": 2,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.6666666666666667,
+      "properties": 1.0833333333333333
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.ktype",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexIntegral": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 2
+      },
+      "KexBool": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexByte": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexChar": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexShort": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexInt": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 1
+      },
+      "KexLong": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexReal": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexFloat": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 1
+      },
+      "KexDouble": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 1
+      },
+      "KexType": {
+        "assignments": 7,
+        "branches": 36,
+        "conditions": 5
+      },
+      "KexVoid": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 1
+      },
+      "KexPointer": {
+        "assignments": 1,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexClass": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 5
+      },
+      "KexArray": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 5
+      },
+      "KexReference": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 5
+      },
+      "KexNull": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "KexType",
+        "KexIntegral",
+        "KexBool"
+      ],
+      [
+        "KexType",
+        "KexIntegral",
+        "KexByte"
+      ],
+      [
+        "KexType",
+        "KexIntegral",
+        "KexChar"
+      ],
+      [
+        "KexType",
+        "KexIntegral",
+        "KexShort"
+      ],
+      [
+        "KexType",
+        "KexIntegral",
+        "KexInt"
+      ],
+      [
+        "KexType",
+        "KexIntegral",
+        "KexLong"
+      ],
+      [
+        "KexType",
+        "KexReal",
+        "KexFloat"
+      ],
+      [
+        "KexType",
+        "KexReal",
+        "KexDouble"
+      ],
+      [
+        "KexType",
+        "KexVoid"
+      ],
+      [
+        "KexType",
+        "KexPointer",
+        "KexClass"
+      ],
+      [
+        "KexType",
+        "KexPointer",
+        "KexArray"
+      ],
+      [
+        "KexType",
+        "KexPointer",
+        "KexReference"
+      ],
+      [
+        "KexType",
+        "KexPointer",
+        "KexNull"
+      ],
+      [
+        "KexIntegral",
+        "KexBool"
+      ],
+      [
+        "KexIntegral",
+        "KexByte"
+      ],
+      [
+        "KexIntegral",
+        "KexChar"
+      ],
+      [
+        "KexIntegral",
+        "KexShort"
+      ],
+      [
+        "KexIntegral",
+        "KexInt"
+      ],
+      [
+        "KexIntegral",
+        "KexLong"
+      ],
+      [
+        "KexReal",
+        "KexFloat"
+      ],
+      [
+        "KexReal",
+        "KexDouble"
+      ],
+      [
+        "KexPointer",
+        "KexClass"
+      ],
+      [
+        "KexPointer",
+        "KexArray"
+      ],
+      [
+        "KexPointer",
+        "KexReference"
+      ],
+      [
+        "KexPointer",
+        "KexNull"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "KexIntegral",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "KexBool",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "KexByte",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "KexChar",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "KexShort",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "KexInt",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "KexLong",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "KexReal",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KexFloat",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "KexDouble",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "KexType",
+        "overrides": 1,
+        "properties": 6
+      },
+      {
+        "name": "KexVoid",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "KexPointer",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "KexClass",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "KexArray",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "KexReference",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "KexNull",
+        "overrides": 4,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 2.1176470588235294,
+      "properties": 1.9411764705882353
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.smt.boolector",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoolectorSolverTest": {
+        "assignments": 40,
+        "branches": 86,
+        "conditions": 6
+      },
+      "BoolectorUnlogic": {
+        "assignments": 1,
+        "branches": 18,
+        "conditions": 3
+      },
+      "BoolectorSMTExpr": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoolectorSMTMemory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoolectorSMTExprFactory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoolectorSMTContext": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoolectorSMTConverter": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BoolectorSolver": {
+        "assignments": 41,
+        "branches": 113,
+        "conditions": 8
+      },
+      "BoolectorEngine": {
+        "assignments": 16,
+        "branches": 268,
+        "conditions": 89
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "BoolectorSolverTest"
+      ],
+      [
+        "AbstractSMTSolver",
+        "BoolectorSolver"
+      ],
+      [
+        "SMTEngine",
+        "BoolectorEngine"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "BoolectorSolverTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolectorUnlogic",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "BoolectorSMTExpr",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolectorSMTMemory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolectorSMTExprFactory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolectorSMTContext",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolectorSMTConverter",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BoolectorSolver",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "BoolectorEngine",
+        "overrides": 53,
+        "properties": 3
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 6.333333333333333,
+      "properties": 0.5555555555555556
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.annotations",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AnnotationsTest": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 0
+      },
+      "TestParser": {
+        "assignments": 8,
+        "branches": 22,
+        "conditions": 0
+      },
+      "AnnotationManager": {
+        "assignments": 20,
+        "branches": 74,
+        "conditions": 28
+      },
+      "AnnotationFunctionality": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AnnotationsLoader": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 2
+      },
+      "MutableAnnotatedCall": {
+        "assignments": 4,
+        "branches": 5,
+        "conditions": 6
+      },
+      "CallType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AnnotatedCall": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "PackageTreeNode": {
+        "assignments": 7,
+        "branches": 14,
+        "conditions": 5
+      },
+      "AnnotatedParam": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AnnotationParserException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Range": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "NotNull": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Nullable": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Contract": {
+        "assignments": 39,
+        "branches": 79,
+        "conditions": 25
+      },
+      "MutableAnnotatedParam": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 2
+      },
+      "ExternalAnnotationsLoader": {
+        "assignments": 59,
+        "branches": 96,
+        "conditions": 51
+      },
+      "AnnotationInfo": {
+        "assignments": 1,
+        "branches": 3,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "AnnotationsTest"
+      ],
+      [
+        "KexRunnerTest",
+        "AnnotationsTest"
+      ],
+      [
+        "AnnotatedCall",
+        "MutableAnnotatedCall"
+      ],
+      [
+        "RuntimeException",
+        "AnnotationParserException"
+      ],
+      [
+        "AnnotationInfo",
+        "Range"
+      ],
+      [
+        "AnnotationInfo",
+        "NotNull"
+      ],
+      [
+        "AnnotationInfo",
+        "Nullable"
+      ],
+      [
+        "AnnotationInfo",
+        "Contract"
+      ],
+      [
+        "AnnotatedParam",
+        "MutableAnnotatedParam"
+      ],
+      [
+        "AnnotationsLoader",
+        "ExternalAnnotationsLoader"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "AnnotationsTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "TestParser",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AnnotationManager",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "AnnotationFunctionality",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AnnotationsLoader",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MutableAnnotatedCall",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "CallType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AnnotatedCall",
+        "overrides": 0,
+        "properties": 7
+      },
+      {
+        "name": "PackageTreeNode",
+        "overrides": 1,
+        "properties": 6
+      },
+      {
+        "name": "AnnotatedParam",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "AnnotationParserException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Range",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "NotNull",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Nullable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Constraints",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Record",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Contract",
+        "overrides": 3,
+        "properties": 5
+      },
+      {
+        "name": "MutableAnnotatedParam",
+        "overrides": 3,
+        "properties": 1
+      },
+      {
+        "name": "ExternalAnnotationsLoader",
+        "overrides": 3,
+        "properties": 1
+      },
+      {
+        "name": "AnnotationInfo",
+        "overrides": 1,
+        "properties": 3
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.8,
+      "properties": 1.55
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BasicGenerationTest": {
+        "assignments": 6,
+        "branches": 7,
+        "conditions": 0
+      },
+      "NoConcreteInstanceException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Reanimator": {
+        "assignments": 18,
+        "branches": 35,
+        "conditions": 10
+      },
+      "Parameters": {
+        "assignments": 0,
+        "branches": 10,
+        "conditions": 0
+      },
+      "RandomObjectReanimator": {
+        "assignments": 36,
+        "branches": 66,
+        "conditions": 7
+      }
+    },
+    "chains": [
+      [
+        "KexTest",
+        "KexRunnerTest",
+        "BasicGenerationTest"
+      ],
+      [
+        "KexRunnerTest",
+        "BasicGenerationTest"
+      ],
+      [
+        "Exception",
+        "NoConcreteInstanceException"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "BasicGenerationTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "NoConcreteInstanceException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Reanimator",
+        "overrides": 0,
+        "properties": 8
+      },
+      {
+        "name": "Parameters",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "RandomObjectReanimator",
+        "overrides": 0,
+        "properties": 5
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.2,
+      "properties": 3.0
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.trace",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TraceManager": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 1
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "TraceManager",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.0
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.trace.file",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ActionValue": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NullValue": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KfgValue": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "BooleanValue": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "CharValue": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "LongValue": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "DoubleValue": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "StringValue": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ArrayValue": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ObjectValue": {
+        "assignments": 2,
+        "branches": 18,
+        "conditions": 0
+      },
+      "Equation": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Action": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodEntryAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodExitAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockEntryAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockExitAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodEntry": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodInstance": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodArgs": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "MethodReturn": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 1
+      },
+      "MethodThrow": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockEntry": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockJump": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockBranch": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "BlockSwitch": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockTableSwitch": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockInfo": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 2
+      },
+      "Trace": {
+        "assignments": 26,
+        "branches": 55,
+        "conditions": 14
+      },
+      "ActionParseException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UnknownTypeException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UnknownNameException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ActionParser": {
+        "assignments": 12,
+        "branches": 108,
+        "conditions": 9
+      },
+      "FileTraceManager": {
+        "assignments": 5,
+        "branches": 13,
+        "conditions": 2
+      }
+    },
+    "chains": [
+      [
+        "ActionValue",
+        "NullValue"
+      ],
+      [
+        "ActionValue",
+        "KfgValue"
+      ],
+      [
+        "ActionValue",
+        "BooleanValue"
+      ],
+      [
+        "ActionValue",
+        "CharValue"
+      ],
+      [
+        "ActionValue",
+        "LongValue"
+      ],
+      [
+        "ActionValue",
+        "DoubleValue"
+      ],
+      [
+        "ActionValue",
+        "StringValue"
+      ],
+      [
+        "ActionValue",
+        "ArrayValue"
+      ],
+      [
+        "ActionValue",
+        "ObjectValue"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodEntryAction",
+        "MethodEntry"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodEntryAction",
+        "MethodInstance"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodEntryAction",
+        "MethodArgs"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodExitAction",
+        "MethodReturn"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodExitAction",
+        "MethodThrow"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockEntryAction",
+        "BlockEntry"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockExitAction",
+        "BlockJump"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockExitAction",
+        "BlockBranch"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockExitAction",
+        "BlockSwitch"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockExitAction",
+        "BlockTableSwitch"
+      ],
+      [
+        "MethodAction",
+        "MethodEntryAction",
+        "MethodEntry"
+      ],
+      [
+        "MethodAction",
+        "MethodEntryAction",
+        "MethodInstance"
+      ],
+      [
+        "MethodAction",
+        "MethodEntryAction",
+        "MethodArgs"
+      ],
+      [
+        "MethodAction",
+        "MethodExitAction",
+        "MethodReturn"
+      ],
+      [
+        "MethodAction",
+        "MethodExitAction",
+        "MethodThrow"
+      ],
+      [
+        "BlockAction",
+        "BlockEntryAction",
+        "BlockEntry"
+      ],
+      [
+        "BlockAction",
+        "BlockExitAction",
+        "BlockJump"
+      ],
+      [
+        "BlockAction",
+        "BlockExitAction",
+        "BlockBranch"
+      ],
+      [
+        "BlockAction",
+        "BlockExitAction",
+        "BlockSwitch"
+      ],
+      [
+        "BlockAction",
+        "BlockExitAction",
+        "BlockTableSwitch"
+      ],
+      [
+        "MethodEntryAction",
+        "MethodEntry"
+      ],
+      [
+        "MethodEntryAction",
+        "MethodInstance"
+      ],
+      [
+        "MethodEntryAction",
+        "MethodArgs"
+      ],
+      [
+        "MethodExitAction",
+        "MethodReturn"
+      ],
+      [
+        "MethodExitAction",
+        "MethodThrow"
+      ],
+      [
+        "BlockEntryAction",
+        "BlockEntry"
+      ],
+      [
+        "BlockExitAction",
+        "BlockJump"
+      ],
+      [
+        "BlockExitAction",
+        "BlockBranch"
+      ],
+      [
+        "BlockExitAction",
+        "BlockSwitch"
+      ],
+      [
+        "BlockExitAction",
+        "BlockTableSwitch"
+      ],
+      [
+        "Exception",
+        "ActionParseException",
+        "UnknownTypeException"
+      ],
+      [
+        "Exception",
+        "ActionParseException",
+        "UnknownNameException"
+      ],
+      [
+        "ActionParseException",
+        "UnknownTypeException"
+      ],
+      [
+        "ActionParseException",
+        "UnknownNameException"
+      ],
+      [
+        "Grammar",
+        "ActionParser"
+      ],
+      [
+        "TraceManager",
+        "FileTraceManager"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ActionValue",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NullValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "KfgValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BooleanValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CharValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "LongValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "DoubleValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StringValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ArrayValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ObjectValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Equation",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Action",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodEntryAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodExitAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BlockAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BlockEntryAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BlockExitAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodEntry",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodInstance",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodArgs",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodReturn",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodThrow",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockEntry",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockJump",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockBranch",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockSwitch",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockTableSwitch",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockInfo",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "Info",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Trace",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ActionParseException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UnknownTypeException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UnknownNameException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ActionParser",
+        "overrides": 0,
+        "properties": 72
+      },
+      {
+        "name": "FileTraceManager",
+        "overrides": 3,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.7222222222222222,
+      "properties": 2.0833333333333335
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.trace.runner",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TimeoutException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InvocationResult": {
+        "assignments": 4,
+        "branches": 6,
+        "conditions": 7
+      },
+      "AbstractRunner": {
+        "assignments": 19,
+        "branches": 56,
+        "conditions": 13
+      },
+      "TracingAbstractRunner": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DefaultRunner": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ObjectTracingRunner": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "RandomObjectTracingRunner": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "FileTracingRunner": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "RandomFileTracingRunner": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "RandomRunner": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 4
+      },
+      "TracingRandomRunner": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 8
+      }
+    },
+    "chains": [
+      [
+        "Exception",
+        "TimeoutException"
+      ],
+      [
+        "AbstractRunner",
+        "TracingAbstractRunner",
+        "ObjectTracingRunner"
+      ],
+      [
+        "AbstractRunner",
+        "TracingAbstractRunner",
+        "TracingRandomRunner",
+        "RandomObjectTracingRunner"
+      ],
+      [
+        "AbstractRunner",
+        "TracingAbstractRunner",
+        "TracingRandomRunner",
+        "RandomFileTracingRunner"
+      ],
+      [
+        "AbstractRunner",
+        "TracingAbstractRunner",
+        "FileTracingRunner"
+      ],
+      [
+        "AbstractRunner",
+        "DefaultRunner"
+      ],
+      [
+        "AbstractRunner",
+        "RandomRunner"
+      ],
+      [
+        "TracingAbstractRunner",
+        "ObjectTracingRunner"
+      ],
+      [
+        "TracingAbstractRunner",
+        "TracingRandomRunner",
+        "RandomObjectTracingRunner"
+      ],
+      [
+        "TracingAbstractRunner",
+        "TracingRandomRunner",
+        "RandomFileTracingRunner"
+      ],
+      [
+        "TracingAbstractRunner",
+        "FileTracingRunner"
+      ],
+      [
+        "TracingRandomRunner",
+        "RandomObjectTracingRunner"
+      ],
+      [
+        "TracingRandomRunner",
+        "RandomFileTracingRunner"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TimeoutException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InvocationResult",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "AbstractRunner",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "TracingAbstractRunner",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DefaultRunner",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ObjectTracingRunner",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "RandomObjectTracingRunner",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "FileTracingRunner",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "RandomFileTracingRunner",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "RandomRunner",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TracingRandomRunner",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.5454545454545454,
+      "properties": 0.2727272727272727
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.trace.`object`",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TraceCollector": {
+        "assignments": 23,
+        "branches": 91,
+        "conditions": 4
+      },
+      "ActualTraceCollector": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TraceCollectorStub": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TraceCollectorProxy": {
+        "assignments": 3,
+        "branches": 3,
+        "conditions": 0
+      },
+      "Action": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodEntry": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodReturn": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodThrow": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodCall": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "StaticInitEntry": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "StaticInitExit": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockAction": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockEntry": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockJump": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockBranch": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BlockSwitch": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Trace": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ObjectTraceManager": {
+        "assignments": 10,
+        "branches": 29,
+        "conditions": 3
+      }
+    },
+    "chains": [
+      [
+        "TraceCollector",
+        "ActualTraceCollector"
+      ],
+      [
+        "TraceCollector",
+        "TraceCollectorStub"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodEntry"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodReturn"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodThrow"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "MethodCall"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "StaticInitEntry"
+      ],
+      [
+        "Action",
+        "MethodAction",
+        "StaticInitExit"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockEntry"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockJump"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockBranch"
+      ],
+      [
+        "Action",
+        "BlockAction",
+        "BlockSwitch"
+      ],
+      [
+        "MethodAction",
+        "MethodEntry"
+      ],
+      [
+        "MethodAction",
+        "MethodReturn"
+      ],
+      [
+        "MethodAction",
+        "MethodThrow"
+      ],
+      [
+        "MethodAction",
+        "MethodCall"
+      ],
+      [
+        "MethodAction",
+        "StaticInitEntry"
+      ],
+      [
+        "MethodAction",
+        "StaticInitExit"
+      ],
+      [
+        "BlockAction",
+        "BlockEntry"
+      ],
+      [
+        "BlockAction",
+        "BlockJump"
+      ],
+      [
+        "BlockAction",
+        "BlockBranch"
+      ],
+      [
+        "BlockAction",
+        "BlockSwitch"
+      ],
+      [
+        "TraceManager",
+        "ObjectTraceManager"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TraceCollector",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ActualTraceCollector",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TraceCollectorStub",
+        "overrides": 11,
+        "properties": 0
+      },
+      {
+        "name": "TraceCollectorProxy",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Action",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodEntry",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodReturn",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodThrow",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MethodCall",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StaticInitEntry",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StaticInitExit",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockAction",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BlockEntry",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockJump",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockBranch",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "BlockSwitch",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Trace",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ObjectTraceManager",
+        "overrides": 3,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.263157894736842,
+      "properties": 0.2631578947368421
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator.collector",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SetterCollector": {
+        "assignments": 9,
+        "branches": 24,
+        "conditions": 9
+      },
+      "ExternalConstructorCollector": {
+        "assignments": 4,
+        "branches": 6,
+        "conditions": 7
+      },
+      "MethodFieldAccessCollector": {
+        "assignments": 5,
+        "branches": 7,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "ClassVisitor",
+        "SetterCollector"
+      ],
+      [
+        "MethodVisitor",
+        "ExternalConstructorCollector"
+      ],
+      [
+        "MethodVisitor",
+        "MethodFieldAccessCollector"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "SetterCollector",
+        "overrides": 3,
+        "properties": 4
+      },
+      {
+        "name": "ExternalConstructorCollector",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "MethodFieldAccessCollector",
+        "overrides": 2,
+        "properties": 3
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 2.3333333333333335,
+      "properties": 2.6666666666666665
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator.codegen",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TestCasePrinter": {
+        "assignments": 8,
+        "branches": 22,
+        "conditions": 5
+      },
+      "CallStackPrinter": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "TestCasePrinter",
+        "overrides": 0,
+        "properties": 7
+      },
+      {
+        "name": "CallStackPrinter",
+        "overrides": 0,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 4.5
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator.codegen.kotlingen",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CallStack2KotlinPrinter": {
+        "assignments": 73,
+        "branches": 157,
+        "conditions": 42
+      },
+      "KtBuilder": {
+        "assignments": 12,
+        "branches": 25,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "CallStackPrinter",
+        "CallStack2KotlinPrinter"
+      ],
+      [
+        "CSType",
+        "CSStarProjection"
+      ],
+      [
+        "CSType",
+        "CSClass"
+      ],
+      [
+        "CSType",
+        "CSPrimaryArray"
+      ],
+      [
+        "CSType",
+        "CSArray"
+      ],
+      [
+        "Type",
+        "StringType"
+      ],
+      [
+        "KtCode",
+        "KtStatement"
+      ],
+      [
+        "KtStatement",
+        "StringStatement"
+      ],
+      [
+        "KtStatement",
+        "ControlStatement"
+      ],
+      [
+        "KtCode",
+        "KtFunction"
+      ],
+      [
+        "KtFunction",
+        "KtConstructor"
+      ],
+      [
+        "KtFunction",
+        "KtMethod"
+      ],
+      [
+        "KtFunction",
+        "KtExtension"
+      ],
+      [
+        "KtCode",
+        "KtClass"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "CSType",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CSStarProjection",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CSClass",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CSPrimaryArray",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CSArray",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CallStack2KotlinPrinter",
+        "overrides": 2,
+        "properties": 14
+      },
+      {
+        "name": "Type",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StringType",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "KtCode",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KtStatement",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StringStatement",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ControlStatement",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KtArgument",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KtFunction",
+        "overrides": 2,
+        "properties": 5
+      },
+      {
+        "name": "KtConstructor",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "KtMethod",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KtExtension",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "KtProperty",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KtClass",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "KtBuilder",
+        "overrides": 1,
+        "properties": 4
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.85,
+      "properties": 1.5
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator.codegen.javagen",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "JavaBuilder": {
+        "assignments": 8,
+        "branches": 20,
+        "conditions": 0
+      },
+      "CallStack2JavaPrinter": {
+        "assignments": 71,
+        "branches": 170,
+        "conditions": 38
+      }
+    },
+    "chains": [
+      [
+        "Type",
+        "StringType"
+      ],
+      [
+        "JavaCode",
+        "JavaStatement"
+      ],
+      [
+        "JavaStatement",
+        "StringStatement"
+      ],
+      [
+        "JavaStatement",
+        "ControlStatement"
+      ],
+      [
+        "JavaCode",
+        "JavaFunction"
+      ],
+      [
+        "JavaFunction",
+        "JavaConstructor"
+      ],
+      [
+        "JavaFunction",
+        "JavaMethod"
+      ],
+      [
+        "JavaCode",
+        "JavaClass"
+      ],
+      [
+        "CallStackPrinter",
+        "CallStack2JavaPrinter"
+      ],
+      [
+        "CSType",
+        "CSStarProjection"
+      ],
+      [
+        "CSType",
+        "CSClass"
+      ],
+      [
+        "CSType",
+        "CSPrimaryArray"
+      ],
+      [
+        "CSType",
+        "CSArray"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Type",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StringType",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "JavaCode",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "JavaStatement",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StringStatement",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ControlStatement",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "JavaArgument",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "JavaFunction",
+        "overrides": 2,
+        "properties": 6
+      },
+      {
+        "name": "JavaConstructor",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "JavaMethod",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "JavaField",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "JavaClass",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "JavaBuilder",
+        "overrides": 1,
+        "properties": 4
+      },
+      {
+        "name": "CSType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CSStarProjection",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CSClass",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CSPrimaryArray",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CSArray",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "CallStack2JavaPrinter",
+        "overrides": 2,
+        "properties": 14
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.0,
+      "properties": 1.4736842105263157
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator.descriptor",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Object2DescriptorConverter": {
+        "assignments": 73,
+        "branches": 115,
+        "conditions": 20
+      },
+      "DescriptorStatistics": {
+        "assignments": 30,
+        "branches": 30,
+        "conditions": 4
+      },
+      "Descriptor": {
+        "assignments": 2,
+        "branches": 17,
+        "conditions": 1
+      },
+      "ConstantDescriptor": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 2
+      },
+      "ObjectDescriptor": {
+        "assignments": 38,
+        "branches": 56,
+        "conditions": 9
+      },
+      "ArrayDescriptor": {
+        "assignments": 31,
+        "branches": 42,
+        "conditions": 10
+      },
+      "StaticFieldDescriptor": {
+        "assignments": 16,
+        "branches": 16,
+        "conditions": 8
+      },
+      "DescriptorBuilder": {
+        "assignments": 1,
+        "branches": 32,
+        "conditions": 4
+      },
+      "ConcreteInstanceGenerator": {
+        "assignments": 2,
+        "branches": 19,
+        "conditions": 3
+      }
+    },
+    "chains": [
+      [
+        "DescriptorBuilder",
+        "Object2DescriptorConverter"
+      ],
+      [
+        "Descriptor",
+        "ConstantDescriptor"
+      ],
+      [
+        "Descriptor",
+        "ObjectDescriptor"
+      ],
+      [
+        "Descriptor",
+        "ArrayDescriptor"
+      ],
+      [
+        "Descriptor",
+        "StaticFieldDescriptor"
+      ],
+      [
+        "ConstantDescriptor",
+        "Null"
+      ],
+      [
+        "ConstantDescriptor",
+        "Bool"
+      ],
+      [
+        "ConstantDescriptor",
+        "Byte"
+      ],
+      [
+        "ConstantDescriptor",
+        "Char"
+      ],
+      [
+        "ConstantDescriptor",
+        "Short"
+      ],
+      [
+        "ConstantDescriptor",
+        "Int"
+      ],
+      [
+        "ConstantDescriptor",
+        "Long"
+      ],
+      [
+        "ConstantDescriptor",
+        "Float"
+      ],
+      [
+        "ConstantDescriptor",
+        "Double"
+      ],
+      [
+        "ConstantDescriptor",
+        "Class"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Object2DescriptorConverter",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "DescriptorStatistics",
+        "overrides": 0,
+        "properties": 10
+      },
+      {
+        "name": "Descriptor",
+        "overrides": 1,
+        "properties": 6
+      },
+      {
+        "name": "Null",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Bool",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Byte",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Char",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Short",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Int",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Long",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Float",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Double",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Class",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ConstantDescriptor",
+        "overrides": 9,
+        "properties": 0
+      },
+      {
+        "name": "ObjectDescriptor",
+        "overrides": 9,
+        "properties": 2
+      },
+      {
+        "name": "ArrayDescriptor",
+        "overrides": 9,
+        "properties": 1
+      },
+      {
+        "name": "StaticFieldDescriptor",
+        "overrides": 9,
+        "properties": 0
+      },
+      {
+        "name": "DescriptorBuilder",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ConcreteInstanceGenerator",
+        "overrides": 0,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 2.473684210526316,
+      "properties": 1.1578947368421053
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.reanimator.callstack",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Generator": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "AnyGenerator": {
+        "assignments": 43,
+        "branches": 102,
+        "conditions": 35
+      },
+      "ArrayGenerator": {
+        "assignments": 9,
+        "branches": 12,
+        "conditions": 1
+      },
+      "StringGenerator": {
+        "assignments": 8,
+        "branches": 18,
+        "conditions": 3
+      },
+      "EnumGenerator": {
+        "assignments": 19,
+        "branches": 42,
+        "conditions": 9
+      },
+      "GeneratorContext": {
+        "assignments": 43,
+        "branches": 129,
+        "conditions": 16
+      },
+      "ApiCall": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CallStack": {
+        "assignments": 10,
+        "branches": 20,
+        "conditions": 0
+      },
+      "PrimaryValue": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "DefaultConstructorCall": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "ConstructorCall": {
+        "assignments": 0,
+        "branches": 6,
+        "conditions": 0
+      },
+      "ExternalConstructorCall": {
+        "assignments": 0,
+        "branches": 6,
+        "conditions": 0
+      },
+      "MethodCall": {
+        "assignments": 0,
+        "branches": 6,
+        "conditions": 1
+      },
+      "StaticMethodCall": {
+        "assignments": 0,
+        "branches": 8,
+        "conditions": 1
+      },
+      "UnknownCall": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "StaticFieldSetter": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "FieldSetter": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "NewArray": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "ArrayWrite": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "EnumValueCreation": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CallStackExecutor": {
+        "assignments": 43,
+        "branches": 62,
+        "conditions": 11
+      },
+      "CallStackGenerator": {
+        "assignments": 14,
+        "branches": 37,
+        "conditions": 7
+      }
+    },
+    "chains": [
+      [
+        "Generator",
+        "AnyGenerator"
+      ],
+      [
+        "Generator",
+        "ArrayGenerator"
+      ],
+      [
+        "Generator",
+        "StringGenerator"
+      ],
+      [
+        "Generator",
+        "EnumGenerator"
+      ],
+      [
+        "Generator",
+        "CallStackGenerator"
+      ],
+      [
+        "CallStack",
+        "PrimaryValue"
+      ],
+      [
+        "ApiCall",
+        "DefaultConstructorCall"
+      ],
+      [
+        "ApiCall",
+        "ConstructorCall"
+      ],
+      [
+        "ApiCall",
+        "ExternalConstructorCall"
+      ],
+      [
+        "ApiCall",
+        "MethodCall"
+      ],
+      [
+        "ApiCall",
+        "StaticMethodCall"
+      ],
+      [
+        "ApiCall",
+        "UnknownCall"
+      ],
+      [
+        "ApiCall",
+        "StaticFieldSetter"
+      ],
+      [
+        "ApiCall",
+        "FieldSetter"
+      ],
+      [
+        "ApiCall",
+        "NewArray"
+      ],
+      [
+        "ApiCall",
+        "ArrayWrite"
+      ],
+      [
+        "ApiCall",
+        "EnumValueCreation"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Generator",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "StackWrapper",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "AnyGenerator",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "ArrayGenerator",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "StringGenerator",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "EnumGenerator",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ExecutionResult",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ExecutionStack",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "GeneratorContext",
+        "overrides": 0,
+        "properties": 12
+      },
+      {
+        "name": "ApiCall",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CallStack",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "PrimaryValue",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "DefaultConstructorCall",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ConstructorCall",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ExternalConstructorCall",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "MethodCall",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "StaticMethodCall",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "UnknownCall",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "StaticFieldSetter",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "FieldSetter",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "NewArray",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "ArrayWrite",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "EnumValueCreation",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "CallStackExecutor",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CallStackGenerator",
+        "overrides": 2,
+        "properties": 5
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.4,
+      "properties": 1.52
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.asm.analysis",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ViolationChecker": {
+        "assignments": 55,
+        "branches": 117,
+        "conditions": 17
+      },
+      "SearchStrategy": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TopologicalStrategy": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "BfsStrategy": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "DfsStrategy": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "DescriptorChecker": {
+        "assignments": 9,
+        "branches": 33,
+        "conditions": 16
+      },
+      "RandomChecker": {
+        "assignments": 3,
+        "branches": 5,
+        "conditions": 6
+      },
+      "KexCheckerException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "KexRunnerException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Failure": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MethodChecker": {
+        "assignments": 17,
+        "branches": 55,
+        "conditions": 14
+      }
+    },
+    "chains": [
+      [
+        "MethodVisitor",
+        "ViolationChecker"
+      ],
+      [
+        "Iterable",
+        "SearchStrategy",
+        "TopologicalStrategy"
+      ],
+      [
+        "Iterable",
+        "SearchStrategy",
+        "BfsStrategy"
+      ],
+      [
+        "Iterable",
+        "SearchStrategy",
+        "DfsStrategy"
+      ],
+      [
+        "SearchStrategy",
+        "TopologicalStrategy"
+      ],
+      [
+        "SearchStrategy",
+        "BfsStrategy"
+      ],
+      [
+        "SearchStrategy",
+        "DfsStrategy"
+      ],
+      [
+        "MethodVisitor",
+        "MethodChecker",
+        "DescriptorChecker"
+      ],
+      [
+        "MethodChecker",
+        "DescriptorChecker"
+      ],
+      [
+        "MethodVisitor",
+        "RandomChecker"
+      ],
+      [
+        "Exception",
+        "KexCheckerException"
+      ],
+      [
+        "Exception",
+        "KexRunnerException"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ViolationChecker",
+        "overrides": 7,
+        "properties": 6
+      },
+      {
+        "name": "SearchStrategy",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "TopologicalStrategy",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "BfsStrategy",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "DfsStrategy",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "DescriptorChecker",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "RandomChecker",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "KexCheckerException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KexRunnerException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Failure",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MethodChecker",
+        "overrides": 2,
+        "properties": 4
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.3636363636363635,
+      "properties": 1.3636363636363635
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.asm.analysis.concolic",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UnsupportedInstructionException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InvalidStateException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ConcolicStateBuilder": {
+        "assignments": 51,
+        "branches": 173,
+        "conditions": 25
+      },
+      "ConcolicChecker": {
+        "assignments": 49,
+        "branches": 95,
+        "conditions": 26
+      }
+    },
+    "chains": [
+      [
+        "Exception",
+        "UnsupportedInstructionException"
+      ],
+      [
+        "Exception",
+        "InvalidStateException"
+      ],
+      [
+        "MethodVisitor",
+        "ConcolicChecker"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "UnsupportedInstructionException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InvalidStateException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CallParameters",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ConcolicStateBuilder",
+        "overrides": 0,
+        "properties": 7
+      },
+      {
+        "name": "BlockWrapper",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CallParams",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ConcolicChecker",
+        "overrides": 2,
+        "properties": 4
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.2857142857142857,
+      "properties": 1.5714285714285714
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.asm.util",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Wrapper": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "PrintStreamWrapper": {
+        "assignments": 9,
+        "branches": 29,
+        "conditions": 2
+      },
+      "StringBuilderWrapper": {
+        "assignments": 14,
+        "branches": 29,
+        "conditions": 4
+      },
+      "SystemOutputWrapper": {
+        "assignments": 4,
+        "branches": 4,
+        "conditions": 0
+      },
+      "SystemErrWrapper": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SystemOutWrapper": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ReflectionWrapper": {
+        "assignments": 8,
+        "branches": 28,
+        "conditions": 0
+      },
+      "ValuePrinter": {
+        "assignments": 21,
+        "branches": 59,
+        "conditions": 1
+      },
+      "FileOutputStreamWrapper": {
+        "assignments": 19,
+        "branches": 40,
+        "conditions": 0
+      },
+      "ClassWriter": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Visibility": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "Wrapper",
+        "PrintStreamWrapper",
+        "SystemOutputWrapper",
+        "SystemErrWrapper"
+      ],
+      [
+        "Wrapper",
+        "PrintStreamWrapper",
+        "SystemOutputWrapper",
+        "SystemOutWrapper"
+      ],
+      [
+        "Wrapper",
+        "PrintStreamWrapper",
+        "FileOutputStreamWrapper"
+      ],
+      [
+        "Wrapper",
+        "StringBuilderWrapper"
+      ],
+      [
+        "Wrapper",
+        "ReflectionWrapper"
+      ],
+      [
+        "Wrapper",
+        "ValuePrinter"
+      ],
+      [
+        "PrintStreamWrapper",
+        "SystemOutputWrapper",
+        "SystemErrWrapper"
+      ],
+      [
+        "PrintStreamWrapper",
+        "SystemOutputWrapper",
+        "SystemOutWrapper"
+      ],
+      [
+        "PrintStreamWrapper",
+        "FileOutputStreamWrapper"
+      ],
+      [
+        "SystemStream",
+        "Output"
+      ],
+      [
+        "SystemStream",
+        "Error"
+      ],
+      [
+        "SystemOutputWrapper",
+        "SystemErrWrapper"
+      ],
+      [
+        "SystemOutputWrapper",
+        "SystemOutWrapper"
+      ],
+      [
+        "ClassVisitor",
+        "ClassWriter"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Wrapper",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "PrintStreamWrapper",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "StringBuilderWrapper",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "Output",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Error",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SystemStream",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "SystemOutputWrapper",
+        "overrides": 1,
+        "properties": 6
+      },
+      {
+        "name": "SystemErrWrapper",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SystemOutWrapper",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ReflectionWrapper",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ValuePrinter",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "FileOutputStreamWrapper",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "ClassWriter",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "Visibility",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.35714285714285715,
+      "properties": 1.7857142857142858
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.random",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "RandomizerError": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "GenerationException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UnknownTypeException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Randomizer": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "Exception",
+        "RandomizerError",
+        "GenerationException"
+      ],
+      [
+        "Exception",
+        "RandomizerError",
+        "UnknownTypeException"
+      ],
+      [
+        "RandomizerError",
+        "GenerationException"
+      ],
+      [
+        "RandomizerError",
+        "UnknownTypeException"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "RandomizerError",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "GenerationException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UnknownTypeException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Randomizer",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.0
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.random.easyrandom",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EasyRandomDriver": {
+        "assignments": 22,
+        "branches": 76,
+        "conditions": 9
+      },
+      "CollectionRandomizer": {
+        "assignments": 3,
+        "branches": 50,
+        "conditions": 5
+      },
+      "ListRandomizer": {
+        "assignments": 1,
+        "branches": 15,
+        "conditions": 1
+      },
+      "QueueRandomizer": {
+        "assignments": 1,
+        "branches": 15,
+        "conditions": 1
+      },
+      "SetRandomizer": {
+        "assignments": 1,
+        "branches": 19,
+        "conditions": 1
+      },
+      "MapRandomizer": {
+        "assignments": 4,
+        "branches": 27,
+        "conditions": 5
+      },
+      "CustomCollectionRandomizer": {
+        "assignments": 1,
+        "branches": 6,
+        "conditions": 3
+      }
+    },
+    "chains": [
+      [
+        "Randomizer",
+        "EasyRandomDriver"
+      ],
+      [
+        "Randomizer",
+        "CollectionRandomizer",
+        "ListRandomizer"
+      ],
+      [
+        "Randomizer",
+        "CollectionRandomizer",
+        "QueueRandomizer"
+      ],
+      [
+        "Randomizer",
+        "CollectionRandomizer",
+        "SetRandomizer"
+      ],
+      [
+        "Randomizer",
+        "CollectionRandomizer",
+        "CustomCollectionRandomizer"
+      ],
+      [
+        "Randomizer",
+        "MapRandomizer"
+      ],
+      [
+        "ObjectFactory",
+        "KexObjectFactory"
+      ],
+      [
+        "CollectionRandomizer",
+        "ListRandomizer"
+      ],
+      [
+        "CollectionRandomizer",
+        "QueueRandomizer"
+      ],
+      [
+        "CollectionRandomizer",
+        "SetRandomizer"
+      ],
+      [
+        "CollectionRandomizer",
+        "CustomCollectionRandomizer"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "BeansConfig",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "KexObjectFactory",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "EasyRandomDriver",
+        "overrides": 1,
+        "properties": 2
+      },
+      {
+        "name": "CollectionRandomizer",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "ListRandomizer",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "QueueRandomizer",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "SetRandomizer",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MapRandomizer",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "CustomCollectionRandomizer",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.0,
+      "properties": 0.7777777777777778
+    }
+  },
+  {
+    "package": "org.jetbrains.research.kex.util",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [],
+    "classesUsages": [],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.0
+    }
+  }
+]

@@ -1,0 +1,1646 @@
+package: org.jetbrains.exposed.dao
+    ReadOnlyProperty->BackReference
+    ReadOnlyProperty->OptionalBackReference
+    ReadOnlyProperty->Referrers
+    ReadOnlyProperty->OptionalReferrers
+    ReadWriteProperty->InnerTableLink
+    EntityClass->ImmutableEntityClass->ImmutableCachedEntityClass
+    EntityClass->LongEntityClass
+    EntityClass->UUIDEntityClass
+    EntityClass->IntEntityClass
+    ImmutableEntityClass->ImmutableCachedEntityClass
+    Iterable->SizedIterable->View
+    SizedIterable->View
+    Comparable->EntityID->DaoEntityID
+    Table->IdTable
+    org->IntIdTable
+    org->LongIdTable
+    org->UUIDTable
+    GlobalStatementInterceptor->EntityLifecycleInterceptor
+    EntityID->DaoEntityID
+    EntityIDFactory->DaoEntityIDFactory
+    Entity->LongEntity
+    Entity->UUIDEntity
+    Entity->IntEntity
+    
+    Max Inheritance hierarchy chain size: 3
+    The longest chain is: EntityClass->ImmutableEntityClass->ImmutableCachedEntityClass
+    Avg chain size: 2.130434782608696
+    
+    Avg overrides functions: 0.84375
+    Avg properties count: 0.8125
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    Reference: a = 0, b = 1, c = 0
+    OptionalReference: a = 0, b = 1, c = 0
+    BackReference: a = 1, b = 4, c = 0
+    OptionalBackReference: a = 1, b = 4, c = 0
+    Referrers: a = 2, b = 10, c = 7
+    OptionalReferrers: a = 2, b = 10, c = 7
+    EntityChangeType: a = 0, b = 0, c = 0
+    EntityChange: a = 0, b = 0, c = 0
+    EntityHook: a = 0, b = 2, c = 0
+    InnerTableLink: a = 15, b = 39, c = 16
+    EntityBatchUpdate: a = 4, b = 15, c = 2
+    EntityClass: a = 58, b = 210, c = 59
+    ImmutableEntityClass: a = 1, b = 3, c = 0
+    ImmutableCachedEntityClass: a = 8, b = 23, c = 9
+    ColumnWithTransform: a = 0, b = 0, c = 0
+    Entity: a = 24, b = 93, c = 48
+    View: a = 0, b = 16, c = 0
+    EntityID: a = 1, b = 5, c = 6
+    IdTable: a = 0, b = 0, c = 0
+    IntIdTable: a = 1, b = 4, c = 0
+    LongIdTable: a = 1, b = 4, c = 0
+    UUIDTable: a = 1, b = 4, c = 0
+    EntityLifecycleInterceptor: a = 4, b = 21, c = 2
+    DaoEntityID: a = 0, b = 2, c = 0
+    DaoEntityIDFactory: a = 0, b = 1, c = 0
+    LongEntity: a = 0, b = 0, c = 0
+    LongEntityClass: a = 0, b = 0, c = 0
+    UUIDEntity: a = 0, b = 0, c = 0
+    UUIDEntityClass: a = 0, b = 0, c = 0
+    EntityCache: a = 22, b = 68, c = 8
+    IntEntity: a = 0, b = 0, c = 0
+    IntEntityClass: a = 0, b = 0, c = 0
+    
+    ABC summary: a = 146, b = 540, c = 164
+    
+package: org.jetbrains.exposed.dao.exceptions
+    Exception->EntityNotFoundException
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: Exception->EntityNotFoundException
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 0.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    EntityNotFoundException: a = 0, b = 0, c = 0
+    
+    ABC summary: a = 0, b = 0, c = 0
+    
+package: org.jetbrains.exposed.sql.money
+    DatabaseTestsBase->MoneyDefaultsTest
+    DatabaseTestsBase->MoneyBaseTest
+    IntIdTable->TableWithDBDefault
+    IntEntity->DBDefault
+    Entity->IntEntity->AccountDao
+    IntEntity->AccountDao
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->Account
+    ColumnSet->Table->IdTable->IntIdTable->Account
+    DdlAware->Table->IdTable->IntIdTable->Account
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable->Account
+    IdTable->IntIdTable->Account
+    IntIdTable->Account
+    BiCompositeColumn->CompositeMoneyColumn
+    VarCharColumnType->CurrencyColumnType
+    
+    Max Inheritance hierarchy chain size: 6
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable->Account
+    Avg chain size: 2.933333333333333
+    
+    Avg overrides functions: 0.5
+    Avg properties count: 1.75
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    MoneyDefaultsTest: a = 15, b = 29, c = 0
+    MoneyBaseTest: a = 9, b = 30, c = 1
+    AccountDao: a = 0, b = 0, c = 0
+    Account: a = 1, b = 1, c = 0
+    CompositeMoneyColumn: a = 0, b = 0, c = 0
+    CurrencyColumnType: a = 0, b = 4, c = 2
+    
+    ABC summary: a = 25, b = 64, c = 3
+    
+package: org.jetbrains.exposed.jdbc
+    DatabaseConnectionAutoRegistration->ExposedConnectionImpl
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: DatabaseConnectionAutoRegistration->ExposedConnectionImpl
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 1.0
+    Avg properties count: 0.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    ExposedConnectionImpl: a = 0, b = 1, c = 0
+    
+    ABC summary: a = 0, b = 1, c = 0
+    
+package: org.jetbrains.exposed.sql.statements.jdbc
+    ExposedConnection->JdbcConnectionImpl
+    Statement->[anonymous object]
+    IdentifierManagerApi->JdbcIdentifierManager
+    ExposedSavepoint->JdbcSavepoint
+    ExposedDatabaseMetadata->JdbcDatabaseMetadataImpl
+    PreparedStatementApi->JdbcPreparedStatementImpl
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: ExposedConnection->JdbcConnectionImpl
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 4.0
+    Avg properties count: 4.25
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    JdbcConnectionImpl: a = 8, b = 24, c = 14
+    JdbcIdentifierManager: a = 11, b = 8, c = 5
+    JdbcSavepoint: a = 0, b = 0, c = 0
+    JdbcDatabaseMetadataImpl: a = 36, b = 119, c = 27
+    JdbcPreparedStatementImpl: a = 1, b = 12, c = 3
+    
+    ABC summary: a = 56, b = 163, c = 49
+    
+package: org.jetbrains.exposed.gradle
+    Inheritance hierarchy is empty
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 13.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    Versions: a = 13, b = 0, c = 0
+    
+    ABC summary: a = 13, b = 0, c = 0
+    
+package: org.jetbrains.exposed.sql
+    FieldSet->ColumnSet->Table->Alias
+    FieldSet->ColumnSet->QueryAlias
+    FieldSet->ColumnSet->Join
+    FieldSet->Slice
+    ColumnSet->Table->Alias
+    ColumnSet->QueryAlias
+    ColumnSet->Join
+    DdlAware->Table->Alias
+    DdlAware->Column
+    DdlAware->ForeignKeyConstraint
+    DdlAware->CheckConstraint
+    DdlAware->Index
+    StringColumnType->[anonymous object]
+    Table->Alias
+    Expression->ExpressionAlias
+    Expression->[anonymous object]
+    Expression->Op->NotOp
+    Expression->Op->CompoundBooleanOp->AndOp
+    Expression->Op->CompoundBooleanOp->OrOp
+    Expression->Op->ComparisonOp->EqOp
+    Expression->Op->ComparisonOp->NeqOp
+    Expression->Op->ComparisonOp->LessOp
+    Expression->Op->ComparisonOp->LessEqOp
+    Expression->Op->ComparisonOp->GreaterOp
+    Expression->Op->ComparisonOp->GreaterEqOp
+    Expression->Op->ComparisonOp->LikeOp
+    Expression->Op->ComparisonOp->NotLikeOp
+    Expression->Op->ComparisonOp->NotRegexpOp
+    Expression->Op->Between
+    Expression->Op->IsNullOp
+    Expression->Op->IsNotNullOp
+    Expression->Op->RegexpOp
+    Expression->Op->exists
+    Expression->Op->notExists
+    Expression->Op->SubQueryOp->InSubQueryOp
+    Expression->Op->SubQueryOp->NotInSubQueryOp
+    Expression->Op->SubQueryOp->EqSubQueryOp
+    Expression->Op->SubQueryOp->NotEqSubQueryOp
+    Expression->Op->InListOrNotInListOp
+    Expression->ExpressionWithColumnType->Function->CustomOperator->PlusOp
+    Expression->ExpressionWithColumnType->Function->CustomOperator->MinusOp
+    Expression->ExpressionWithColumnType->Function->CustomOperator->TimesOp
+    Expression->ExpressionWithColumnType->Function->CustomOperator->DivideOp
+    Expression->ExpressionWithColumnType->Function->CustomFunction
+    Expression->ExpressionWithColumnType->Function->Random
+    Expression->ExpressionWithColumnType->Function->LowerCase
+    Expression->ExpressionWithColumnType->Function->UpperCase
+    Expression->ExpressionWithColumnType->Function->Concat
+    Expression->ExpressionWithColumnType->Function->GroupConcat
+    Expression->ExpressionWithColumnType->Function->Substring
+    Expression->ExpressionWithColumnType->Function->Trim
+    Expression->ExpressionWithColumnType->Function->Min
+    Expression->ExpressionWithColumnType->Function->Max
+    Expression->ExpressionWithColumnType->Function->Avg
+    Expression->ExpressionWithColumnType->Function->Sum
+    Expression->ExpressionWithColumnType->Function->Count
+    Expression->ExpressionWithColumnType->Function->StdDevPop
+    Expression->ExpressionWithColumnType->Function->StdDevSamp
+    Expression->ExpressionWithColumnType->Function->VarPop
+    Expression->ExpressionWithColumnType->Function->VarSamp
+    Expression->ExpressionWithColumnType->Function->NextVal
+    Expression->ExpressionWithColumnType->Function->Coalesce
+    Expression->ExpressionWithColumnType->Function->Cast
+    Expression->ExpressionWithColumnType->ModOp
+    Expression->ExpressionWithColumnType->LiteralOp
+    Expression->ExpressionWithColumnType->NoOpConversion
+    Expression->ExpressionWithColumnType->Column
+    Expression->QueryParameter
+    Expression->CaseWhenElse
+    Expression->CompositeColumn->BiCompositeColumn
+    Function->[anonymous object]
+    Expression->[anonymous object]
+    Op->TRUE
+    Op->FALSE
+    Op->NotOp
+    Op->CompoundBooleanOp->AndOp
+    Op->CompoundBooleanOp->OrOp
+    Op->ComparisonOp->EqOp
+    Op->ComparisonOp->NeqOp
+    Op->ComparisonOp->LessOp
+    Op->ComparisonOp->LessEqOp
+    Op->ComparisonOp->GreaterOp
+    Op->ComparisonOp->GreaterEqOp
+    Op->ComparisonOp->LikeOp
+    Op->ComparisonOp->NotLikeOp
+    Op->ComparisonOp->NotRegexpOp
+    Op->Between
+    Op->IsNullOp
+    Op->IsNotNullOp
+    Op->RegexpOp
+    Op->exists
+    Op->notExists
+    Op->SubQueryOp->InSubQueryOp
+    Op->SubQueryOp->NotInSubQueryOp
+    Op->SubQueryOp->EqSubQueryOp
+    Op->SubQueryOp->NotEqSubQueryOp
+    Op->InListOrNotInListOp
+    ComplexExpression->CompoundBooleanOp->AndOp
+    ComplexExpression->CompoundBooleanOp->OrOp
+    ComplexExpression->ComparisonOp->EqOp
+    ComplexExpression->ComparisonOp->NeqOp
+    ComplexExpression->ComparisonOp->LessOp
+    ComplexExpression->ComparisonOp->LessEqOp
+    ComplexExpression->ComparisonOp->GreaterOp
+    ComplexExpression->ComparisonOp->GreaterEqOp
+    ComplexExpression->ComparisonOp->LikeOp
+    ComplexExpression->ComparisonOp->NotLikeOp
+    ComplexExpression->ComparisonOp->NotRegexpOp
+    ComplexExpression->Between
+    ComplexExpression->IsNullOp
+    ComplexExpression->IsNotNullOp
+    ComplexExpression->RegexpOp
+    ComplexExpression->SubQueryOp->InSubQueryOp
+    ComplexExpression->SubQueryOp->NotInSubQueryOp
+    ComplexExpression->SubQueryOp->EqSubQueryOp
+    ComplexExpression->SubQueryOp->NotEqSubQueryOp
+    ComplexExpression->InListOrNotInListOp
+    ComplexExpression->CaseWhenElse
+    CompoundBooleanOp->AndOp
+    CompoundBooleanOp->OrOp
+    ComparisonOp->EqOp
+    ComparisonOp->NeqOp
+    ComparisonOp->LessOp
+    ComparisonOp->LessEqOp
+    ComparisonOp->GreaterOp
+    ComparisonOp->GreaterEqOp
+    ComparisonOp->LikeOp
+    ComparisonOp->NotLikeOp
+    ComparisonOp->NotRegexpOp
+    ExpressionWithColumnType->Function->CustomOperator->PlusOp
+    ExpressionWithColumnType->Function->CustomOperator->MinusOp
+    ExpressionWithColumnType->Function->CustomOperator->TimesOp
+    ExpressionWithColumnType->Function->CustomOperator->DivideOp
+    ExpressionWithColumnType->Function->CustomFunction
+    ExpressionWithColumnType->Function->Random
+    ExpressionWithColumnType->Function->LowerCase
+    ExpressionWithColumnType->Function->UpperCase
+    ExpressionWithColumnType->Function->Concat
+    ExpressionWithColumnType->Function->GroupConcat
+    ExpressionWithColumnType->Function->Substring
+    ExpressionWithColumnType->Function->Trim
+    ExpressionWithColumnType->Function->Min
+    ExpressionWithColumnType->Function->Max
+    ExpressionWithColumnType->Function->Avg
+    ExpressionWithColumnType->Function->Sum
+    ExpressionWithColumnType->Function->Count
+    ExpressionWithColumnType->Function->StdDevPop
+    ExpressionWithColumnType->Function->StdDevSamp
+    ExpressionWithColumnType->Function->VarPop
+    ExpressionWithColumnType->Function->VarSamp
+    ExpressionWithColumnType->Function->NextVal
+    ExpressionWithColumnType->Function->Coalesce
+    ExpressionWithColumnType->Function->Cast
+    ExpressionWithColumnType->ModOp
+    ExpressionWithColumnType->LiteralOp
+    ExpressionWithColumnType->NoOpConversion
+    ExpressionWithColumnType->Column
+    Function->CustomOperator->PlusOp
+    Function->CustomOperator->MinusOp
+    Function->CustomOperator->TimesOp
+    Function->CustomOperator->DivideOp
+    Function->CustomFunction
+    Function->Random
+    Function->LowerCase
+    Function->UpperCase
+    Function->Concat
+    Function->GroupConcat
+    Function->Substring
+    Function->Trim
+    Function->Min
+    Function->Max
+    Function->Avg
+    Function->Sum
+    Function->Count
+    Function->StdDevPop
+    Function->StdDevSamp
+    Function->VarPop
+    Function->VarSamp
+    Function->NextVal
+    Function->Coalesce
+    Function->Cast
+    CustomOperator->PlusOp
+    CustomOperator->MinusOp
+    CustomOperator->TimesOp
+    CustomOperator->DivideOp
+    SubQueryOp->InSubQueryOp
+    SubQueryOp->NotInSubQueryOp
+    SubQueryOp->EqSubQueryOp
+    SubQueryOp->NotEqSubQueryOp
+    ISqlExpressionBuilder->SqlExpressionBuilderClass
+    ISqlExpressionBuilder->SqlExpressionBuilder
+    IColumnType->ColumnType->EntityIDColumnType
+    IColumnType->ColumnType->ByteColumnType
+    IColumnType->ColumnType->UByteColumnType
+    IColumnType->ColumnType->ShortColumnType
+    IColumnType->ColumnType->UShortColumnType
+    IColumnType->ColumnType->IntegerColumnType
+    IColumnType->ColumnType->UIntegerColumnType
+    IColumnType->ColumnType->LongColumnType
+    IColumnType->ColumnType->ULongColumnType
+    IColumnType->ColumnType->FloatColumnType
+    IColumnType->ColumnType->DoubleColumnType
+    IColumnType->ColumnType->DecimalColumnType
+    IColumnType->ColumnType->CharacterColumnType
+    IColumnType->ColumnType->StringColumnType->CharColumnType
+    IColumnType->ColumnType->StringColumnType->VarCharColumnType->EnumerationNameColumnType
+    IColumnType->ColumnType->StringColumnType->TextColumnType
+    IColumnType->ColumnType->BasicBinaryColumnType->BinaryColumnType
+    IColumnType->ColumnType->BlobColumnType
+    IColumnType->ColumnType->UUIDColumnType
+    IColumnType->ColumnType->BooleanColumnType
+    IColumnType->ColumnType->EnumerationColumnType
+    ColumnType->EntityIDColumnType
+    ColumnType->ByteColumnType
+    ColumnType->UByteColumnType
+    ColumnType->ShortColumnType
+    ColumnType->UShortColumnType
+    ColumnType->IntegerColumnType
+    ColumnType->UIntegerColumnType
+    ColumnType->LongColumnType
+    ColumnType->ULongColumnType
+    ColumnType->FloatColumnType
+    ColumnType->DoubleColumnType
+    ColumnType->DecimalColumnType
+    ColumnType->CharacterColumnType
+    ColumnType->StringColumnType->CharColumnType
+    ColumnType->StringColumnType->VarCharColumnType->EnumerationNameColumnType
+    ColumnType->StringColumnType->TextColumnType
+    ColumnType->BasicBinaryColumnType->BinaryColumnType
+    ColumnType->BlobColumnType
+    ColumnType->UUIDColumnType
+    ColumnType->BooleanColumnType
+    ColumnType->EnumerationColumnType
+    StringColumnType->CharColumnType
+    StringColumnType->VarCharColumnType->EnumerationNameColumnType
+    StringColumnType->TextColumnType
+    BasicBinaryColumnType->BinaryColumnType
+    VarCharColumnType->EnumerationNameColumnType
+    SqlLogger->StdOutSqlLogger
+    SqlLogger->Slf4jSqlDebugLogger
+    SqlLogger->CompositeSqlLogger
+    StatementInterceptor->CompositeSqlLogger
+    Comparable->Column
+    Iterable->SizedIterable->Query
+    Iterable->SizedIterable->EmptySizedIterable
+    Iterable->SizedIterable->SizedCollection
+    Iterable->SizedIterable->LazySizedCollection
+    Iterable->SizedIterable->[anonymous object]
+    SizedIterable->Query
+    SizedIterable->EmptySizedIterable
+    SizedIterable->SizedCollection
+    SizedIterable->LazySizedCollection
+    SizedIterable->[anonymous object]
+    Statement->Query
+    Iterator->ResultIterator
+    Iterable->[anonymous object]
+    Table->[anonymous object]
+    NextVal->IntNextVal
+    NextVal->LongNextVal
+    CompositeColumn->BiCompositeColumn
+    Iterator->EmptySizedIterable
+    Iterator->[anonymous object]
+    UserDataHolder->Transaction
+    Statement->[anonymous object]
+    
+    Max Inheritance hierarchy chain size: 5
+    The longest chain is: Expression->ExpressionWithColumnType->Function->CustomOperator->PlusOp
+    Avg chain size: 2.757575757575758
+    
+    Avg overrides functions: 1.6866666666666668
+    Avg properties count: 0.7
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    Database: a = 12, b = 74, c = 13
+    DatabaseConnectionAutoRegistration: a = 0, b = 0, c = 0
+    Alias: a = 3, b = 12, c = 6
+    ExpressionAlias: a = 0, b = 3, c = 1
+    QueryAlias: a = 1, b = 22, c = 4
+    [anonymous object]: a = 0, b = 4, c = 0
+    Op: a = 0, b = 1, c = 0
+    NotOp: a = 0, b = 2, c = 0
+    ComplexExpression: a = 0, b = 0, c = 0
+    CompoundBooleanOp: a = 0, b = 3, c = 0
+    AndOp: a = 0, b = 0, c = 0
+    OrOp: a = 0, b = 0, c = 0
+    ComparisonOp: a = 0, b = 4, c = 0
+    EqOp: a = 0, b = 0, c = 0
+    NeqOp: a = 0, b = 0, c = 0
+    LessOp: a = 0, b = 0, c = 0
+    LessEqOp: a = 0, b = 0, c = 0
+    GreaterOp: a = 0, b = 0, c = 0
+    GreaterEqOp: a = 0, b = 0, c = 0
+    Between: a = 0, b = 2, c = 0
+    IsNullOp: a = 0, b = 2, c = 0
+    IsNotNullOp: a = 0, b = 2, c = 0
+    PlusOp: a = 0, b = 0, c = 0
+    MinusOp: a = 0, b = 0, c = 0
+    TimesOp: a = 0, b = 0, c = 0
+    DivideOp: a = 3, b = 7, c = 2
+    ModOp: a = 0, b = 3, c = 1
+    LikeOp: a = 0, b = 0, c = 0
+    NotLikeOp: a = 0, b = 0, c = 0
+    RegexpOp: a = 0, b = 1, c = 0
+    NotRegexpOp: a = 0, b = 0, c = 0
+    exists: a = 0, b = 4, c = 0
+    notExists: a = 0, b = 4, c = 0
+    SubQueryOp: a = 0, b = 3, c = 0
+    InSubQueryOp: a = 0, b = 0, c = 0
+    NotInSubQueryOp: a = 0, b = 0, c = 0
+    EqSubQueryOp: a = 0, b = 0, c = 0
+    NotEqSubQueryOp: a = 0, b = 0, c = 0
+    InListOrNotInListOp: a = 1, b = 15, c = 7
+    LiteralOp: a = 0, b = 2, c = 0
+    QueryParameter: a = 0, b = 2, c = 0
+    NoOpConversion: a = 0, b = 1, c = 0
+    SqlExpressionBuilderClass: a = 0, b = 0, c = 0
+    ISqlExpressionBuilder: a = 4, b = 126, c = 9
+    SqlExpressionBuilder: a = 0, b = 0, c = 0
+    IColumnType: a = 1, b = 7, c = 1
+    ColumnType: a = 0, b = 3, c = 3
+    AutoIncColumnType: a = 0, b = 0, c = 0
+    EntityIDColumnType: a = 0, b = 8, c = 6
+    ByteColumnType: a = 0, b = 4, c = 1
+    UByteColumnType: a = 2, b = 13, c = 6
+    ShortColumnType: a = 0, b = 4, c = 1
+    UShortColumnType: a = 2, b = 13, c = 6
+    IntegerColumnType: a = 0, b = 4, c = 1
+    UIntegerColumnType: a = 2, b = 13, c = 6
+    LongColumnType: a = 0, b = 4, c = 1
+    ULongColumnType: a = 2, b = 13, c = 6
+    FloatColumnType: a = 0, b = 4, c = 1
+    DoubleColumnType: a = 0, b = 4, c = 1
+    DecimalColumnType: a = 3, b = 8, c = 6
+    CharacterColumnType: a = 0, b = 4, c = 1
+    StringColumnType: a = 3, b = 14, c = 7
+    CharColumnType: a = 2, b = 8, c = 8
+    VarCharColumnType: a = 2, b = 8, c = 7
+    TextColumnType: a = 1, b = 7, c = 4
+    BasicBinaryColumnType: a = 0, b = 8, c = 2
+    BinaryColumnType: a = 2, b = 4, c = 6
+    BlobColumnType: a = 0, b = 15, c = 4
+    UUIDColumnType: a = 1, b = 20, c = 3
+    BooleanColumnType: a = 0, b = 6, c = 2
+    EnumerationColumnType: a = 2, b = 7, c = 7
+    EnumerationNameColumnType: a = 2, b = 8, c = 8
+    IDateColumnType: a = 0, b = 0, c = 0
+    Schema: a = 0, b = 13, c = 3
+    QueryBuilder: a = 2, b = 32, c = 6
+    Expression: a = 0, b = 9, c = 2
+    ExpressionWithColumnType: a = 0, b = 0, c = 0
+    SqlLogger: a = 0, b = 0, c = 0
+    StdOutSqlLogger: a = 0, b = 2, c = 0
+    Slf4jSqlDebugLogger: a = 0, b = 3, c = 0
+    CompositeSqlLogger: a = 1, b = 6, c = 0
+    Column: a = 16, b = 56, c = 49
+    SortOrder: a = 0, b = 0, c = 0
+    Query: a = 44, b = 85, c = 28
+    DdlAware: a = 0, b = 0, c = 0
+    ReferenceOption: a = 0, b = 0, c = 0
+    ForeignKeyConstraint: a = 1, b = 18, c = 7
+    CheckConstraint: a = 5, b = 16, c = 2
+    Index: a = 5, b = 26, c = 11
+    [anonymous object]: a = 4, b = 13, c = 3
+    SchemaUtils: a = 34, b = 149, c = 20
+    Function: a = 0, b = 0, c = 0
+    CustomFunction: a = 0, b = 5, c = 0
+    CustomOperator: a = 0, b = 2, c = 0
+    Random: a = 0, b = 2, c = 0
+    LowerCase: a = 0, b = 2, c = 0
+    UpperCase: a = 0, b = 2, c = 0
+    Concat: a = 0, b = 1, c = 0
+    GroupConcat: a = 0, b = 1, c = 0
+    Substring: a = 0, b = 1, c = 0
+    Trim: a = 0, b = 2, c = 0
+    Min: a = 0, b = 2, c = 0
+    Max: a = 0, b = 2, c = 0
+    Avg: a = 0, b = 2, c = 0
+    Sum: a = 0, b = 2, c = 0
+    Count: a = 0, b = 1, c = 0
+    StdDevPop: a = 0, b = 2, c = 0
+    StdDevSamp: a = 0, b = 2, c = 0
+    VarPop: a = 0, b = 2, c = 0
+    VarSamp: a = 0, b = 2, c = 0
+    NextVal: a = 0, b = 1, c = 0
+    Case: a = 0, b = 2, c = 0
+    CaseWhen: a = 1, b = 3, c = 0
+    CaseWhenElse: a = 0, b = 4, c = 1
+    Coalesce: a = 0, b = 2, c = 0
+    Cast: a = 0, b = 1, c = 0
+    CompositeColumn: a = 1, b = 3, c = 0
+    BiCompositeColumn: a = 3, b = 6, c = 4
+    Sequence: a = 2, b = 21, c = 3
+    SizedIterable: a = 0, b = 0, c = 0
+    EmptySizedIterable: a = 0, b = 1, c = 0
+    SizedCollection: a = 0, b = 10, c = 2
+    LazySizedCollection: a = 14, b = 22, c = 22
+    [anonymous object]: a = 1, b = 16, c = 0
+    FieldSet: a = 1, b = 5, c = 1
+    ColumnSet: a = 0, b = 3, c = 0
+    Slice: a = 0, b = 0, c = 0
+    JoinType: a = 0, b = 0, c = 0
+    Join: a = 7, b = 51, c = 22
+    Table: a = 42, b = 242, c = 32
+    Seq: a = 0, b = 0, c = 0
+    Key: a = 0, b = 0, c = 0
+    UserDataHolder: a = 2, b = 3, c = 0
+    Transaction: a = 19, b = 84, c = 5
+    ResultRow: a = 12, b = 49, c = 23
+    
+    ABC summary: a = 268, b = 1502, c = 394
+    
+package: org.jetbrains.exposed.exceptions
+    SQLException->ExposedSQLException
+    UnsupportedOperationException->UnsupportedByDialectException
+    ExceptionInInitializerError->DuplicateColumnException
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: SQLException->ExposedSQLException
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 1.0
+    Avg properties count: 0.3333333333333333
+    
+    ABC metric
+    global ABC: a = 0, b = 1, c = 0
+    ExposedSQLException: a = 1, b = 8, c = 8
+    UnsupportedByDialectException: a = 0, b = 0, c = 0
+    DuplicateColumnException: a = 0, b = 0, c = 0
+    
+    ABC summary: a = 1, b = 8, c = 8
+    
+package: org.jetbrains.exposed.sql.transactions
+    ThreadLocal->[anonymous object]
+    TransactionManager->NotInitializedManager
+    TransactionManager->ThreadLocalTransactionManager
+    ReadWriteProperty->TransactionStore
+    TransactionInterface->ThreadLocalTransaction
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: ThreadLocal->[anonymous object]
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 1.7142857142857142
+    Avg properties count: 3.142857142857143
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    TransactionInterface: a = 0, b = 0, c = 0
+    NotInitializedManager: a = 2, b = 3, c = 0
+    TransactionManager: a = 6, b = 23, c = 9
+    TransactionStore: a = 3, b = 10, c = 4
+    ThreadLocalTransactionManager: a = 3, b = 10, c = 6
+    
+    ABC summary: a = 14, b = 46, c = 19
+    
+package: org.jetbrains.exposed.sql.transactions.experimental
+    CoroutineScope->TransactionScope
+    CoroutineContext->TransactionScope
+    ThreadContextElement->TransactionCoroutineElement
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: CoroutineScope->TransactionScope
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.6666666666666666
+    Avg properties count: 1.3333333333333333
+    
+    ABC metric
+    global ABC: a = 13, b = 31, c = 15
+    TransactionContext: a = 0, b = 0, c = 0
+    TransactionScope: a = 2, b = 1, c = 0
+    TransactionCoroutineElement: a = 3, b = 6, c = 0
+    
+    ABC summary: a = 5, b = 7, c = 0
+    
+package: org.jetbrains.exposed.sql.vendors
+    DataTypeProvider->OracleDataTypeProvider
+    DataTypeProvider->PostgreSQLDataTypeProvider
+    DataTypeProvider->MysqlDataTypeProvider
+    DataTypeProvider->SQLiteDataTypeProvider
+    DataTypeProvider->SQLServerDataTypeProvider
+    DataTypeProvider->H2DataTypeProvider
+    FunctionProvider->OracleFunctionProvider
+    FunctionProvider->PostgreSQLFunctionProvider
+    FunctionProvider->MysqlFunctionProvider->MariaDBFunctionProvider
+    FunctionProvider->SQLiteFunctionProvider
+    FunctionProvider->SQLServerFunctionProvider
+    FunctionProvider->H2FunctionProvider
+    DatabaseDialect->VendorDialect->OracleDialect
+    DatabaseDialect->VendorDialect->PostgreSQLDialect->PostgreSQLNGDialect
+    DatabaseDialect->VendorDialect->MysqlDialect->MariaDBDialect
+    DatabaseDialect->VendorDialect->SQLiteDialect
+    DatabaseDialect->VendorDialect->SQLServerDialect
+    DatabaseDialect->VendorDialect->H2Dialect
+    VendorDialect->OracleDialect
+    VendorDialect->PostgreSQLDialect->PostgreSQLNGDialect
+    VendorDialect->MysqlDialect->MariaDBDialect
+    VendorDialect->SQLiteDialect
+    VendorDialect->SQLServerDialect
+    VendorDialect->H2Dialect
+    PostgreSQLDialect->PostgreSQLNGDialect
+    MysqlFunctionProvider->INSTANCE
+    Op->MATCH
+    MatchMode->MysqlMatchMode
+    StringColumnType->CharColumnType
+    MysqlFunctionProvider->MariaDBFunctionProvider
+    MysqlDialect->MariaDBDialect
+    
+    Max Inheritance hierarchy chain size: 4
+    The longest chain is: DatabaseDialect->VendorDialect->PostgreSQLDialect->PostgreSQLNGDialect
+    Avg chain size: 2.3548387096774195
+    
+    Avg overrides functions: 5.645161290322581
+    Avg properties count: 1.7096774193548387
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    OracleDataTypeProvider: a = 0, b = 8, c = 10
+    OracleFunctionProvider: a = 6, b = 76, c = 18
+    OracleDialect: a = 7, b = 15, c = 2
+    PostgreSQLDataTypeProvider: a = 0, b = 2, c = 0
+    PostgreSQLFunctionProvider: a = 10, b = 79, c = 12
+    PostgreSQLDialect: a = 2, b = 14, c = 1
+    PostgreSQLNGDialect: a = 1, b = 0, c = 0
+    MysqlDataTypeProvider: a = 0, b = 3, c = 1
+    MysqlFunctionProvider: a = 6, b = 30, c = 5
+    MysqlDialect: a = 17, b = 51, c = 11
+    SQLiteDataTypeProvider: a = 0, b = 2, c = 1
+    SQLiteFunctionProvider: a = 3, b = 44, c = 11
+    SQLiteDialect: a = 11, b = 17, c = 9
+    SQLServerDataTypeProvider: a = 0, b = 3, c = 1
+    SQLServerFunctionProvider: a = 4, b = 51, c = 16
+    SQLServerDialect: a = 5, b = 10, c = 0
+    MariaDBFunctionProvider: a = 0, b = 4, c = 0
+    MariaDBDialect: a = 4, b = 0, c = 0
+    DataTypeProvider: a = 0, b = 6, c = 1
+    FunctionProvider: a = 1, b = 86, c = 7
+    ColumnMetadata: a = 0, b = 0, c = 0
+    DatabaseDialect: a = 0, b = 12, c = 0
+    VendorDialect: a = 22, b = 71, c = 14
+    H2DataTypeProvider: a = 0, b = 2, c = 0
+    H2FunctionProvider: a = 11, b = 50, c = 13
+    H2Dialect: a = 4, b = 25, c = 6
+    
+    ABC summary: a = 114, b = 661, c = 139
+    
+package: org.jetbrains.exposed.sql.statements
+    Statement->UpdateBuilder->InsertStatement->ReplaceStatement
+    Statement->UpdateBuilder->InsertStatement->BatchInsertStatement->SQLServerBatchInsertStatement
+    Statement->UpdateBuilder->UpdateStatement->BatchUpdateStatement
+    Statement->DeleteStatement
+    Statement->InsertSelectStatement
+    UpdateBuilder->InsertStatement->ReplaceStatement
+    UpdateBuilder->InsertStatement->BatchInsertStatement->SQLServerBatchInsertStatement
+    UpdateBuilder->UpdateStatement->BatchUpdateStatement
+    InsertStatement->ReplaceStatement
+    InsertStatement->BatchInsertStatement->SQLServerBatchInsertStatement
+    StatementInterceptor->GlobalStatementInterceptor
+    Exception->BatchDataInconsistentException
+    BatchInsertStatement->SQLServerBatchInsertStatement
+    UpdateStatement->BatchUpdateStatement
+    
+    Max Inheritance hierarchy chain size: 5
+    The longest chain is: Statement->UpdateBuilder->InsertStatement->BatchInsertStatement->SQLServerBatchInsertStatement
+    Avg chain size: 2.857142857142857
+    
+    Avg overrides functions: 1.5294117647058822
+    Avg properties count: 0.8235294117647058
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    InsertStatement: a = 26, b = 79, c = 41
+    UpdateBuilder: a = 6, b = 17, c = 8
+    UpdateStatement: a = 0, b = 14, c = 2
+    DeleteStatement: a = 0, b = 14, c = 2
+    ReplaceStatement: a = 0, b = 2, c = 1
+    StatementInterceptor: a = 0, b = 0, c = 0
+    GlobalStatementInterceptor: a = 0, b = 0, c = 0
+    BatchDataInconsistentException: a = 0, b = 0, c = 0
+    BatchInsertStatement: a = 14, b = 49, c = 17
+    SQLServerBatchInsertStatement: a = 5, b = 23, c = 4
+    BatchUpdateStatement: a = 5, b = 22, c = 6
+    DefaultValueMarker: a = 0, b = 0, c = 0
+    Statement: a = 9, b = 31, c = 9
+    StatementContext: a = 0, b = 1, c = 0
+    StatementGroup: a = 0, b = 0, c = 0
+    StatementType: a = 0, b = 0, c = 0
+    InsertSelectStatement: a = 1, b = 12, c = 2
+    
+    ABC summary: a = 66, b = 264, c = 92
+    
+package: org.jetbrains.exposed.sql.statements.api
+    LinkedHashMap->[anonymous object]
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: LinkedHashMap->[anonymous object]
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.375
+    Avg properties count: 4.125
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    ExposedDatabaseMetadata: a = 0, b = 0, c = 0
+    IdentifierManagerApi: a = 6, b = 41, c = 36
+    ExposedSavepoint: a = 0, b = 0, c = 0
+    PreparedStatementApi: a = 0, b = 4, c = 0
+    ExposedBlob: a = 0, b = 2, c = 2
+    ExposedConnection: a = 0, b = 0, c = 0
+    
+    ABC summary: a = 6, b = 47, c = 38
+    
+package: org.jetbrains.exposed.dao.id
+    EntityIDFactory->[anonymous object]
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable
+    FieldSet->ColumnSet->Table->IdTable->LongIdTable
+    FieldSet->ColumnSet->Table->IdTable->UUIDTable
+    ColumnSet->Table->IdTable->IntIdTable
+    ColumnSet->Table->IdTable->LongIdTable
+    ColumnSet->Table->IdTable->UUIDTable
+    DdlAware->Table->IdTable->IntIdTable
+    DdlAware->Table->IdTable->LongIdTable
+    DdlAware->Table->IdTable->UUIDTable
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable
+    Table->IdTable->LongIdTable
+    Table->IdTable->UUIDTable
+    IdTable->IntIdTable
+    IdTable->LongIdTable
+    IdTable->UUIDTable
+    Comparable->EntityID
+    
+    Max Inheritance hierarchy chain size: 5
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable
+    Avg chain size: 3.3333333333333335
+    
+    Avg overrides functions: 0.625
+    Avg properties count: 1.25
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    EntityIDFactory: a = 0, b = 0, c = 0
+    EntityIDFunctionProvider: a = 1, b = 3, c = 1
+    IdTable: a = 0, b = 0, c = 0
+    IntIdTable: a = 1, b = 5, c = 1
+    LongIdTable: a = 1, b = 5, c = 1
+    UUIDTable: a = 1, b = 5, c = 1
+    EntityID: a = 1, b = 5, c = 6
+    
+    ABC summary: a = 5, b = 23, c = 10
+    
+package: org.jetbrains.exposed.spring
+    SpringTransactionTestBase->ExposedTransactionManagerTest
+    SpringTransactionTestBase->SpringCoroutineTest
+    SpringTransactionTestBase->SpringTransactionEntityTest
+    SpringTransactionTestBase->EntityUpdateTest
+    Table->t1
+    Table->Testing
+    TransactionManagementConfigurer->TestConfig
+    UUIDTable->CustomerTable
+    UUIDEntity->CustomerDAO
+    UUIDTable->OrderTable
+    UUIDEntity->OrderDAO
+    IntIdTable->t1
+    IntEntity->dao
+    DataSourceTransactionManager->SpringTransactionManager
+    ThreadLocal->[anonymous object]
+    TransactionManager->SpringTransactionManager
+    TransactionInterface->SpringTransaction
+    ApplicationRunner->DatabaseInitializer
+    Ordered->DatabaseInitializer
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: SpringTransactionTestBase->ExposedTransactionManagerTest
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.7
+    Avg properties count: 1.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    ExposedTransactionManagerTest: a = 8, b = 37, c = 0
+    SpringCoroutineTest: a = 3, b = 17, c = 2
+    TestConfig: a = 0, b = 7, c = 0
+    SpringTransactionTestBase: a = 0, b = 0, c = 0
+    CustomerTable: a = 1, b = 2, c = 0
+    CustomerDAO: a = 0, b = 0, c = 0
+    OrderTable: a = 2, b = 2, c = 0
+    OrderDAO: a = 0, b = 1, c = 0
+    Service: a = 3, b = 6, c = 0
+    SpringTransactionEntityTest: a = 3, b = 14, c = 0
+    EntityUpdateTest: a = 4, b = 12, c = 2
+    SpringTransactionManager: a = 9, b = 44, c = 12
+    DatabaseInitializerTest: a = 0, b = 11, c = 0
+    Application: a = 0, b = 1, c = 0
+    DatabaseInitializer: a = 3, b = 9, c = 0
+    
+    ABC summary: a = 36, b = 163, c = 16
+    
+package: org.jetbrains.exposed
+    DatabaseTestsBase->JodaTimeBaseTest->JodaTimeDefaultsTest
+    DatabaseTestsBase->JodaTimeBaseTest->JodaTimeMiscTableTest
+    JodaTimeBaseTest->JodaTimeDefaultsTest
+    JodaTimeBaseTest->JodaTimeMiscTableTest
+    IntIdTable->TableWithDBDefault
+    IntEntity->DBDefault
+    Expression->[anonymous object]
+    IntIdTable->[anonymous object]
+    ExpressionWithColumnType->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->CitiesTime
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->CitiesTime
+    ColumnSet->Table->IdTable->IntIdTable->CitiesTime
+    ColumnSet->Table->IdTable->IntIdTable->CitiesTime
+    DdlAware->Table->IdTable->IntIdTable->CitiesTime
+    DdlAware->Table->IdTable->IntIdTable->CitiesTime
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable->CitiesTime
+    Table->IdTable->IntIdTable->CitiesTime
+    IdTable->IntIdTable->CitiesTime
+    IdTable->IntIdTable->CitiesTime
+    IntIdTable->CitiesTime
+    IntIdTable->CitiesTime
+    MiscTable->Misc
+    DatabaseTestsBase->DefaultsTest
+    IntIdTable->TableWithDBDefault
+    IntEntity->DBDefault
+    Expression->[anonymous object]
+    IntIdTable->[anonymous object]
+    ExpressionWithColumnType->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    DatabaseTestsBase->JavaTimeBaseTest
+    IntIdTable->[anonymous object]
+    MiscTable->Misc
+    DatabaseTestsBase->MiscTableTest
+    
+    Max Inheritance hierarchy chain size: 6
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable->CitiesTime
+    Avg chain size: 2.682926829268293
+    
+    Avg overrides functions: 0.27586206896551724
+    Avg properties count: 2.3448275862068964
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    JodaTimeDefaultsTest: a = 64, b = 167, c = 3
+    JodaTimeBaseTest: a = 10, b = 47, c = 0
+    CitiesTime: a = 2, b = 3, c = 0
+    Misc: a = 4, b = 6, c = 0
+    JodaTimeMiscTableTest: a = 197, b = 180, c = 1
+    DefaultsTest: a = 55, b = 142, c = 2
+    JavaTimeBaseTest: a = 18, b = 63, c = 1
+    CitiesTime: a = 2, b = 3, c = 0
+    Misc: a = 6, b = 9, c = 0
+    MiscTableTest: a = 215, b = 181, c = 1
+    
+    ABC summary: a = 573, b = 801, c = 8
+    
+package: org.jetbrains.exposed.sql.jodatime
+    IColumnType->ColumnType->DateColumnType
+    ColumnType->DateColumnType
+    IDateColumnType->DateColumnType
+    Function->Date
+    Function->CurrentDateTime
+    Function->Year
+    Function->Month
+    Function->Day
+    Function->Hour
+    Function->Minute
+    Function->Second
+    
+    Max Inheritance hierarchy chain size: 3
+    The longest chain is: IColumnType->ColumnType->DateColumnType
+    Avg chain size: 2.090909090909091
+    
+    Avg overrides functions: 1.6666666666666667
+    Avg properties count: 0.1111111111111111
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    DateColumnType: a = 4, b = 27, c = 13
+    Date: a = 0, b = 2, c = 0
+    CurrentDateTime: a = 0, b = 2, c = 2
+    Year: a = 0, b = 2, c = 0
+    Month: a = 0, b = 2, c = 0
+    Day: a = 0, b = 2, c = 0
+    Hour: a = 0, b = 2, c = 0
+    Minute: a = 0, b = 2, c = 0
+    Second: a = 0, b = 2, c = 0
+    
+    ABC summary: a = 4, b = 43, c = 15
+    
+package: org.jetbrains.exposed.spring.tables
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->TestTable
+    ColumnSet->Table->IdTable->IntIdTable->TestTable
+    DdlAware->Table->IdTable->IntIdTable->TestTable
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable->TestTable
+    IdTable->IntIdTable->TestTable
+    IntIdTable->TestTable
+    
+    Max Inheritance hierarchy chain size: 6
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable->TestTable
+    Avg chain size: 3.857142857142857
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    TestTable: a = 1, b = 1, c = 0
+    
+    ABC summary: a = 1, b = 1, c = 0
+    
+package: org.jetbrains.exposed.spring.tables.ignore
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->IgnoreTable
+    ColumnSet->Table->IdTable->IntIdTable->IgnoreTable
+    DdlAware->Table->IdTable->IntIdTable->IgnoreTable
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable->IgnoreTable
+    IdTable->IntIdTable->IgnoreTable
+    IntIdTable->IgnoreTable
+    
+    Max Inheritance hierarchy chain size: 6
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable->IgnoreTable
+    Avg chain size: 3.857142857142857
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    IgnoreTable: a = 1, b = 1, c = 0
+    
+    ABC summary: a = 1, b = 1, c = 0
+    
+package: org.jetbrains.exposed.spring.autoconfigure
+    Inheritance hierarchy is empty
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.25
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    ExposedAutoConfigurationTest: a = 2, b = 2, c = 0
+    ExposedAutoConfigurationTestAutoGenerateDDL: a = 1, b = 9, c = 0
+    AsyncExposedService: a = 0, b = 5, c = 0
+    ExposedAutoConfiguration: a = 0, b = 2, c = 0
+    
+    ABC summary: a = 3, b = 18, c = 0
+    
+package: org.jetbrains.exposed.sql.`java-time`
+    Expression->ExpressionWithColumnType->Function->Date
+    Expression->ExpressionWithColumnType->Function->CurrentDateTime
+    Expression->ExpressionWithColumnType->Function->Year
+    Expression->ExpressionWithColumnType->Function->Month
+    Expression->ExpressionWithColumnType->Function->Day
+    Expression->ExpressionWithColumnType->Function->Hour
+    Expression->ExpressionWithColumnType->Function->Minute
+    Expression->ExpressionWithColumnType->Function->Second
+    Expression->CurrentTimestamp
+    ExpressionWithColumnType->Function->Date
+    ExpressionWithColumnType->Function->CurrentDateTime
+    ExpressionWithColumnType->Function->Year
+    ExpressionWithColumnType->Function->Month
+    ExpressionWithColumnType->Function->Day
+    ExpressionWithColumnType->Function->Hour
+    ExpressionWithColumnType->Function->Minute
+    ExpressionWithColumnType->Function->Second
+    Function->Date
+    Function->CurrentDateTime
+    Function->Year
+    Function->Month
+    Function->Day
+    Function->Hour
+    Function->Minute
+    Function->Second
+    IColumnType->ColumnType->JavaLocalDateColumnType
+    IColumnType->ColumnType->JavaLocalDateTimeColumnType
+    IColumnType->ColumnType->JavaInstantColumnType
+    IColumnType->ColumnType->JavaDurationColumnType
+    ColumnType->JavaLocalDateColumnType
+    ColumnType->JavaLocalDateTimeColumnType
+    ColumnType->JavaInstantColumnType
+    ColumnType->JavaDurationColumnType
+    IDateColumnType->JavaLocalDateColumnType
+    IDateColumnType->JavaLocalDateTimeColumnType
+    IDateColumnType->JavaInstantColumnType
+    
+    Max Inheritance hierarchy chain size: 4
+    The longest chain is: Expression->ExpressionWithColumnType->Function->Date
+    Avg chain size: 2.7777777777777777
+    
+    Avg overrides functions: 2.076923076923077
+    Avg properties count: 0.5384615384615384
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    Date: a = 0, b = 2, c = 0
+    CurrentDateTime: a = 0, b = 2, c = 2
+    CurrentTimestamp: a = 0, b = 2, c = 2
+    Year: a = 0, b = 2, c = 0
+    Month: a = 0, b = 2, c = 0
+    Day: a = 0, b = 2, c = 0
+    Hour: a = 0, b = 2, c = 0
+    Minute: a = 0, b = 2, c = 0
+    Second: a = 0, b = 2, c = 0
+    JavaLocalDateColumnType: a = 3, b = 22, c = 4
+    JavaLocalDateTimeColumnType: a = 3, b = 35, c = 5
+    JavaInstantColumnType: a = 3, b = 13, c = 5
+    JavaDurationColumnType: a = 2, b = 15, c = 2
+    
+    ABC summary: a = 11, b = 103, c = 20
+    
+package: org.jetbrains.exposed.sql.tests.h2
+    DatabaseTestsBase->H2Tests
+    Table->Testing
+    Table->RefTable
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: DatabaseTestsBase->H2Tests
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 2.4
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    MultiDatabaseEntityTest: a = 24, b = 132, c = 3
+    MultiDatabaseTest: a = 22, b = 163, c = 0
+    H2Tests: a = 8, b = 33, c = 0
+    
+    ABC summary: a = 54, b = 328, c = 3
+    
+package: org.jetbrains.exposed.sql.tests.shared
+    DataSource->DataSourceStub
+    DatabaseTestsBase->ConnectionTimeoutTest
+    DatabaseTestsBase->ThreadLocalManagerTest
+    DatabaseTestsBase->RollbackTransactionTest
+    DatabaseTestsBase->TransactionIsolationTest
+    DatabaseTestsBase->SchemaTests
+    DatabaseTestsBase->ConnectionTests
+    DatabaseTestsBase->CoroutineTests
+    DatabaseTestsBase->NestedTransactionsTest
+    DatabaseTestsBase->FunctionsTests
+    DatabaseTestsBase->ParameterizationTests
+    DatabaseTestsBase->AliasesTests
+    DatabaseTestsBase->DDLTests
+    DataSourceStub->ExceptionOnGetConnectionDataSource
+    SQLTransientException->GetConnectException
+    DataSourceStub->WrappingDataSource
+    SQLTransientException->RollbackException
+    ConnectionSpy->ExceptionOnRollbackConnection
+    SQLTransientException->CommitException
+    ConnectionSpy->ExceptionOnCommitConnection
+    SQLTransientException->CloseException
+    ConnectionSpy->ExceptionOnRollbackCloseConnection
+    ConnectionSpy->ExceptionOnCommitCloseConnection
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->RollbackTable
+    FieldSet->ColumnSet->Table->MiscTable
+    ColumnSet->Table->IdTable->IntIdTable->RollbackTable
+    ColumnSet->Table->MiscTable
+    DdlAware->Table->IdTable->IntIdTable->RollbackTable
+    DdlAware->Table->MiscTable
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable->RollbackTable
+    Table->MiscTable
+    IdTable->IntIdTable->RollbackTable
+    IntIdTable->RollbackTable
+    LongIdTable->People
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    IntIdTable->Testing
+    IntEntity->TestingEntity
+    Function->LengthFunction
+    Table->[anonymous object]
+    UUIDTable->[anonymous object]
+    UUIDTable->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    IntIdTable->KeyWordTable
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    IdTable->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    IdTable->EntityTable
+    EntityTable->[anonymous object]
+    EntityTable->[anonymous object]
+    EntityTable->[anonymous object]
+    IntIdTable->Table1
+    IntIdTable->Table2
+    IntIdTable->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    PGobject->PGEnum
+    IntEntity->Keyword
+    IntEntityClass->[anonymous object]
+    IntIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    IntIdTable->TableFromSchemeOne
+    IntIdTable->TableFromSchemeTwo
+    
+    Max Inheritance hierarchy chain size: 6
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable->RollbackTable
+    Avg chain size: 2.207317073170732
+    
+    Avg overrides functions: 0.2692307692307692
+    Avg properties count: 1.3205128205128205
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    DataSourceStub: a = 0, b = 9, c = 0
+    ConnectionTimeoutTest: a = 2, b = 7, c = 2
+    ConnectionExceptions: a = 6, b = 40, c = 6
+    ThreadLocalManagerTest: a = 5, b = 14, c = 0
+    RollbackTable: a = 1, b = 1, c = 0
+    RollbackTransactionTest: a = 8, b = 57, c = 1
+    TransactionIsolationTest: a = 0, b = 3, c = 0
+    TransactionManagerResetTest: a = 4, b = 13, c = 0
+    SchemaTests: a = 11, b = 54, c = 5
+    ConnectionTests: a = 5, b = 16, c = 0
+    CoroutineTests: a = 28, b = 151, c = 11
+    NestedTransactionsTest: a = 5, b = 41, c = 3
+    FunctionsTests: a = 49, b = 287, c = 5
+    ParameterizationTests: a = 1, b = 7, c = 0
+    AliasesTests: a = 37, b = 108, c = 2
+    DDLTests: a = 134, b = 346, c = 7
+    MiscTable: a = 19, b = 30, c = 0
+    
+    ABC summary: a = 315, b = 1184, c = 42
+    
+package: org.jetbrains.exposed.sql.tests.shared.entities
+    LongIdTable->Cities
+    LongEntity->City
+    LongIdTable->People
+    LongEntity->Person
+    DatabaseTestsBase->LongIdTableEntityTest
+    DatabaseTestsBase->EntityTests
+    DatabaseTestsBase->UUIDTableEntityTest
+    DatabaseTestsBase->ImmutableEntityTest
+    DatabaseTestsBase->ViaTests
+    DatabaseTestsBase->NonAutoIncEntities
+    DatabaseTestsBase->EntityHookTest
+    IdTable->YTable
+    IntIdTable->XTable
+    Entity->XEntity
+    IntEntity->AEntity
+    AEntity->BEntity
+    Entity->YEntity
+    IntIdTable->OneAutoFieldTable
+    IntEntity->SingleFieldEntity
+    IntIdTable->Boards
+    LongIdTable->Posts
+    IntIdTable->Categories
+    IntEntity->Board
+    LongEntity->Post
+    IntEntity->Category
+    IntIdTable->Humans
+    IdTable->Users
+    IntEntity->Human
+    IntEntity->User
+    IntIdTable->SelfReferenceTable
+    IntEntity->SelfReferencedEntity
+    LongIdTable->Parents
+    LongEntity->Parent
+    LongIdTable->Children
+    LongEntity->Child
+    IntIdTable->Regions
+    LongIdTable->Students
+    LongIdTable->StudentBios
+    LongIdTable->Notes
+    LongIdTable->Detentions
+    LongIdTable->Holidays
+    Table->SchoolHolidays
+    IntIdTable->Schools
+    IntEntity->Region
+    LongEntity->ComparableLongEntity
+    ComparableLongEntity->Student
+    ComparableLongEntity->StudentBio
+    ComparableLongEntity->Note
+    ComparableLongEntity->Detention
+    ComparableLongEntity->Holiday
+    IntEntity->School
+    UUIDTable->Cities
+    UUIDEntity->City
+    UUIDTable->People
+    UUIDEntity->Person
+    UUIDTable->Addresses
+    UUIDEntity->Address
+    IdTable->Organization
+    Entity->EOrganization
+    Entity->ECachedOrganization
+    UUIDTable->NumbersTable
+    IdTable->StringsTable
+    Table->ConnectionTable
+    UUIDEntity->VNumber
+    Entity->VString
+    IntIdTable->NodesTable
+    Table->NodeToNodes
+    IntEntity->Node
+    Table->cities
+    Table->users
+    Table->noRefereeTable
+    Table->refereeTable
+    IntIdTable->referencedTable
+    Table->strangeTable
+    IdTable->BaseNonAutoIncTable
+    BaseNonAutoIncTable->NotAutoIntIdTable
+    Entity->NotAutoEntity
+    BaseNonAutoIncTable->NonAutoIncSharedTable
+    IntIdTable->AutoIncSharedTable
+    IntEntity->SharedNonAutoIncEntity
+    IntIdTable->Users
+    IntIdTable->Cities
+    IntIdTable->Countries
+    org->UsersToCities
+    IntEntity->User
+    IntEntity->City
+    IntEntity->Country
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: LongIdTable->Cities
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.07291666666666667
+    Avg properties count: 1.75
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    LongIdTables: a = 0, b = 0, c = 0
+    LongIdTableEntityTest: a = 25, b = 51, c = 0
+    EntityTestsData: a = 0, b = 0, c = 0
+    EntityTests: a = 306, b = 517, c = 14
+    UUIDTables: a = 0, b = 0, c = 0
+    UUIDTableEntityTest: a = 38, b = 68, c = 0
+    ImmutableEntityTest: a = 12, b = 27, c = 0
+    ViaTestData: a = 1, b = 1, c = 0
+    VNumber: a = 0, b = 0, c = 0
+    VString: a = 0, b = 0, c = 0
+    ViaTests: a = 52, b = 105, c = 0
+    SortByReferenceTest: a = 7, b = 34, c = 0
+    NonAutoIncEntities: a = 10, b = 24, c = 3
+    EntityHookTestData: a = 1, b = 1, c = 0
+    EntityHookTest: a = 75, b = 150, c = 1
+    
+    ABC summary: a = 527, b = 978, c = 18
+    
+package: org.jetbrains.exposed.sql.tests.shared.types
+    DatabaseTestsBase->CharColumnType
+    IntIdTable->CharTable
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: DatabaseTestsBase->CharColumnType
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 0.5
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    CharColumnType: a = 3, b = 6, c = 0
+    
+    ABC summary: a = 3, b = 6, c = 0
+    
+package: org.jetbrains.exposed.sql.tests.shared.dml
+    DatabaseTestsBase->InsertTests
+    DatabaseTestsBase->ArithmeticTests
+    DatabaseTestsBase->UpdateTests
+    DatabaseTestsBase->CountTests
+    DatabaseTestsBase->InsertSelectTests
+    DatabaseTestsBase->DeleteTests
+    DatabaseTestsBase->SelectBatchedTests
+    DatabaseTestsBase->OrderByTests
+    DatabaseTestsBase->JoinTests
+    DatabaseTestsBase->ExistsTests
+    DatabaseTestsBase->AdjustQueryTests
+    DatabaseTestsBase->ReplaceTests
+    DatabaseTestsBase->ConditionsTests
+    DatabaseTestsBase->SelectTests
+    DatabaseTestsBase->GroupByTests
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IdTable->[anonymous object]
+    IdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    Table->LongIdTable
+    IntIdTable->IntIdTestTable
+    IdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->OrderedDataTable
+    IntEntity->OrderedData
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->Cities
+    Table->Users
+    Table->UserData
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->OrgMemberships
+    FieldSet->ColumnSet->Table->IdTable->IntIdTable->Orgs
+    ColumnSet->Table->IdTable->IntIdTable->OrgMemberships
+    ColumnSet->Table->IdTable->IntIdTable->Orgs
+    DdlAware->Table->IdTable->IntIdTable->OrgMemberships
+    DdlAware->Table->IdTable->IntIdTable->Orgs
+    StringColumnType->[anonymous object]
+    Table->IdTable->IntIdTable->OrgMemberships
+    Table->IdTable->IntIdTable->Orgs
+    IdTable->IntIdTable->OrgMemberships
+    IdTable->IntIdTable->Orgs
+    IntIdTable->OrgMemberships
+    IntIdTable->Orgs
+    Entity->IntEntity->OrgMembership
+    Entity->IntEntity->Org
+    IntEntity->OrgMembership
+    IntEntity->Org
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    
+    Max Inheritance hierarchy chain size: 6
+    The longest chain is: FieldSet->ColumnSet->Table->IdTable->IntIdTable->OrgMemberships
+    Avg chain size: 2.4444444444444446
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.3333333333333333
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    InsertTests: a = 74, b = 141, c = 1
+    ArithmeticTests: a = 10, b = 24, c = 0
+    DMLTestsData: a = 0, b = 0, c = 0
+    OrgMemberships: a = 1, b = 1, c = 0
+    OrgMembership: a = 0, b = 0, c = 0
+    Orgs: a = 2, b = 6, c = 0
+    Org: a = 0, b = 0, c = 0
+    UpdateTests: a = 16, b = 43, c = 1
+    CountTests: a = 6, b = 31, c = 0
+    InsertSelectTests: a = 10, b = 70, c = 0
+    DeleteTests: a = 6, b = 33, c = 2
+    SelectBatchedTests: a = 15, b = 43, c = 0
+    OrderByTests: a = 18, b = 75, c = 4
+    JoinTests: a = 39, b = 93, c = 4
+    ExistsTests: a = 3, b = 27, c = 0
+    AdjustQueryTests: a = 21, b = 61, c = 3
+    ReplaceTests: a = 3, b = 6, c = 0
+    ConditionsTests: a = 9, b = 61, c = 0
+    SelectTests: a = 27, b = 122, c = 5
+    GroupByTests: a = 20, b = 164, c = 7
+    
+    ABC summary: a = 280, b = 1001, c = 27
+    
+package: org.jetbrains.exposed.sql.tests.shared.ddl
+    DatabaseTestsBase->SequencesTests
+    DatabaseTestsBase->CreateTableTests
+    DatabaseTestsBase->EnumerationTests
+    DatabaseTestsBase->CreateIndexTests
+    DatabaseTestsBase->CreateMissingTablesAndColumnsTests
+    DatabaseTestsBase->ReplaceColumnTests
+    DatabaseTestsBase->DatabaseTests
+    DatabaseTestsBase->WhereConditionsTests
+    Table->Developer
+    LongIdTable->DeveloperWithLongId
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->Book
+    Table->Person
+    Table->TableWithDuplicatedColumn
+    IntIdTable->IDTable
+    IntIdTable->TableDuplicatedColumnRefereToIntIdTable
+    Table->TableDuplicatedColumnRefereToTable
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    LongIdTable->[anonymous object]
+    IntIdTable->OneTable
+    IntIdTable->OneOneTable
+    IntIdTable->EnumTable
+    IntEntity->EnumEntity
+    IntEntityClass->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    Table->[anonymous object]
+    IdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    Table->[anonymous object]
+    IntIdTable->[anonymous object]
+    IntIdTable->[anonymous object]
+    Table->MultipleIndexesTable
+    IntIdTable->PlayerTable
+    IntIdTable->SessionsTable
+    Table->T1
+    Table->T2
+    IdTable->[anonymous object]
+    IntIdTable->IDTable
+    Table->User
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: DatabaseTestsBase->SequencesTests
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.2830188679245282
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    SequencesTests: a = 20, b = 39, c = 10
+    CreateTableTests: a = 52, b = 157, c = 2
+    EnumerationTests: a = 9, b = 34, c = 10
+    CreateIndexTests: a = 6, b = 32, c = 0
+    CreateMissingTablesAndColumnsTests: a = 18, b = 91, c = 13
+    ReplaceColumnTests: a = 2, b = 4, c = 0
+    DatabaseTests: a = 4, b = 8, c = 0
+    WhereConditionsTests: a = 4, b = 17, c = 0
+    
+    ABC summary: a = 115, b = 382, c = 35
+    
+package: org.jetbrains.exposed.sql.tests.sqlite
+    Inheritance hierarchy is empty
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 2.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    MultipleDatabaseBugTest: a = 7, b = 12, c = 0
+    
+    ABC summary: a = 7, b = 12, c = 0
+    
+package: org.jetbrains.exposed.sql.tests.mysql
+    DatabaseTestsBase->MysqlTests
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: DatabaseTestsBase->MysqlTests
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    MysqlTests: a = 1, b = 8, c = 0
+    
+    ABC summary: a = 1, b = 8, c = 0
+    
+package: org.jetbrains.exposed.sql.tests.demo.sql
+    FieldSet->ColumnSet->Table->Users
+    FieldSet->ColumnSet->Table->Cities
+    ColumnSet->Table->Users
+    ColumnSet->Table->Cities
+    DdlAware->Table->Users
+    DdlAware->Table->Cities
+    StringColumnType->[anonymous object]
+    Table->Users
+    Table->Cities
+    
+    Max Inheritance hierarchy chain size: 4
+    The longest chain is: FieldSet->ColumnSet->Table->Users
+    Avg chain size: 2.888888888888889
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 2.3333333333333335
+    
+    ABC metric
+    global ABC: a = 24, b = 51, c = 4
+    Users: a = 4, b = 5, c = 0
+    Cities: a = 3, b = 4, c = 0
+    SamplesSQL: a = 0, b = 1, c = 0
+    
+    ABC summary: a = 7, b = 10, c = 0
+    
+package: org.jetbrains.exposed.sql.tests.demo.dao
+    org->IntIdTable->Users
+    org->IntIdTable->Cities
+    IntIdTable->Users
+    IntIdTable->Cities
+    Entity->IntEntity->User
+    Entity->IntEntity->City
+    IntEntity->User
+    IntEntity->City
+    
+    Max Inheritance hierarchy chain size: 3
+    The longest chain is: org->IntIdTable->Users
+    Avg chain size: 2.5
+    
+    Avg overrides functions: 0.0
+    Avg properties count: 1.8
+    
+    ABC metric
+    global ABC: a = 13, b = 17, c = 0
+    Users: a = 3, b = 4, c = 0
+    Cities: a = 1, b = 1, c = 0
+    User: a = 0, b = 0, c = 0
+    City: a = 0, b = 0, c = 0
+    SamplesDao: a = 0, b = 1, c = 0
+    
+    ABC summary: a = 4, b = 6, c = 0
+    
+package: org.jetbrains.exposed.sql.tests
+    MySQLContainer->SpecifiedMySQLContainer
+    Statement->RepeatableStatement
+    TestRule->RepeatableTestRule
+    
+    Max Inheritance hierarchy chain size: 2
+    The longest chain is: MySQLContainer->SpecifiedMySQLContainer
+    Avg chain size: 2.0
+    
+    Avg overrides functions: 0.3333333333333333
+    Avg properties count: 0.0
+    
+    ABC metric
+    global ABC: a = 0, b = 0, c = 0
+    TestDB: a = 0, b = 0, c = 0
+    SpecifiedMySQLContainer: a = 0, b = 0, c = 0
+    DatabaseTestsBase: a = 6, b = 40, c = 8
+    RepeatableTest: a = 0, b = 0, c = 0
+    RepeatableStatement: a = 0, b = 3, c = 1
+    RepeatableTestRule: a = 1, b = 3, c = 2
+    
+    ABC summary: a = 7, b = 46, c = 11
+    
+=====
+ABC = a = 2718, b = 8517, c = 1130
+Max inheritance chain = FieldSet->ColumnSet->Table->IdTable->IntIdTable->Account
+Max inheritance chain len = 6
+Avg inheritance chain len = 2.4944920440636476
+Avg overrides count (all overrides count / classes count) = 0.9710365853658537
+Avg properties count (all properties count / classes count) = 1.3277439024390243
+Classes count = 656
+

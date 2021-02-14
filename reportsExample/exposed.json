@@ -1,0 +1,9412 @@
+[
+  {
+    "package": "org.jetbrains.exposed.dao",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Reference": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "OptionalReference": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "BackReference": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "OptionalBackReference": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "Referrers": {
+        "assignments": 2,
+        "branches": 10,
+        "conditions": 7
+      },
+      "OptionalReferrers": {
+        "assignments": 2,
+        "branches": 10,
+        "conditions": 7
+      },
+      "EntityChangeType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityChange": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityHook": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "InnerTableLink": {
+        "assignments": 15,
+        "branches": 39,
+        "conditions": 16
+      },
+      "EntityBatchUpdate": {
+        "assignments": 4,
+        "branches": 15,
+        "conditions": 2
+      },
+      "EntityClass": {
+        "assignments": 58,
+        "branches": 210,
+        "conditions": 59
+      },
+      "ImmutableEntityClass": {
+        "assignments": 1,
+        "branches": 3,
+        "conditions": 0
+      },
+      "ImmutableCachedEntityClass": {
+        "assignments": 8,
+        "branches": 23,
+        "conditions": 9
+      },
+      "ColumnWithTransform": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Entity": {
+        "assignments": 24,
+        "branches": 93,
+        "conditions": 48
+      },
+      "View": {
+        "assignments": 0,
+        "branches": 16,
+        "conditions": 0
+      },
+      "EntityID": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 6
+      },
+      "IdTable": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "IntIdTable": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "LongIdTable": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "UUIDTable": {
+        "assignments": 1,
+        "branches": 4,
+        "conditions": 0
+      },
+      "EntityLifecycleInterceptor": {
+        "assignments": 4,
+        "branches": 21,
+        "conditions": 2
+      },
+      "DaoEntityID": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "DaoEntityIDFactory": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "LongEntity": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "LongEntityClass": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UUIDEntity": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UUIDEntityClass": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityCache": {
+        "assignments": 22,
+        "branches": 68,
+        "conditions": 8
+      },
+      "IntEntity": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "IntEntityClass": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "ReadOnlyProperty",
+        "BackReference"
+      ],
+      [
+        "ReadOnlyProperty",
+        "OptionalBackReference"
+      ],
+      [
+        "ReadOnlyProperty",
+        "Referrers"
+      ],
+      [
+        "ReadOnlyProperty",
+        "OptionalReferrers"
+      ],
+      [
+        "ReadWriteProperty",
+        "InnerTableLink"
+      ],
+      [
+        "EntityClass",
+        "ImmutableEntityClass",
+        "ImmutableCachedEntityClass"
+      ],
+      [
+        "EntityClass",
+        "LongEntityClass"
+      ],
+      [
+        "EntityClass",
+        "UUIDEntityClass"
+      ],
+      [
+        "EntityClass",
+        "IntEntityClass"
+      ],
+      [
+        "ImmutableEntityClass",
+        "ImmutableCachedEntityClass"
+      ],
+      [
+        "Iterable",
+        "SizedIterable",
+        "View"
+      ],
+      [
+        "SizedIterable",
+        "View"
+      ],
+      [
+        "Comparable",
+        "EntityID",
+        "DaoEntityID"
+      ],
+      [
+        "Table",
+        "IdTable"
+      ],
+      [
+        "org",
+        "IntIdTable"
+      ],
+      [
+        "org",
+        "LongIdTable"
+      ],
+      [
+        "org",
+        "UUIDTable"
+      ],
+      [
+        "GlobalStatementInterceptor",
+        "EntityLifecycleInterceptor"
+      ],
+      [
+        "EntityID",
+        "DaoEntityID"
+      ],
+      [
+        "EntityIDFactory",
+        "DaoEntityIDFactory"
+      ],
+      [
+        "Entity",
+        "LongEntity"
+      ],
+      [
+        "Entity",
+        "UUIDEntity"
+      ],
+      [
+        "Entity",
+        "IntEntity"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Reference",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "OptionalReference",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BackReference",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "OptionalBackReference",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "Referrers",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "OptionalReferrers",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "EntityChangeType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EntityChange",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EntityHook",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InnerTableLink",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "EntityBatchUpdate",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "EntityClass",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "ImmutableEntityClass",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ImmutableCachedEntityClass",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "ColumnWithTransform",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Entity",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "View",
+        "overrides": 8,
+        "properties": 0
+      },
+      {
+        "name": "EntityID",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "IdTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "IntIdTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "LongIdTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "UUIDTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "EntityLifecycleInterceptor",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "DaoEntityID",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "DaoEntityIDFactory",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "LongEntity",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LongEntityClass",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UUIDEntity",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UUIDEntityClass",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EntityCache",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "IntEntity",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "IntEntityClass",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.84375,
+      "properties": 0.8125
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.dao.exceptions",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityNotFoundException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "Exception",
+        "EntityNotFoundException"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "EntityNotFoundException",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.money",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MoneyDefaultsTest": {
+        "assignments": 15,
+        "branches": 29,
+        "conditions": 0
+      },
+      "MoneyBaseTest": {
+        "assignments": 9,
+        "branches": 30,
+        "conditions": 1
+      },
+      "AccountDao": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Account": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "CompositeMoneyColumn": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CurrencyColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 2
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "MoneyDefaultsTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "MoneyBaseTest"
+      ],
+      [
+        "IntIdTable",
+        "TableWithDBDefault"
+      ],
+      [
+        "IntEntity",
+        "DBDefault"
+      ],
+      [
+        "Entity",
+        "IntEntity",
+        "AccountDao"
+      ],
+      [
+        "IntEntity",
+        "AccountDao"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Account"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Account"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Account"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Account"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "Account"
+      ],
+      [
+        "IntIdTable",
+        "Account"
+      ],
+      [
+        "BiCompositeColumn",
+        "CompositeMoneyColumn"
+      ],
+      [
+        "VarCharColumnType",
+        "CurrencyColumnType"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TableWithDBDefault",
+        "overrides": 0,
+        "properties": 6
+      },
+      {
+        "name": "DBDefault",
+        "overrides": 2,
+        "properties": 4
+      },
+      {
+        "name": "MoneyDefaultsTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MoneyBaseTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AccountDao",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Account",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CompositeMoneyColumn",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CurrencyColumnType",
+        "overrides": 2,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.5,
+      "properties": 1.75
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.jdbc",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ExposedConnectionImpl": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "DatabaseConnectionAutoRegistration",
+        "ExposedConnectionImpl"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ExposedConnectionImpl",
+        "overrides": 1,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.0,
+      "properties": 0.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.statements.jdbc",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "JdbcConnectionImpl": {
+        "assignments": 8,
+        "branches": 24,
+        "conditions": 14
+      },
+      "JdbcIdentifierManager": {
+        "assignments": 11,
+        "branches": 8,
+        "conditions": 5
+      },
+      "JdbcSavepoint": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "JdbcDatabaseMetadataImpl": {
+        "assignments": 36,
+        "branches": 119,
+        "conditions": 27
+      },
+      "JdbcPreparedStatementImpl": {
+        "assignments": 1,
+        "branches": 12,
+        "conditions": 3
+      }
+    },
+    "chains": [
+      [
+        "ExposedConnection",
+        "JdbcConnectionImpl"
+      ],
+      [
+        "Statement",
+        "[anonymous object]"
+      ],
+      [
+        "IdentifierManagerApi",
+        "JdbcIdentifierManager"
+      ],
+      [
+        "ExposedSavepoint",
+        "JdbcSavepoint"
+      ],
+      [
+        "ExposedDatabaseMetadata",
+        "JdbcDatabaseMetadataImpl"
+      ],
+      [
+        "PreparedStatementApi",
+        "JdbcPreparedStatementImpl"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "[anonymous object]",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "JdbcConnectionImpl",
+        "overrides": 10,
+        "properties": 6
+      },
+      {
+        "name": "JdbcIdentifierManager",
+        "overrides": 1,
+        "properties": 11
+      },
+      {
+        "name": "JdbcSavepoint",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CachableMapWithDefault",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "JdbcDatabaseMetadataImpl",
+        "overrides": 5,
+        "properties": 15
+      },
+      {
+        "name": "JdbcPreparedStatementImpl",
+        "overrides": 7,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 4.0,
+      "properties": 4.25
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.gradle",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Versions": {
+        "assignments": 13,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "Versions",
+        "overrides": 0,
+        "properties": 13
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 13.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Database": {
+        "assignments": 12,
+        "branches": 74,
+        "conditions": 13
+      },
+      "DatabaseConnectionAutoRegistration": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Alias": {
+        "assignments": 3,
+        "branches": 12,
+        "conditions": 6
+      },
+      "ExpressionAlias": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 1
+      },
+      "QueryAlias": {
+        "assignments": 1,
+        "branches": 22,
+        "conditions": 4
+      },
+      "[anonymous object]": {
+        "assignments": 1,
+        "branches": 16,
+        "conditions": 0
+      },
+      "Op": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "NotOp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "ComplexExpression": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CompoundBooleanOp": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "AndOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "OrOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ComparisonOp": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "EqOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NeqOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "LessOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "LessEqOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "GreaterOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "GreaterEqOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Between": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "IsNullOp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "IsNotNullOp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "PlusOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MinusOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TimesOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DivideOp": {
+        "assignments": 3,
+        "branches": 7,
+        "conditions": 2
+      },
+      "ModOp": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 1
+      },
+      "LikeOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NotLikeOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "RegexpOp": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "NotRegexpOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "exists": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "notExists": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "SubQueryOp": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "InSubQueryOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NotInSubQueryOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EqSubQueryOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NotEqSubQueryOp": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InListOrNotInListOp": {
+        "assignments": 1,
+        "branches": 15,
+        "conditions": 7
+      },
+      "LiteralOp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "QueryParameter": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "NoOpConversion": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "SqlExpressionBuilderClass": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ISqlExpressionBuilder": {
+        "assignments": 4,
+        "branches": 126,
+        "conditions": 9
+      },
+      "SqlExpressionBuilder": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "IColumnType": {
+        "assignments": 1,
+        "branches": 7,
+        "conditions": 1
+      },
+      "ColumnType": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 3
+      },
+      "AutoIncColumnType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityIDColumnType": {
+        "assignments": 0,
+        "branches": 8,
+        "conditions": 6
+      },
+      "ByteColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "UByteColumnType": {
+        "assignments": 2,
+        "branches": 13,
+        "conditions": 6
+      },
+      "ShortColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "UShortColumnType": {
+        "assignments": 2,
+        "branches": 13,
+        "conditions": 6
+      },
+      "IntegerColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "UIntegerColumnType": {
+        "assignments": 2,
+        "branches": 13,
+        "conditions": 6
+      },
+      "LongColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "ULongColumnType": {
+        "assignments": 2,
+        "branches": 13,
+        "conditions": 6
+      },
+      "FloatColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "DoubleColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "DecimalColumnType": {
+        "assignments": 3,
+        "branches": 8,
+        "conditions": 6
+      },
+      "CharacterColumnType": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "StringColumnType": {
+        "assignments": 3,
+        "branches": 14,
+        "conditions": 7
+      },
+      "CharColumnType": {
+        "assignments": 2,
+        "branches": 8,
+        "conditions": 8
+      },
+      "VarCharColumnType": {
+        "assignments": 2,
+        "branches": 8,
+        "conditions": 7
+      },
+      "TextColumnType": {
+        "assignments": 1,
+        "branches": 7,
+        "conditions": 4
+      },
+      "BasicBinaryColumnType": {
+        "assignments": 0,
+        "branches": 8,
+        "conditions": 2
+      },
+      "BinaryColumnType": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 6
+      },
+      "BlobColumnType": {
+        "assignments": 0,
+        "branches": 15,
+        "conditions": 4
+      },
+      "UUIDColumnType": {
+        "assignments": 1,
+        "branches": 20,
+        "conditions": 3
+      },
+      "BooleanColumnType": {
+        "assignments": 0,
+        "branches": 6,
+        "conditions": 2
+      },
+      "EnumerationColumnType": {
+        "assignments": 2,
+        "branches": 7,
+        "conditions": 7
+      },
+      "EnumerationNameColumnType": {
+        "assignments": 2,
+        "branches": 8,
+        "conditions": 8
+      },
+      "IDateColumnType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Schema": {
+        "assignments": 0,
+        "branches": 13,
+        "conditions": 3
+      },
+      "QueryBuilder": {
+        "assignments": 2,
+        "branches": 32,
+        "conditions": 6
+      },
+      "Expression": {
+        "assignments": 0,
+        "branches": 9,
+        "conditions": 2
+      },
+      "ExpressionWithColumnType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SqlLogger": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "StdOutSqlLogger": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Slf4jSqlDebugLogger": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "CompositeSqlLogger": {
+        "assignments": 1,
+        "branches": 6,
+        "conditions": 0
+      },
+      "Column": {
+        "assignments": 16,
+        "branches": 56,
+        "conditions": 49
+      },
+      "SortOrder": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Query": {
+        "assignments": 44,
+        "branches": 85,
+        "conditions": 28
+      },
+      "DdlAware": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ReferenceOption": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ForeignKeyConstraint": {
+        "assignments": 1,
+        "branches": 18,
+        "conditions": 7
+      },
+      "CheckConstraint": {
+        "assignments": 5,
+        "branches": 16,
+        "conditions": 2
+      },
+      "Index": {
+        "assignments": 5,
+        "branches": 26,
+        "conditions": 11
+      },
+      "SchemaUtils": {
+        "assignments": 34,
+        "branches": 149,
+        "conditions": 20
+      },
+      "Function": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CustomFunction": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 0
+      },
+      "CustomOperator": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Random": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "LowerCase": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "UpperCase": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Concat": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "GroupConcat": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "Substring": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "Trim": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Min": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Max": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Avg": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Sum": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Count": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "StdDevPop": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "StdDevSamp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "VarPop": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "VarSamp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "NextVal": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "Case": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CaseWhen": {
+        "assignments": 1,
+        "branches": 3,
+        "conditions": 0
+      },
+      "CaseWhenElse": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 1
+      },
+      "Coalesce": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Cast": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "CompositeColumn": {
+        "assignments": 1,
+        "branches": 3,
+        "conditions": 0
+      },
+      "BiCompositeColumn": {
+        "assignments": 3,
+        "branches": 6,
+        "conditions": 4
+      },
+      "Sequence": {
+        "assignments": 2,
+        "branches": 21,
+        "conditions": 3
+      },
+      "SizedIterable": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EmptySizedIterable": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "SizedCollection": {
+        "assignments": 0,
+        "branches": 10,
+        "conditions": 2
+      },
+      "LazySizedCollection": {
+        "assignments": 14,
+        "branches": 22,
+        "conditions": 22
+      },
+      "FieldSet": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "ColumnSet": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "Slice": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "JoinType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Join": {
+        "assignments": 7,
+        "branches": 51,
+        "conditions": 22
+      },
+      "Table": {
+        "assignments": 42,
+        "branches": 242,
+        "conditions": 32
+      },
+      "Seq": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Key": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UserDataHolder": {
+        "assignments": 2,
+        "branches": 3,
+        "conditions": 0
+      },
+      "Transaction": {
+        "assignments": 19,
+        "branches": 84,
+        "conditions": 5
+      },
+      "ResultRow": {
+        "assignments": 12,
+        "branches": 49,
+        "conditions": 23
+      }
+    },
+    "chains": [
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "Alias"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "QueryAlias"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Join"
+      ],
+      [
+        "FieldSet",
+        "Slice"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "Alias"
+      ],
+      [
+        "ColumnSet",
+        "QueryAlias"
+      ],
+      [
+        "ColumnSet",
+        "Join"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "Alias"
+      ],
+      [
+        "DdlAware",
+        "Column"
+      ],
+      [
+        "DdlAware",
+        "ForeignKeyConstraint"
+      ],
+      [
+        "DdlAware",
+        "CheckConstraint"
+      ],
+      [
+        "DdlAware",
+        "Index"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "Alias"
+      ],
+      [
+        "Expression",
+        "ExpressionAlias"
+      ],
+      [
+        "Expression",
+        "[anonymous object]"
+      ],
+      [
+        "Expression",
+        "Op",
+        "NotOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "CompoundBooleanOp",
+        "AndOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "CompoundBooleanOp",
+        "OrOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "EqOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "NeqOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "LessOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "LessEqOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "GreaterOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "GreaterEqOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "LikeOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "NotLikeOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "ComparisonOp",
+        "NotRegexpOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "Between"
+      ],
+      [
+        "Expression",
+        "Op",
+        "IsNullOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "IsNotNullOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "RegexpOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "exists"
+      ],
+      [
+        "Expression",
+        "Op",
+        "notExists"
+      ],
+      [
+        "Expression",
+        "Op",
+        "SubQueryOp",
+        "InSubQueryOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "SubQueryOp",
+        "NotInSubQueryOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "SubQueryOp",
+        "EqSubQueryOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "SubQueryOp",
+        "NotEqSubQueryOp"
+      ],
+      [
+        "Expression",
+        "Op",
+        "InListOrNotInListOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "PlusOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "MinusOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "TimesOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "DivideOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomFunction"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Random"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "LowerCase"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "UpperCase"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Concat"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "GroupConcat"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Substring"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Trim"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Min"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Max"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Avg"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Sum"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Count"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "StdDevPop"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "StdDevSamp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "VarPop"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "VarSamp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "NextVal"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Coalesce"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Cast"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "ModOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "LiteralOp"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "NoOpConversion"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Column"
+      ],
+      [
+        "Expression",
+        "QueryParameter"
+      ],
+      [
+        "Expression",
+        "CaseWhenElse"
+      ],
+      [
+        "Expression",
+        "CompositeColumn",
+        "BiCompositeColumn"
+      ],
+      [
+        "Function",
+        "[anonymous object]"
+      ],
+      [
+        "Expression",
+        "[anonymous object]"
+      ],
+      [
+        "Op",
+        "TRUE"
+      ],
+      [
+        "Op",
+        "FALSE"
+      ],
+      [
+        "Op",
+        "NotOp"
+      ],
+      [
+        "Op",
+        "CompoundBooleanOp",
+        "AndOp"
+      ],
+      [
+        "Op",
+        "CompoundBooleanOp",
+        "OrOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "EqOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "NeqOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "LessOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "LessEqOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "GreaterOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "GreaterEqOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "LikeOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "NotLikeOp"
+      ],
+      [
+        "Op",
+        "ComparisonOp",
+        "NotRegexpOp"
+      ],
+      [
+        "Op",
+        "Between"
+      ],
+      [
+        "Op",
+        "IsNullOp"
+      ],
+      [
+        "Op",
+        "IsNotNullOp"
+      ],
+      [
+        "Op",
+        "RegexpOp"
+      ],
+      [
+        "Op",
+        "exists"
+      ],
+      [
+        "Op",
+        "notExists"
+      ],
+      [
+        "Op",
+        "SubQueryOp",
+        "InSubQueryOp"
+      ],
+      [
+        "Op",
+        "SubQueryOp",
+        "NotInSubQueryOp"
+      ],
+      [
+        "Op",
+        "SubQueryOp",
+        "EqSubQueryOp"
+      ],
+      [
+        "Op",
+        "SubQueryOp",
+        "NotEqSubQueryOp"
+      ],
+      [
+        "Op",
+        "InListOrNotInListOp"
+      ],
+      [
+        "ComplexExpression",
+        "CompoundBooleanOp",
+        "AndOp"
+      ],
+      [
+        "ComplexExpression",
+        "CompoundBooleanOp",
+        "OrOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "EqOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "NeqOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "LessOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "LessEqOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "GreaterOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "GreaterEqOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "LikeOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "NotLikeOp"
+      ],
+      [
+        "ComplexExpression",
+        "ComparisonOp",
+        "NotRegexpOp"
+      ],
+      [
+        "ComplexExpression",
+        "Between"
+      ],
+      [
+        "ComplexExpression",
+        "IsNullOp"
+      ],
+      [
+        "ComplexExpression",
+        "IsNotNullOp"
+      ],
+      [
+        "ComplexExpression",
+        "RegexpOp"
+      ],
+      [
+        "ComplexExpression",
+        "SubQueryOp",
+        "InSubQueryOp"
+      ],
+      [
+        "ComplexExpression",
+        "SubQueryOp",
+        "NotInSubQueryOp"
+      ],
+      [
+        "ComplexExpression",
+        "SubQueryOp",
+        "EqSubQueryOp"
+      ],
+      [
+        "ComplexExpression",
+        "SubQueryOp",
+        "NotEqSubQueryOp"
+      ],
+      [
+        "ComplexExpression",
+        "InListOrNotInListOp"
+      ],
+      [
+        "ComplexExpression",
+        "CaseWhenElse"
+      ],
+      [
+        "CompoundBooleanOp",
+        "AndOp"
+      ],
+      [
+        "CompoundBooleanOp",
+        "OrOp"
+      ],
+      [
+        "ComparisonOp",
+        "EqOp"
+      ],
+      [
+        "ComparisonOp",
+        "NeqOp"
+      ],
+      [
+        "ComparisonOp",
+        "LessOp"
+      ],
+      [
+        "ComparisonOp",
+        "LessEqOp"
+      ],
+      [
+        "ComparisonOp",
+        "GreaterOp"
+      ],
+      [
+        "ComparisonOp",
+        "GreaterEqOp"
+      ],
+      [
+        "ComparisonOp",
+        "LikeOp"
+      ],
+      [
+        "ComparisonOp",
+        "NotLikeOp"
+      ],
+      [
+        "ComparisonOp",
+        "NotRegexpOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "PlusOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "MinusOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "TimesOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomOperator",
+        "DivideOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "CustomFunction"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Random"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "LowerCase"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "UpperCase"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Concat"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "GroupConcat"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Substring"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Trim"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Min"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Max"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Avg"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Sum"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Count"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "StdDevPop"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "StdDevSamp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "VarPop"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "VarSamp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "NextVal"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Coalesce"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Cast"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "ModOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "LiteralOp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "NoOpConversion"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Column"
+      ],
+      [
+        "Function",
+        "CustomOperator",
+        "PlusOp"
+      ],
+      [
+        "Function",
+        "CustomOperator",
+        "MinusOp"
+      ],
+      [
+        "Function",
+        "CustomOperator",
+        "TimesOp"
+      ],
+      [
+        "Function",
+        "CustomOperator",
+        "DivideOp"
+      ],
+      [
+        "Function",
+        "CustomFunction"
+      ],
+      [
+        "Function",
+        "Random"
+      ],
+      [
+        "Function",
+        "LowerCase"
+      ],
+      [
+        "Function",
+        "UpperCase"
+      ],
+      [
+        "Function",
+        "Concat"
+      ],
+      [
+        "Function",
+        "GroupConcat"
+      ],
+      [
+        "Function",
+        "Substring"
+      ],
+      [
+        "Function",
+        "Trim"
+      ],
+      [
+        "Function",
+        "Min"
+      ],
+      [
+        "Function",
+        "Max"
+      ],
+      [
+        "Function",
+        "Avg"
+      ],
+      [
+        "Function",
+        "Sum"
+      ],
+      [
+        "Function",
+        "Count"
+      ],
+      [
+        "Function",
+        "StdDevPop"
+      ],
+      [
+        "Function",
+        "StdDevSamp"
+      ],
+      [
+        "Function",
+        "VarPop"
+      ],
+      [
+        "Function",
+        "VarSamp"
+      ],
+      [
+        "Function",
+        "NextVal"
+      ],
+      [
+        "Function",
+        "Coalesce"
+      ],
+      [
+        "Function",
+        "Cast"
+      ],
+      [
+        "CustomOperator",
+        "PlusOp"
+      ],
+      [
+        "CustomOperator",
+        "MinusOp"
+      ],
+      [
+        "CustomOperator",
+        "TimesOp"
+      ],
+      [
+        "CustomOperator",
+        "DivideOp"
+      ],
+      [
+        "SubQueryOp",
+        "InSubQueryOp"
+      ],
+      [
+        "SubQueryOp",
+        "NotInSubQueryOp"
+      ],
+      [
+        "SubQueryOp",
+        "EqSubQueryOp"
+      ],
+      [
+        "SubQueryOp",
+        "NotEqSubQueryOp"
+      ],
+      [
+        "ISqlExpressionBuilder",
+        "SqlExpressionBuilderClass"
+      ],
+      [
+        "ISqlExpressionBuilder",
+        "SqlExpressionBuilder"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "EntityIDColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "ByteColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "UByteColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "ShortColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "UShortColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "IntegerColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "UIntegerColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "LongColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "ULongColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "FloatColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "DoubleColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "DecimalColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "CharacterColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "StringColumnType",
+        "CharColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "StringColumnType",
+        "VarCharColumnType",
+        "EnumerationNameColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "StringColumnType",
+        "TextColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "BasicBinaryColumnType",
+        "BinaryColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "BlobColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "UUIDColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "BooleanColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "EnumerationColumnType"
+      ],
+      [
+        "ColumnType",
+        "EntityIDColumnType"
+      ],
+      [
+        "ColumnType",
+        "ByteColumnType"
+      ],
+      [
+        "ColumnType",
+        "UByteColumnType"
+      ],
+      [
+        "ColumnType",
+        "ShortColumnType"
+      ],
+      [
+        "ColumnType",
+        "UShortColumnType"
+      ],
+      [
+        "ColumnType",
+        "IntegerColumnType"
+      ],
+      [
+        "ColumnType",
+        "UIntegerColumnType"
+      ],
+      [
+        "ColumnType",
+        "LongColumnType"
+      ],
+      [
+        "ColumnType",
+        "ULongColumnType"
+      ],
+      [
+        "ColumnType",
+        "FloatColumnType"
+      ],
+      [
+        "ColumnType",
+        "DoubleColumnType"
+      ],
+      [
+        "ColumnType",
+        "DecimalColumnType"
+      ],
+      [
+        "ColumnType",
+        "CharacterColumnType"
+      ],
+      [
+        "ColumnType",
+        "StringColumnType",
+        "CharColumnType"
+      ],
+      [
+        "ColumnType",
+        "StringColumnType",
+        "VarCharColumnType",
+        "EnumerationNameColumnType"
+      ],
+      [
+        "ColumnType",
+        "StringColumnType",
+        "TextColumnType"
+      ],
+      [
+        "ColumnType",
+        "BasicBinaryColumnType",
+        "BinaryColumnType"
+      ],
+      [
+        "ColumnType",
+        "BlobColumnType"
+      ],
+      [
+        "ColumnType",
+        "UUIDColumnType"
+      ],
+      [
+        "ColumnType",
+        "BooleanColumnType"
+      ],
+      [
+        "ColumnType",
+        "EnumerationColumnType"
+      ],
+      [
+        "StringColumnType",
+        "CharColumnType"
+      ],
+      [
+        "StringColumnType",
+        "VarCharColumnType",
+        "EnumerationNameColumnType"
+      ],
+      [
+        "StringColumnType",
+        "TextColumnType"
+      ],
+      [
+        "BasicBinaryColumnType",
+        "BinaryColumnType"
+      ],
+      [
+        "VarCharColumnType",
+        "EnumerationNameColumnType"
+      ],
+      [
+        "SqlLogger",
+        "StdOutSqlLogger"
+      ],
+      [
+        "SqlLogger",
+        "Slf4jSqlDebugLogger"
+      ],
+      [
+        "SqlLogger",
+        "CompositeSqlLogger"
+      ],
+      [
+        "StatementInterceptor",
+        "CompositeSqlLogger"
+      ],
+      [
+        "Comparable",
+        "Column"
+      ],
+      [
+        "Iterable",
+        "SizedIterable",
+        "Query"
+      ],
+      [
+        "Iterable",
+        "SizedIterable",
+        "EmptySizedIterable"
+      ],
+      [
+        "Iterable",
+        "SizedIterable",
+        "SizedCollection"
+      ],
+      [
+        "Iterable",
+        "SizedIterable",
+        "LazySizedCollection"
+      ],
+      [
+        "Iterable",
+        "SizedIterable",
+        "[anonymous object]"
+      ],
+      [
+        "SizedIterable",
+        "Query"
+      ],
+      [
+        "SizedIterable",
+        "EmptySizedIterable"
+      ],
+      [
+        "SizedIterable",
+        "SizedCollection"
+      ],
+      [
+        "SizedIterable",
+        "LazySizedCollection"
+      ],
+      [
+        "SizedIterable",
+        "[anonymous object]"
+      ],
+      [
+        "Statement",
+        "Query"
+      ],
+      [
+        "Iterator",
+        "ResultIterator"
+      ],
+      [
+        "Iterable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "NextVal",
+        "IntNextVal"
+      ],
+      [
+        "NextVal",
+        "LongNextVal"
+      ],
+      [
+        "CompositeColumn",
+        "BiCompositeColumn"
+      ],
+      [
+        "Iterator",
+        "EmptySizedIterable"
+      ],
+      [
+        "Iterator",
+        "[anonymous object]"
+      ],
+      [
+        "UserDataHolder",
+        "Transaction"
+      ],
+      [
+        "Statement",
+        "[anonymous object]"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Database",
+        "overrides": 0,
+        "properties": 13
+      },
+      {
+        "name": "DatabaseConnectionAutoRegistration",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Alias",
+        "overrides": 5,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ExpressionAlias",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "QueryAlias",
+        "overrides": 7,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "TRUE",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "FALSE",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Op",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NotOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ComplexExpression",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CompoundBooleanOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "AndOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "OrOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ComparisonOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "EqOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NeqOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LessOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LessEqOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "GreaterOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "GreaterEqOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Between",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "IsNullOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "IsNotNullOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "PlusOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MinusOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TimesOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DivideOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ModOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "LikeOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NotLikeOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RegexpOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "NotRegexpOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "exists",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "notExists",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "SubQueryOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "InSubQueryOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NotInSubQueryOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EqSubQueryOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NotEqSubQueryOp",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InListOrNotInListOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "LiteralOp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "QueryParameter",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "NoOpConversion",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "SqlExpressionBuilderClass",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ISqlExpressionBuilder",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SqlExpressionBuilder",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "IColumnType",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ColumnType",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "AutoIncColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "EntityIDColumnType",
+        "overrides": 6,
+        "properties": 0
+      },
+      {
+        "name": "ByteColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "UByteColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "ShortColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "UShortColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "IntegerColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "UIntegerColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "LongColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ULongColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "FloatColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "DoubleColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "DecimalColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "CharacterColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "StringColumnType",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "CharColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "VarCharColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "TextColumnType",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "BasicBinaryColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "BinaryColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "BlobColumnType",
+        "overrides": 6,
+        "properties": 0
+      },
+      {
+        "name": "UUIDColumnType",
+        "overrides": 4,
+        "properties": 1
+      },
+      {
+        "name": "BooleanColumnType",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "EnumerationColumnType",
+        "overrides": 5,
+        "properties": 0
+      },
+      {
+        "name": "EnumerationNameColumnType",
+        "overrides": 4,
+        "properties": 0
+      },
+      {
+        "name": "IDateColumnType",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Schema",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "QueryBuilder",
+        "overrides": 1,
+        "properties": 3
+      },
+      {
+        "name": "Expression",
+        "overrides": 3,
+        "properties": 1
+      },
+      {
+        "name": "ExpressionWithColumnType",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SqlLogger",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StdOutSqlLogger",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Slf4jSqlDebugLogger",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CompositeSqlLogger",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "Column",
+        "overrides": 8,
+        "properties": 6
+      },
+      {
+        "name": "SortOrder",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ResultIterator",
+        "overrides": 2,
+        "properties": 2
+      },
+      {
+        "name": "Query",
+        "overrides": 11,
+        "properties": 12
+      },
+      {
+        "name": "DdlAware",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ReferenceOption",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "ForeignKeyConstraint",
+        "overrides": 3,
+        "properties": 9
+      },
+      {
+        "name": "CheckConstraint",
+        "overrides": 3,
+        "properties": 1
+      },
+      {
+        "name": "Index",
+        "overrides": 6,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "TableDepthGraph",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SchemaUtils",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Function",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CustomFunction",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CustomOperator",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Random",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "LowerCase",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "UpperCase",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Concat",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "GroupConcat",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Substring",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Trim",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Min",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Max",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Avg",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Sum",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Count",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StdDevPop",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StdDevSamp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "VarPop",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "VarSamp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "IntNextVal",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LongNextVal",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NextVal",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Case",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CaseWhen",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CaseWhenElse",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Coalesce",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Cast",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CompositeColumn",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "BiCompositeColumn",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "Sequence",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "SizedIterable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EmptySizedIterable",
+        "overrides": 8,
+        "properties": 0
+      },
+      {
+        "name": "SizedCollection",
+        "overrides": 6,
+        "properties": 0
+      },
+      {
+        "name": "LazySizedCollection",
+        "overrides": 8,
+        "properties": 5
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 8,
+        "properties": 0
+      },
+      {
+        "name": "FieldSet",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "ColumnSet",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Slice",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "JoinType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "JoinPart",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Join",
+        "overrides": 7,
+        "properties": 2
+      },
+      {
+        "name": "PrimaryKey",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "Table",
+        "overrides": 12,
+        "properties": 10
+      },
+      {
+        "name": "Seq",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Key",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UserDataHolder",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "Transaction",
+        "overrides": 2,
+        "properties": 11
+      },
+      {
+        "name": "NotInitializedValue",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ResultRow",
+        "overrides": 1,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.6866666666666668,
+      "properties": 0.7
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.exceptions",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "ExposedSQLException": {
+        "assignments": 1,
+        "branches": 8,
+        "conditions": 8
+      },
+      "UnsupportedByDialectException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DuplicateColumnException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "SQLException",
+        "ExposedSQLException"
+      ],
+      [
+        "UnsupportedOperationException",
+        "UnsupportedByDialectException"
+      ],
+      [
+        "ExceptionInInitializerError",
+        "DuplicateColumnException"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ExposedSQLException",
+        "overrides": 3,
+        "properties": 1
+      },
+      {
+        "name": "UnsupportedByDialectException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DuplicateColumnException",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.0,
+      "properties": 0.3333333333333333
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.transactions",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TransactionInterface": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "NotInitializedManager": {
+        "assignments": 2,
+        "branches": 3,
+        "conditions": 0
+      },
+      "TransactionManager": {
+        "assignments": 6,
+        "branches": 23,
+        "conditions": 9
+      },
+      "TransactionStore": {
+        "assignments": 3,
+        "branches": 10,
+        "conditions": 4
+      },
+      "ThreadLocalTransactionManager": {
+        "assignments": 3,
+        "branches": 10,
+        "conditions": 6
+      }
+    },
+    "chains": [
+      [
+        "ThreadLocal",
+        "[anonymous object]"
+      ],
+      [
+        "TransactionManager",
+        "NotInitializedManager"
+      ],
+      [
+        "TransactionManager",
+        "ThreadLocalTransactionManager"
+      ],
+      [
+        "ReadWriteProperty",
+        "TransactionStore"
+      ],
+      [
+        "TransactionInterface",
+        "ThreadLocalTransaction"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TransactionInterface",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "NotInitializedManager",
+        "overrides": 3,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "TransactionManager",
+        "overrides": 0,
+        "properties": 8
+      },
+      {
+        "name": "TransactionStore",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ThreadLocalTransaction",
+        "overrides": 3,
+        "properties": 5
+      },
+      {
+        "name": "ThreadLocalTransactionManager",
+        "overrides": 3,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.7142857142857142,
+      "properties": 3.142857142857143
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.transactions.experimental",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 13,
+        "branches": 31,
+        "conditions": 15
+      },
+      "TransactionContext": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TransactionScope": {
+        "assignments": 2,
+        "branches": 1,
+        "conditions": 0
+      },
+      "TransactionCoroutineElement": {
+        "assignments": 3,
+        "branches": 6,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "CoroutineScope",
+        "TransactionScope"
+      ],
+      [
+        "CoroutineContext",
+        "TransactionScope"
+      ],
+      [
+        "ThreadContextElement",
+        "TransactionCoroutineElement"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TransactionContext",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TransactionScope",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "TransactionCoroutineElement",
+        "overrides": 2,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.6666666666666666,
+      "properties": 1.3333333333333333
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.vendors",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "OracleDataTypeProvider": {
+        "assignments": 0,
+        "branches": 8,
+        "conditions": 10
+      },
+      "OracleFunctionProvider": {
+        "assignments": 6,
+        "branches": 76,
+        "conditions": 18
+      },
+      "OracleDialect": {
+        "assignments": 7,
+        "branches": 15,
+        "conditions": 2
+      },
+      "PostgreSQLDataTypeProvider": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "PostgreSQLFunctionProvider": {
+        "assignments": 10,
+        "branches": 79,
+        "conditions": 12
+      },
+      "PostgreSQLDialect": {
+        "assignments": 2,
+        "branches": 14,
+        "conditions": 1
+      },
+      "PostgreSQLNGDialect": {
+        "assignments": 1,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MysqlDataTypeProvider": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 1
+      },
+      "MysqlFunctionProvider": {
+        "assignments": 6,
+        "branches": 30,
+        "conditions": 5
+      },
+      "MysqlDialect": {
+        "assignments": 17,
+        "branches": 51,
+        "conditions": 11
+      },
+      "SQLiteDataTypeProvider": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 1
+      },
+      "SQLiteFunctionProvider": {
+        "assignments": 3,
+        "branches": 44,
+        "conditions": 11
+      },
+      "SQLiteDialect": {
+        "assignments": 11,
+        "branches": 17,
+        "conditions": 9
+      },
+      "SQLServerDataTypeProvider": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 1
+      },
+      "SQLServerFunctionProvider": {
+        "assignments": 4,
+        "branches": 51,
+        "conditions": 16
+      },
+      "SQLServerDialect": {
+        "assignments": 5,
+        "branches": 10,
+        "conditions": 0
+      },
+      "MariaDBFunctionProvider": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "MariaDBDialect": {
+        "assignments": 4,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DataTypeProvider": {
+        "assignments": 0,
+        "branches": 6,
+        "conditions": 1
+      },
+      "FunctionProvider": {
+        "assignments": 1,
+        "branches": 86,
+        "conditions": 7
+      },
+      "ColumnMetadata": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DatabaseDialect": {
+        "assignments": 0,
+        "branches": 12,
+        "conditions": 0
+      },
+      "VendorDialect": {
+        "assignments": 22,
+        "branches": 71,
+        "conditions": 14
+      },
+      "H2DataTypeProvider": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "H2FunctionProvider": {
+        "assignments": 11,
+        "branches": 50,
+        "conditions": 13
+      },
+      "H2Dialect": {
+        "assignments": 4,
+        "branches": 25,
+        "conditions": 6
+      }
+    },
+    "chains": [
+      [
+        "DataTypeProvider",
+        "OracleDataTypeProvider"
+      ],
+      [
+        "DataTypeProvider",
+        "PostgreSQLDataTypeProvider"
+      ],
+      [
+        "DataTypeProvider",
+        "MysqlDataTypeProvider"
+      ],
+      [
+        "DataTypeProvider",
+        "SQLiteDataTypeProvider"
+      ],
+      [
+        "DataTypeProvider",
+        "SQLServerDataTypeProvider"
+      ],
+      [
+        "DataTypeProvider",
+        "H2DataTypeProvider"
+      ],
+      [
+        "FunctionProvider",
+        "OracleFunctionProvider"
+      ],
+      [
+        "FunctionProvider",
+        "PostgreSQLFunctionProvider"
+      ],
+      [
+        "FunctionProvider",
+        "MysqlFunctionProvider",
+        "MariaDBFunctionProvider"
+      ],
+      [
+        "FunctionProvider",
+        "SQLiteFunctionProvider"
+      ],
+      [
+        "FunctionProvider",
+        "SQLServerFunctionProvider"
+      ],
+      [
+        "FunctionProvider",
+        "H2FunctionProvider"
+      ],
+      [
+        "DatabaseDialect",
+        "VendorDialect",
+        "OracleDialect"
+      ],
+      [
+        "DatabaseDialect",
+        "VendorDialect",
+        "PostgreSQLDialect",
+        "PostgreSQLNGDialect"
+      ],
+      [
+        "DatabaseDialect",
+        "VendorDialect",
+        "MysqlDialect",
+        "MariaDBDialect"
+      ],
+      [
+        "DatabaseDialect",
+        "VendorDialect",
+        "SQLiteDialect"
+      ],
+      [
+        "DatabaseDialect",
+        "VendorDialect",
+        "SQLServerDialect"
+      ],
+      [
+        "DatabaseDialect",
+        "VendorDialect",
+        "H2Dialect"
+      ],
+      [
+        "VendorDialect",
+        "OracleDialect"
+      ],
+      [
+        "VendorDialect",
+        "PostgreSQLDialect",
+        "PostgreSQLNGDialect"
+      ],
+      [
+        "VendorDialect",
+        "MysqlDialect",
+        "MariaDBDialect"
+      ],
+      [
+        "VendorDialect",
+        "SQLiteDialect"
+      ],
+      [
+        "VendorDialect",
+        "SQLServerDialect"
+      ],
+      [
+        "VendorDialect",
+        "H2Dialect"
+      ],
+      [
+        "PostgreSQLDialect",
+        "PostgreSQLNGDialect"
+      ],
+      [
+        "MysqlFunctionProvider",
+        "INSTANCE"
+      ],
+      [
+        "Op",
+        "MATCH"
+      ],
+      [
+        "MatchMode",
+        "MysqlMatchMode"
+      ],
+      [
+        "StringColumnType",
+        "CharColumnType"
+      ],
+      [
+        "MysqlFunctionProvider",
+        "MariaDBFunctionProvider"
+      ],
+      [
+        "MysqlDialect",
+        "MariaDBDialect"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "OracleDataTypeProvider",
+        "overrides": 17,
+        "properties": 0
+      },
+      {
+        "name": "OracleFunctionProvider",
+        "overrides": 15,
+        "properties": 0
+      },
+      {
+        "name": "OracleDialect",
+        "overrides": 7,
+        "properties": 7
+      },
+      {
+        "name": "PostgreSQLDataTypeProvider",
+        "overrides": 10,
+        "properties": 0
+      },
+      {
+        "name": "PostgreSQLFunctionProvider",
+        "overrides": 14,
+        "properties": 1
+      },
+      {
+        "name": "PostgreSQLDialect",
+        "overrides": 6,
+        "properties": 1
+      },
+      {
+        "name": "PostgreSQLNGDialect",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "MysqlDataTypeProvider",
+        "overrides": 7,
+        "properties": 0
+      },
+      {
+        "name": "INSTANCE",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MATCH",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MysqlMatchMode",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CharColumnType",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "MysqlFunctionProvider",
+        "overrides": 8,
+        "properties": 1
+      },
+      {
+        "name": "MysqlDialect",
+        "overrides": 6,
+        "properties": 3
+      },
+      {
+        "name": "SQLiteDataTypeProvider",
+        "overrides": 6,
+        "properties": 0
+      },
+      {
+        "name": "SQLiteFunctionProvider",
+        "overrides": 13,
+        "properties": 0
+      },
+      {
+        "name": "SQLiteDialect",
+        "overrides": 4,
+        "properties": 5
+      },
+      {
+        "name": "SQLServerDataTypeProvider",
+        "overrides": 10,
+        "properties": 0
+      },
+      {
+        "name": "SQLServerFunctionProvider",
+        "overrides": 14,
+        "properties": 0
+      },
+      {
+        "name": "SQLServerDialect",
+        "overrides": 8,
+        "properties": 6
+      },
+      {
+        "name": "MariaDBFunctionProvider",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "MariaDBDialect",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "DataTypeProvider",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MatchMode",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "FunctionProvider",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ColumnMetadata",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DatabaseDialect",
+        "overrides": 0,
+        "properties": 12
+      },
+      {
+        "name": "VendorDialect",
+        "overrides": 13,
+        "properties": 6
+      },
+      {
+        "name": "H2DataTypeProvider",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "H2FunctionProvider",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "H2Dialect",
+        "overrides": 6,
+        "properties": 5
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 5.645161290322581,
+      "properties": 1.7096774193548387
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.statements",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InsertStatement": {
+        "assignments": 26,
+        "branches": 79,
+        "conditions": 41
+      },
+      "UpdateBuilder": {
+        "assignments": 6,
+        "branches": 17,
+        "conditions": 8
+      },
+      "UpdateStatement": {
+        "assignments": 0,
+        "branches": 14,
+        "conditions": 2
+      },
+      "DeleteStatement": {
+        "assignments": 0,
+        "branches": 14,
+        "conditions": 2
+      },
+      "ReplaceStatement": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 1
+      },
+      "StatementInterceptor": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "GlobalStatementInterceptor": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BatchDataInconsistentException": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "BatchInsertStatement": {
+        "assignments": 14,
+        "branches": 49,
+        "conditions": 17
+      },
+      "SQLServerBatchInsertStatement": {
+        "assignments": 5,
+        "branches": 23,
+        "conditions": 4
+      },
+      "BatchUpdateStatement": {
+        "assignments": 5,
+        "branches": 22,
+        "conditions": 6
+      },
+      "DefaultValueMarker": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Statement": {
+        "assignments": 9,
+        "branches": 31,
+        "conditions": 9
+      },
+      "StatementContext": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "StatementGroup": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "StatementType": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InsertSelectStatement": {
+        "assignments": 1,
+        "branches": 12,
+        "conditions": 2
+      }
+    },
+    "chains": [
+      [
+        "Statement",
+        "UpdateBuilder",
+        "InsertStatement",
+        "ReplaceStatement"
+      ],
+      [
+        "Statement",
+        "UpdateBuilder",
+        "InsertStatement",
+        "BatchInsertStatement",
+        "SQLServerBatchInsertStatement"
+      ],
+      [
+        "Statement",
+        "UpdateBuilder",
+        "UpdateStatement",
+        "BatchUpdateStatement"
+      ],
+      [
+        "Statement",
+        "DeleteStatement"
+      ],
+      [
+        "Statement",
+        "InsertSelectStatement"
+      ],
+      [
+        "UpdateBuilder",
+        "InsertStatement",
+        "ReplaceStatement"
+      ],
+      [
+        "UpdateBuilder",
+        "InsertStatement",
+        "BatchInsertStatement",
+        "SQLServerBatchInsertStatement"
+      ],
+      [
+        "UpdateBuilder",
+        "UpdateStatement",
+        "BatchUpdateStatement"
+      ],
+      [
+        "InsertStatement",
+        "ReplaceStatement"
+      ],
+      [
+        "InsertStatement",
+        "BatchInsertStatement",
+        "SQLServerBatchInsertStatement"
+      ],
+      [
+        "StatementInterceptor",
+        "GlobalStatementInterceptor"
+      ],
+      [
+        "Exception",
+        "BatchDataInconsistentException"
+      ],
+      [
+        "BatchInsertStatement",
+        "SQLServerBatchInsertStatement"
+      ],
+      [
+        "UpdateStatement",
+        "BatchUpdateStatement"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "InsertStatement",
+        "overrides": 4,
+        "properties": 3
+      },
+      {
+        "name": "UpdateBuilder",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "UpdateStatement",
+        "overrides": 3,
+        "properties": 1
+      },
+      {
+        "name": "DeleteStatement",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "ReplaceStatement",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "StatementInterceptor",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "GlobalStatementInterceptor",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BatchDataInconsistentException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BatchInsertStatement",
+        "overrides": 3,
+        "properties": 4
+      },
+      {
+        "name": "SQLServerBatchInsertStatement",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "BatchUpdateStatement",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "DefaultValueMarker",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Statement",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "StatementContext",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StatementGroup",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "StatementType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InsertSelectStatement",
+        "overrides": 3,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.5294117647058822,
+      "properties": 0.8235294117647058
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.statements.api",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ExposedDatabaseMetadata": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "IdentifierManagerApi": {
+        "assignments": 6,
+        "branches": 41,
+        "conditions": 36
+      },
+      "ExposedSavepoint": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "PreparedStatementApi": {
+        "assignments": 0,
+        "branches": 4,
+        "conditions": 0
+      },
+      "ExposedBlob": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 2
+      },
+      "ExposedConnection": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "LinkedHashMap",
+        "[anonymous object]"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "ExposedDatabaseMetadata",
+        "overrides": 0,
+        "properties": 12
+      },
+      {
+        "name": "OracleVersion",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "IdentifierManagerApi",
+        "overrides": 0,
+        "properties": 13
+      },
+      {
+        "name": "ExposedSavepoint",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "PreparedStatementApi",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ExposedBlob",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ExposedConnection",
+        "overrides": 0,
+        "properties": 6
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.375,
+      "properties": 4.125
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.dao.id",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityIDFactory": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityIDFunctionProvider": {
+        "assignments": 1,
+        "branches": 3,
+        "conditions": 1
+      },
+      "IdTable": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "IntIdTable": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "LongIdTable": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "UUIDTable": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 1
+      },
+      "EntityID": {
+        "assignments": 1,
+        "branches": 5,
+        "conditions": 6
+      }
+    },
+    "chains": [
+      [
+        "EntityIDFactory",
+        "[anonymous object]"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "LongIdTable"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "UUIDTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "LongIdTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "UUIDTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "LongIdTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "UUIDTable"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "LongIdTable"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "UUIDTable"
+      ],
+      [
+        "IdTable",
+        "IntIdTable"
+      ],
+      [
+        "IdTable",
+        "LongIdTable"
+      ],
+      [
+        "IdTable",
+        "UUIDTable"
+      ],
+      [
+        "Comparable",
+        "EntityID"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "EntityIDFactory",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "EntityIDFunctionProvider",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "IdTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "IntIdTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "LongIdTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "UUIDTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "EntityID",
+        "overrides": 4,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.625,
+      "properties": 1.25
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.spring",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ExposedTransactionManagerTest": {
+        "assignments": 8,
+        "branches": 37,
+        "conditions": 0
+      },
+      "SpringCoroutineTest": {
+        "assignments": 3,
+        "branches": 17,
+        "conditions": 2
+      },
+      "TestConfig": {
+        "assignments": 0,
+        "branches": 7,
+        "conditions": 0
+      },
+      "SpringTransactionTestBase": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CustomerTable": {
+        "assignments": 1,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CustomerDAO": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "OrderTable": {
+        "assignments": 2,
+        "branches": 2,
+        "conditions": 0
+      },
+      "OrderDAO": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "Service": {
+        "assignments": 3,
+        "branches": 6,
+        "conditions": 0
+      },
+      "SpringTransactionEntityTest": {
+        "assignments": 3,
+        "branches": 14,
+        "conditions": 0
+      },
+      "EntityUpdateTest": {
+        "assignments": 4,
+        "branches": 12,
+        "conditions": 2
+      },
+      "SpringTransactionManager": {
+        "assignments": 9,
+        "branches": 44,
+        "conditions": 12
+      },
+      "DatabaseInitializerTest": {
+        "assignments": 0,
+        "branches": 11,
+        "conditions": 0
+      },
+      "Application": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      },
+      "DatabaseInitializer": {
+        "assignments": 3,
+        "branches": 9,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "SpringTransactionTestBase",
+        "ExposedTransactionManagerTest"
+      ],
+      [
+        "SpringTransactionTestBase",
+        "SpringCoroutineTest"
+      ],
+      [
+        "SpringTransactionTestBase",
+        "SpringTransactionEntityTest"
+      ],
+      [
+        "SpringTransactionTestBase",
+        "EntityUpdateTest"
+      ],
+      [
+        "Table",
+        "t1"
+      ],
+      [
+        "Table",
+        "Testing"
+      ],
+      [
+        "TransactionManagementConfigurer",
+        "TestConfig"
+      ],
+      [
+        "UUIDTable",
+        "CustomerTable"
+      ],
+      [
+        "UUIDEntity",
+        "CustomerDAO"
+      ],
+      [
+        "UUIDTable",
+        "OrderTable"
+      ],
+      [
+        "UUIDEntity",
+        "OrderDAO"
+      ],
+      [
+        "IntIdTable",
+        "t1"
+      ],
+      [
+        "IntEntity",
+        "dao"
+      ],
+      [
+        "DataSourceTransactionManager",
+        "SpringTransactionManager"
+      ],
+      [
+        "ThreadLocal",
+        "[anonymous object]"
+      ],
+      [
+        "TransactionManager",
+        "SpringTransactionManager"
+      ],
+      [
+        "TransactionInterface",
+        "SpringTransaction"
+      ],
+      [
+        "ApplicationRunner",
+        "DatabaseInitializer"
+      ],
+      [
+        "Ordered",
+        "DatabaseInitializer"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "t1",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ExposedTransactionManagerTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Testing",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "SpringCoroutineTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "TestConfig",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "SpringTransactionTestBase",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CustomerTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CustomerDAO",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "OrderTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "OrderDAO",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Service",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SpringTransactionEntityTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "t1",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "dao",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "EntityUpdateTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SpringTransaction",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "SpringTransactionManager",
+        "overrides": 8,
+        "properties": 3
+      },
+      {
+        "name": "DatabaseInitializerTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Application",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DatabaseInitializer",
+        "overrides": 2,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.7,
+      "properties": 1.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "JodaTimeDefaultsTest": {
+        "assignments": 64,
+        "branches": 167,
+        "conditions": 3
+      },
+      "JodaTimeBaseTest": {
+        "assignments": 10,
+        "branches": 47,
+        "conditions": 0
+      },
+      "CitiesTime": {
+        "assignments": 2,
+        "branches": 3,
+        "conditions": 0
+      },
+      "Misc": {
+        "assignments": 6,
+        "branches": 9,
+        "conditions": 0
+      },
+      "JodaTimeMiscTableTest": {
+        "assignments": 197,
+        "branches": 180,
+        "conditions": 1
+      },
+      "DefaultsTest": {
+        "assignments": 55,
+        "branches": 142,
+        "conditions": 2
+      },
+      "JavaTimeBaseTest": {
+        "assignments": 18,
+        "branches": 63,
+        "conditions": 1
+      },
+      "MiscTableTest": {
+        "assignments": 215,
+        "branches": 181,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "JodaTimeBaseTest",
+        "JodaTimeDefaultsTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "JodaTimeBaseTest",
+        "JodaTimeMiscTableTest"
+      ],
+      [
+        "JodaTimeBaseTest",
+        "JodaTimeDefaultsTest"
+      ],
+      [
+        "JodaTimeBaseTest",
+        "JodaTimeMiscTableTest"
+      ],
+      [
+        "IntIdTable",
+        "TableWithDBDefault"
+      ],
+      [
+        "IntEntity",
+        "DBDefault"
+      ],
+      [
+        "Expression",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "IntIdTable",
+        "CitiesTime"
+      ],
+      [
+        "MiscTable",
+        "Misc"
+      ],
+      [
+        "DatabaseTestsBase",
+        "DefaultsTest"
+      ],
+      [
+        "IntIdTable",
+        "TableWithDBDefault"
+      ],
+      [
+        "IntEntity",
+        "DBDefault"
+      ],
+      [
+        "Expression",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "DatabaseTestsBase",
+        "JavaTimeBaseTest"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "MiscTable",
+        "Misc"
+      ],
+      [
+        "DatabaseTestsBase",
+        "MiscTableTest"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TableWithDBDefault",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "DBDefault",
+        "overrides": 2,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 8
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "JodaTimeDefaultsTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "JodaTimeBaseTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CitiesTime",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Misc",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "JodaTimeMiscTableTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TableWithDBDefault",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "DBDefault",
+        "overrides": 2,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 12
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "DefaultsTest",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "JavaTimeBaseTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CitiesTime",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Misc",
+        "overrides": 0,
+        "properties": 6
+      },
+      {
+        "name": "MiscTableTest",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.27586206896551724,
+      "properties": 2.3448275862068964
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.jodatime",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DateColumnType": {
+        "assignments": 4,
+        "branches": 27,
+        "conditions": 13
+      },
+      "Date": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CurrentDateTime": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 2
+      },
+      "Year": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Month": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Day": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Hour": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Minute": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Second": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "IColumnType",
+        "ColumnType",
+        "DateColumnType"
+      ],
+      [
+        "ColumnType",
+        "DateColumnType"
+      ],
+      [
+        "IDateColumnType",
+        "DateColumnType"
+      ],
+      [
+        "Function",
+        "Date"
+      ],
+      [
+        "Function",
+        "CurrentDateTime"
+      ],
+      [
+        "Function",
+        "Year"
+      ],
+      [
+        "Function",
+        "Month"
+      ],
+      [
+        "Function",
+        "Day"
+      ],
+      [
+        "Function",
+        "Hour"
+      ],
+      [
+        "Function",
+        "Minute"
+      ],
+      [
+        "Function",
+        "Second"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "DateColumnType",
+        "overrides": 7,
+        "properties": 1
+      },
+      {
+        "name": "Date",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CurrentDateTime",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Year",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Month",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Day",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Hour",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Minute",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Second",
+        "overrides": 1,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 1.6666666666666667,
+      "properties": 0.1111111111111111
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.spring.tables",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TestTable": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "TestTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "TestTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "TestTable"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "TestTable"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "TestTable"
+      ],
+      [
+        "IntIdTable",
+        "TestTable"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TestTable",
+        "overrides": 0,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.spring.tables.ignore",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "IgnoreTable": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "IgnoreTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "IgnoreTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "IgnoreTable"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "IgnoreTable"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "IgnoreTable"
+      ],
+      [
+        "IntIdTable",
+        "IgnoreTable"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "IgnoreTable",
+        "overrides": 0,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.spring.autoconfigure",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ExposedAutoConfigurationTest": {
+        "assignments": 2,
+        "branches": 2,
+        "conditions": 0
+      },
+      "ExposedAutoConfigurationTestAutoGenerateDDL": {
+        "assignments": 1,
+        "branches": 9,
+        "conditions": 0
+      },
+      "AsyncExposedService": {
+        "assignments": 0,
+        "branches": 5,
+        "conditions": 0
+      },
+      "ExposedAutoConfiguration": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "ExposedAutoConfigurationTest",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ExposedAutoConfigurationTestAutoGenerateDDL",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "AsyncExposedService",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ExposedAutoConfiguration",
+        "overrides": 0,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.25
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.`java-time`",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Date": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "CurrentDateTime": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 2
+      },
+      "CurrentTimestamp": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 2
+      },
+      "Year": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Month": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Day": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Hour": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Minute": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "Second": {
+        "assignments": 0,
+        "branches": 2,
+        "conditions": 0
+      },
+      "JavaLocalDateColumnType": {
+        "assignments": 3,
+        "branches": 22,
+        "conditions": 4
+      },
+      "JavaLocalDateTimeColumnType": {
+        "assignments": 3,
+        "branches": 35,
+        "conditions": 5
+      },
+      "JavaInstantColumnType": {
+        "assignments": 3,
+        "branches": 13,
+        "conditions": 5
+      },
+      "JavaDurationColumnType": {
+        "assignments": 2,
+        "branches": 15,
+        "conditions": 2
+      }
+    },
+    "chains": [
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Date"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "CurrentDateTime"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Year"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Month"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Day"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Hour"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Minute"
+      ],
+      [
+        "Expression",
+        "ExpressionWithColumnType",
+        "Function",
+        "Second"
+      ],
+      [
+        "Expression",
+        "CurrentTimestamp"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Date"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "CurrentDateTime"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Year"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Month"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Day"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Hour"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Minute"
+      ],
+      [
+        "ExpressionWithColumnType",
+        "Function",
+        "Second"
+      ],
+      [
+        "Function",
+        "Date"
+      ],
+      [
+        "Function",
+        "CurrentDateTime"
+      ],
+      [
+        "Function",
+        "Year"
+      ],
+      [
+        "Function",
+        "Month"
+      ],
+      [
+        "Function",
+        "Day"
+      ],
+      [
+        "Function",
+        "Hour"
+      ],
+      [
+        "Function",
+        "Minute"
+      ],
+      [
+        "Function",
+        "Second"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "JavaLocalDateColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "JavaLocalDateTimeColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "JavaInstantColumnType"
+      ],
+      [
+        "IColumnType",
+        "ColumnType",
+        "JavaDurationColumnType"
+      ],
+      [
+        "ColumnType",
+        "JavaLocalDateColumnType"
+      ],
+      [
+        "ColumnType",
+        "JavaLocalDateTimeColumnType"
+      ],
+      [
+        "ColumnType",
+        "JavaInstantColumnType"
+      ],
+      [
+        "ColumnType",
+        "JavaDurationColumnType"
+      ],
+      [
+        "IDateColumnType",
+        "JavaLocalDateColumnType"
+      ],
+      [
+        "IDateColumnType",
+        "JavaLocalDateTimeColumnType"
+      ],
+      [
+        "IDateColumnType",
+        "JavaInstantColumnType"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Date",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CurrentDateTime",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CurrentTimestamp",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Year",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Month",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Day",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Hour",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Minute",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "Second",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "JavaLocalDateColumnType",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "JavaLocalDateTimeColumnType",
+        "overrides": 4,
+        "properties": 2
+      },
+      {
+        "name": "JavaInstantColumnType",
+        "overrides": 5,
+        "properties": 2
+      },
+      {
+        "name": "JavaDurationColumnType",
+        "overrides": 5,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 2.076923076923077,
+      "properties": 0.5384615384615384
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.h2",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MultiDatabaseEntityTest": {
+        "assignments": 24,
+        "branches": 132,
+        "conditions": 3
+      },
+      "MultiDatabaseTest": {
+        "assignments": 22,
+        "branches": 163,
+        "conditions": 0
+      },
+      "H2Tests": {
+        "assignments": 8,
+        "branches": 33,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "H2Tests"
+      ],
+      [
+        "Table",
+        "Testing"
+      ],
+      [
+        "Table",
+        "RefTable"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "MultiDatabaseEntityTest",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "MultiDatabaseTest",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Testing",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "RefTable",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "H2Tests",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 2.4
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.shared",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DataSourceStub": {
+        "assignments": 0,
+        "branches": 9,
+        "conditions": 0
+      },
+      "ConnectionTimeoutTest": {
+        "assignments": 2,
+        "branches": 7,
+        "conditions": 2
+      },
+      "ConnectionExceptions": {
+        "assignments": 6,
+        "branches": 40,
+        "conditions": 6
+      },
+      "ThreadLocalManagerTest": {
+        "assignments": 5,
+        "branches": 14,
+        "conditions": 0
+      },
+      "RollbackTable": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "RollbackTransactionTest": {
+        "assignments": 8,
+        "branches": 57,
+        "conditions": 1
+      },
+      "TransactionIsolationTest": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 0
+      },
+      "TransactionManagerResetTest": {
+        "assignments": 4,
+        "branches": 13,
+        "conditions": 0
+      },
+      "SchemaTests": {
+        "assignments": 11,
+        "branches": 54,
+        "conditions": 5
+      },
+      "ConnectionTests": {
+        "assignments": 5,
+        "branches": 16,
+        "conditions": 0
+      },
+      "CoroutineTests": {
+        "assignments": 28,
+        "branches": 151,
+        "conditions": 11
+      },
+      "NestedTransactionsTest": {
+        "assignments": 5,
+        "branches": 41,
+        "conditions": 3
+      },
+      "FunctionsTests": {
+        "assignments": 49,
+        "branches": 287,
+        "conditions": 5
+      },
+      "ParameterizationTests": {
+        "assignments": 1,
+        "branches": 7,
+        "conditions": 0
+      },
+      "AliasesTests": {
+        "assignments": 37,
+        "branches": 108,
+        "conditions": 2
+      },
+      "DDLTests": {
+        "assignments": 134,
+        "branches": 346,
+        "conditions": 7
+      },
+      "MiscTable": {
+        "assignments": 19,
+        "branches": 30,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "DataSource",
+        "DataSourceStub"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ConnectionTimeoutTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ThreadLocalManagerTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "RollbackTransactionTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "TransactionIsolationTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "SchemaTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ConnectionTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "CoroutineTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "NestedTransactionsTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "FunctionsTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ParameterizationTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "AliasesTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "DDLTests"
+      ],
+      [
+        "DataSourceStub",
+        "ExceptionOnGetConnectionDataSource"
+      ],
+      [
+        "SQLTransientException",
+        "GetConnectException"
+      ],
+      [
+        "DataSourceStub",
+        "WrappingDataSource"
+      ],
+      [
+        "SQLTransientException",
+        "RollbackException"
+      ],
+      [
+        "ConnectionSpy",
+        "ExceptionOnRollbackConnection"
+      ],
+      [
+        "SQLTransientException",
+        "CommitException"
+      ],
+      [
+        "ConnectionSpy",
+        "ExceptionOnCommitConnection"
+      ],
+      [
+        "SQLTransientException",
+        "CloseException"
+      ],
+      [
+        "ConnectionSpy",
+        "ExceptionOnRollbackCloseConnection"
+      ],
+      [
+        "ConnectionSpy",
+        "ExceptionOnCommitCloseConnection"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "RollbackTable"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "MiscTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "RollbackTable"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "MiscTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "RollbackTable"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "MiscTable"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "RollbackTable"
+      ],
+      [
+        "Table",
+        "MiscTable"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "RollbackTable"
+      ],
+      [
+        "IntIdTable",
+        "RollbackTable"
+      ],
+      [
+        "LongIdTable",
+        "People"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "Testing"
+      ],
+      [
+        "IntEntity",
+        "TestingEntity"
+      ],
+      [
+        "Function",
+        "LengthFunction"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "UUIDTable",
+        "[anonymous object]"
+      ],
+      [
+        "UUIDTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "KeyWordTable"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IdTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IdTable",
+        "EntityTable"
+      ],
+      [
+        "EntityTable",
+        "[anonymous object]"
+      ],
+      [
+        "EntityTable",
+        "[anonymous object]"
+      ],
+      [
+        "EntityTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "Table1"
+      ],
+      [
+        "IntIdTable",
+        "Table2"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "PGobject",
+        "PGEnum"
+      ],
+      [
+        "IntEntity",
+        "Keyword"
+      ],
+      [
+        "IntEntityClass",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "TableFromSchemeOne"
+      ],
+      [
+        "IntIdTable",
+        "TableFromSchemeTwo"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "DataSourceStub",
+        "overrides": 9,
+        "properties": 0
+      },
+      {
+        "name": "ExceptionOnGetConnectionDataSource",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "GetConnectException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ConnectionTimeoutTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ConnectionSpy",
+        "overrides": 3,
+        "properties": 0
+      },
+      {
+        "name": "WrappingDataSource",
+        "overrides": 1,
+        "properties": 1
+      },
+      {
+        "name": "RollbackException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ExceptionOnRollbackConnection",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CommitException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ExceptionOnCommitConnection",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "CloseException",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ExceptionOnRollbackCloseConnection",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ExceptionOnCommitCloseConnection",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "ConnectionExceptions",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ThreadLocalManagerTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RollbackTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "RollbackTransactionTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TransactionIsolationTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TransactionManagerResetTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SchemaTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "People",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ConnectionTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Testing",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TestingEntity",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CoroutineTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "NestedTransactionsTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LengthFunction",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "FunctionsTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ParameterizationTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "AliasesTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "KeyWordTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "EntityTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Table1",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Table2",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Foo",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "PGEnum",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Keyword",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "TableFromSchemeOne",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TableFromSchemeTwo",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "DDLTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "E",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "MiscTable",
+        "overrides": 0,
+        "properties": 19
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.2692307692307692,
+      "properties": 1.3205128205128205
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.shared.entities",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "LongIdTables": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "LongIdTableEntityTest": {
+        "assignments": 25,
+        "branches": 51,
+        "conditions": 0
+      },
+      "EntityTestsData": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "EntityTests": {
+        "assignments": 306,
+        "branches": 517,
+        "conditions": 14
+      },
+      "UUIDTables": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UUIDTableEntityTest": {
+        "assignments": 38,
+        "branches": 68,
+        "conditions": 0
+      },
+      "ImmutableEntityTest": {
+        "assignments": 12,
+        "branches": 27,
+        "conditions": 0
+      },
+      "ViaTestData": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "VNumber": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "VString": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "ViaTests": {
+        "assignments": 52,
+        "branches": 105,
+        "conditions": 0
+      },
+      "SortByReferenceTest": {
+        "assignments": 7,
+        "branches": 34,
+        "conditions": 0
+      },
+      "NonAutoIncEntities": {
+        "assignments": 10,
+        "branches": 24,
+        "conditions": 3
+      },
+      "EntityHookTestData": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "EntityHookTest": {
+        "assignments": 75,
+        "branches": 150,
+        "conditions": 1
+      }
+    },
+    "chains": [
+      [
+        "LongIdTable",
+        "Cities"
+      ],
+      [
+        "LongEntity",
+        "City"
+      ],
+      [
+        "LongIdTable",
+        "People"
+      ],
+      [
+        "LongEntity",
+        "Person"
+      ],
+      [
+        "DatabaseTestsBase",
+        "LongIdTableEntityTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "EntityTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "UUIDTableEntityTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ImmutableEntityTest"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ViaTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "NonAutoIncEntities"
+      ],
+      [
+        "DatabaseTestsBase",
+        "EntityHookTest"
+      ],
+      [
+        "IdTable",
+        "YTable"
+      ],
+      [
+        "IntIdTable",
+        "XTable"
+      ],
+      [
+        "Entity",
+        "XEntity"
+      ],
+      [
+        "IntEntity",
+        "AEntity"
+      ],
+      [
+        "AEntity",
+        "BEntity"
+      ],
+      [
+        "Entity",
+        "YEntity"
+      ],
+      [
+        "IntIdTable",
+        "OneAutoFieldTable"
+      ],
+      [
+        "IntEntity",
+        "SingleFieldEntity"
+      ],
+      [
+        "IntIdTable",
+        "Boards"
+      ],
+      [
+        "LongIdTable",
+        "Posts"
+      ],
+      [
+        "IntIdTable",
+        "Categories"
+      ],
+      [
+        "IntEntity",
+        "Board"
+      ],
+      [
+        "LongEntity",
+        "Post"
+      ],
+      [
+        "IntEntity",
+        "Category"
+      ],
+      [
+        "IntIdTable",
+        "Humans"
+      ],
+      [
+        "IdTable",
+        "Users"
+      ],
+      [
+        "IntEntity",
+        "Human"
+      ],
+      [
+        "IntEntity",
+        "User"
+      ],
+      [
+        "IntIdTable",
+        "SelfReferenceTable"
+      ],
+      [
+        "IntEntity",
+        "SelfReferencedEntity"
+      ],
+      [
+        "LongIdTable",
+        "Parents"
+      ],
+      [
+        "LongEntity",
+        "Parent"
+      ],
+      [
+        "LongIdTable",
+        "Children"
+      ],
+      [
+        "LongEntity",
+        "Child"
+      ],
+      [
+        "IntIdTable",
+        "Regions"
+      ],
+      [
+        "LongIdTable",
+        "Students"
+      ],
+      [
+        "LongIdTable",
+        "StudentBios"
+      ],
+      [
+        "LongIdTable",
+        "Notes"
+      ],
+      [
+        "LongIdTable",
+        "Detentions"
+      ],
+      [
+        "LongIdTable",
+        "Holidays"
+      ],
+      [
+        "Table",
+        "SchoolHolidays"
+      ],
+      [
+        "IntIdTable",
+        "Schools"
+      ],
+      [
+        "IntEntity",
+        "Region"
+      ],
+      [
+        "LongEntity",
+        "ComparableLongEntity"
+      ],
+      [
+        "ComparableLongEntity",
+        "Student"
+      ],
+      [
+        "ComparableLongEntity",
+        "StudentBio"
+      ],
+      [
+        "ComparableLongEntity",
+        "Note"
+      ],
+      [
+        "ComparableLongEntity",
+        "Detention"
+      ],
+      [
+        "ComparableLongEntity",
+        "Holiday"
+      ],
+      [
+        "IntEntity",
+        "School"
+      ],
+      [
+        "UUIDTable",
+        "Cities"
+      ],
+      [
+        "UUIDEntity",
+        "City"
+      ],
+      [
+        "UUIDTable",
+        "People"
+      ],
+      [
+        "UUIDEntity",
+        "Person"
+      ],
+      [
+        "UUIDTable",
+        "Addresses"
+      ],
+      [
+        "UUIDEntity",
+        "Address"
+      ],
+      [
+        "IdTable",
+        "Organization"
+      ],
+      [
+        "Entity",
+        "EOrganization"
+      ],
+      [
+        "Entity",
+        "ECachedOrganization"
+      ],
+      [
+        "UUIDTable",
+        "NumbersTable"
+      ],
+      [
+        "IdTable",
+        "StringsTable"
+      ],
+      [
+        "Table",
+        "ConnectionTable"
+      ],
+      [
+        "UUIDEntity",
+        "VNumber"
+      ],
+      [
+        "Entity",
+        "VString"
+      ],
+      [
+        "IntIdTable",
+        "NodesTable"
+      ],
+      [
+        "Table",
+        "NodeToNodes"
+      ],
+      [
+        "IntEntity",
+        "Node"
+      ],
+      [
+        "Table",
+        "cities"
+      ],
+      [
+        "Table",
+        "users"
+      ],
+      [
+        "Table",
+        "noRefereeTable"
+      ],
+      [
+        "Table",
+        "refereeTable"
+      ],
+      [
+        "IntIdTable",
+        "referencedTable"
+      ],
+      [
+        "Table",
+        "strangeTable"
+      ],
+      [
+        "IdTable",
+        "BaseNonAutoIncTable"
+      ],
+      [
+        "BaseNonAutoIncTable",
+        "NotAutoIntIdTable"
+      ],
+      [
+        "Entity",
+        "NotAutoEntity"
+      ],
+      [
+        "BaseNonAutoIncTable",
+        "NonAutoIncSharedTable"
+      ],
+      [
+        "IntIdTable",
+        "AutoIncSharedTable"
+      ],
+      [
+        "IntEntity",
+        "SharedNonAutoIncEntity"
+      ],
+      [
+        "IntIdTable",
+        "Users"
+      ],
+      [
+        "IntIdTable",
+        "Cities"
+      ],
+      [
+        "IntIdTable",
+        "Countries"
+      ],
+      [
+        "org",
+        "UsersToCities"
+      ],
+      [
+        "IntEntity",
+        "User"
+      ],
+      [
+        "IntEntity",
+        "City"
+      ],
+      [
+        "IntEntity",
+        "Country"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Cities",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "City",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "People",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Person",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "LongIdTables",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "LongIdTableEntityTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "YTable",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "XTable",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "XEntity",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "XType",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AEntity",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "BEntity",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "YEntity",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "EntityTestsData",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "OneAutoFieldTable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SingleFieldEntity",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Boards",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Posts",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "Categories",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Board",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Post",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "Category",
+        "overrides": 2,
+        "properties": 3
+      },
+      {
+        "name": "Humans",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Users",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Human",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "User",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "SelfReferenceTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SelfReferencedEntity",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Parents",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Parent",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Children",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Child",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Regions",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "Students",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "StudentBios",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Notes",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Detentions",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Holidays",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "SchoolHolidays",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Schools",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Region",
+        "overrides": 2,
+        "properties": 1
+      },
+      {
+        "name": "ComparableLongEntity",
+        "overrides": 2,
+        "properties": 0
+      },
+      {
+        "name": "Student",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "StudentBio",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Note",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Detention",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Holiday",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "School",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "EntityTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Cities",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "City",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "People",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Person",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Addresses",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Address",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "UUIDTables",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "UUIDTableEntityTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Organization",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "Schema",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EOrganization",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ECachedOrganization",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ImmutableEntityTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "NumbersTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "StringsTable",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "ConnectionTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ViaTestData",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "VNumber",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "VString",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "NodesTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "NodeToNodes",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Node",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "ViaTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "cities",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "users",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "noRefereeTable",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "refereeTable",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "referencedTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "strangeTable",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "TestTables",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SortByReferenceTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "BaseNonAutoIncTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "NotAutoIntIdTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "NotAutoEntity",
+        "overrides": 1,
+        "properties": 4
+      },
+      {
+        "name": "NonAutoIncSharedTable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AutoIncSharedTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SharedNonAutoIncEntity",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "NonAutoIncEntities",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Users",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Cities",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Countries",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "UsersToCities",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "User",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "City",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Country",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "EntityHookTestData",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "EntityHookTest",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.07291666666666667,
+      "properties": 1.75
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.shared.types",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "CharColumnType": {
+        "assignments": 3,
+        "branches": 6,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "CharColumnType"
+      ],
+      [
+        "IntIdTable",
+        "CharTable"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "CharTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CharColumnType",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.5
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.shared.dml",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "InsertTests": {
+        "assignments": 74,
+        "branches": 141,
+        "conditions": 1
+      },
+      "ArithmeticTests": {
+        "assignments": 10,
+        "branches": 24,
+        "conditions": 0
+      },
+      "DMLTestsData": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "OrgMemberships": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "OrgMembership": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "Orgs": {
+        "assignments": 2,
+        "branches": 6,
+        "conditions": 0
+      },
+      "Org": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "UpdateTests": {
+        "assignments": 16,
+        "branches": 43,
+        "conditions": 1
+      },
+      "CountTests": {
+        "assignments": 6,
+        "branches": 31,
+        "conditions": 0
+      },
+      "InsertSelectTests": {
+        "assignments": 10,
+        "branches": 70,
+        "conditions": 0
+      },
+      "DeleteTests": {
+        "assignments": 6,
+        "branches": 33,
+        "conditions": 2
+      },
+      "SelectBatchedTests": {
+        "assignments": 15,
+        "branches": 43,
+        "conditions": 0
+      },
+      "OrderByTests": {
+        "assignments": 18,
+        "branches": 75,
+        "conditions": 4
+      },
+      "JoinTests": {
+        "assignments": 39,
+        "branches": 93,
+        "conditions": 4
+      },
+      "ExistsTests": {
+        "assignments": 3,
+        "branches": 27,
+        "conditions": 0
+      },
+      "AdjustQueryTests": {
+        "assignments": 21,
+        "branches": 61,
+        "conditions": 3
+      },
+      "ReplaceTests": {
+        "assignments": 3,
+        "branches": 6,
+        "conditions": 0
+      },
+      "ConditionsTests": {
+        "assignments": 9,
+        "branches": 61,
+        "conditions": 0
+      },
+      "SelectTests": {
+        "assignments": 27,
+        "branches": 122,
+        "conditions": 5
+      },
+      "GroupByTests": {
+        "assignments": 20,
+        "branches": 164,
+        "conditions": 7
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "InsertTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ArithmeticTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "UpdateTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "CountTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "InsertSelectTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "DeleteTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "SelectBatchedTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "OrderByTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "JoinTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ExistsTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "AdjustQueryTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ReplaceTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ConditionsTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "SelectTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "GroupByTests"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "LongIdTable"
+      ],
+      [
+        "IntIdTable",
+        "IntIdTestTable"
+      ],
+      [
+        "IdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "OrderedDataTable"
+      ],
+      [
+        "IntEntity",
+        "OrderedData"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "Cities"
+      ],
+      [
+        "Table",
+        "Users"
+      ],
+      [
+        "Table",
+        "UserData"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "OrgMemberships"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Orgs"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "OrgMemberships"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Orgs"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "OrgMemberships"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Orgs"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "OrgMemberships"
+      ],
+      [
+        "Table",
+        "IdTable",
+        "IntIdTable",
+        "Orgs"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "OrgMemberships"
+      ],
+      [
+        "IdTable",
+        "IntIdTable",
+        "Orgs"
+      ],
+      [
+        "IntIdTable",
+        "OrgMemberships"
+      ],
+      [
+        "IntIdTable",
+        "Orgs"
+      ],
+      [
+        "Entity",
+        "IntEntity",
+        "OrgMembership"
+      ],
+      [
+        "Entity",
+        "IntEntity",
+        "Org"
+      ],
+      [
+        "IntEntity",
+        "OrgMembership"
+      ],
+      [
+        "IntEntity",
+        "Org"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "LongIdTable",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "IntIdTestTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "OrderedDataTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "OrderedData",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "InsertTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ArithmeticTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "Cities",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Users",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "UserData",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "DMLTestsData",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "OrgMemberships",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "OrgMembership",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Orgs",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Org",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "UpdateTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "CountTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "InsertSelectTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DeleteTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SelectBatchedTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "OrderByTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "JoinTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "ExistsTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "AdjustQueryTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "ReplaceTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "ConditionsTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SelectTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "GroupByTests",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.3333333333333333
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.shared.ddl",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SequencesTests": {
+        "assignments": 20,
+        "branches": 39,
+        "conditions": 10
+      },
+      "CreateTableTests": {
+        "assignments": 52,
+        "branches": 157,
+        "conditions": 2
+      },
+      "EnumerationTests": {
+        "assignments": 9,
+        "branches": 34,
+        "conditions": 10
+      },
+      "CreateIndexTests": {
+        "assignments": 6,
+        "branches": 32,
+        "conditions": 0
+      },
+      "CreateMissingTablesAndColumnsTests": {
+        "assignments": 18,
+        "branches": 91,
+        "conditions": 13
+      },
+      "ReplaceColumnTests": {
+        "assignments": 2,
+        "branches": 4,
+        "conditions": 0
+      },
+      "DatabaseTests": {
+        "assignments": 4,
+        "branches": 8,
+        "conditions": 0
+      },
+      "WhereConditionsTests": {
+        "assignments": 4,
+        "branches": 17,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "SequencesTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "CreateTableTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "EnumerationTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "CreateIndexTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "CreateMissingTablesAndColumnsTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "ReplaceColumnTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "DatabaseTests"
+      ],
+      [
+        "DatabaseTestsBase",
+        "WhereConditionsTests"
+      ],
+      [
+        "Table",
+        "Developer"
+      ],
+      [
+        "LongIdTable",
+        "DeveloperWithLongId"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "Book"
+      ],
+      [
+        "Table",
+        "Person"
+      ],
+      [
+        "Table",
+        "TableWithDuplicatedColumn"
+      ],
+      [
+        "IntIdTable",
+        "IDTable"
+      ],
+      [
+        "IntIdTable",
+        "TableDuplicatedColumnRefereToIntIdTable"
+      ],
+      [
+        "Table",
+        "TableDuplicatedColumnRefereToTable"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "LongIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "OneTable"
+      ],
+      [
+        "IntIdTable",
+        "OneOneTable"
+      ],
+      [
+        "IntIdTable",
+        "EnumTable"
+      ],
+      [
+        "IntEntity",
+        "EnumEntity"
+      ],
+      [
+        "IntEntityClass",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "MultipleIndexesTable"
+      ],
+      [
+        "IntIdTable",
+        "PlayerTable"
+      ],
+      [
+        "IntIdTable",
+        "SessionsTable"
+      ],
+      [
+        "Table",
+        "T1"
+      ],
+      [
+        "Table",
+        "T2"
+      ],
+      [
+        "IdTable",
+        "[anonymous object]"
+      ],
+      [
+        "IntIdTable",
+        "IDTable"
+      ],
+      [
+        "Table",
+        "User"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Developer",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "DeveloperWithLongId",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SequencesTests",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Book",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "Person",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "TableWithDuplicatedColumn",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "IDTable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "TableDuplicatedColumnRefereToIntIdTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "TableDuplicatedColumnRefereToTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "OneTable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "OneOneTable",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "CreateTableTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EnumTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "EnumEntity",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "EnumerationTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "CreateIndexTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 5
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "MultipleIndexesTable",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "PlayerTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "SessionsTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "T1",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "T2",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "[anonymous object]",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "CreateMissingTablesAndColumnsTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "IDTable",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "ReplaceColumnTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DatabaseTests",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "User",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "WhereConditionsTests",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.2830188679245282
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.sqlite",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MultipleDatabaseBugTest": {
+        "assignments": 7,
+        "branches": 12,
+        "conditions": 0
+      }
+    },
+    "chains": [],
+    "classesUsages": [
+      {
+        "name": "MultipleDatabaseBugTest",
+        "overrides": 0,
+        "properties": 2
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 2.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.mysql",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "MysqlTests": {
+        "assignments": 1,
+        "branches": 8,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "DatabaseTestsBase",
+        "MysqlTests"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "MysqlTests",
+        "overrides": 0,
+        "properties": 1
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.0
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.demo.sql",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 24,
+        "branches": 51,
+        "conditions": 4
+      },
+      "Users": {
+        "assignments": 4,
+        "branches": 5,
+        "conditions": 0
+      },
+      "Cities": {
+        "assignments": 3,
+        "branches": 4,
+        "conditions": 0
+      },
+      "SamplesSQL": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "Users"
+      ],
+      [
+        "FieldSet",
+        "ColumnSet",
+        "Table",
+        "Cities"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "Users"
+      ],
+      [
+        "ColumnSet",
+        "Table",
+        "Cities"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "Users"
+      ],
+      [
+        "DdlAware",
+        "Table",
+        "Cities"
+      ],
+      [
+        "StringColumnType",
+        "[anonymous object]"
+      ],
+      [
+        "Table",
+        "Users"
+      ],
+      [
+        "Table",
+        "Cities"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Users",
+        "overrides": 0,
+        "properties": 4
+      },
+      {
+        "name": "Cities",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "SamplesSQL",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 2.3333333333333335
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests.demo.dao",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 13,
+        "branches": 17,
+        "conditions": 0
+      },
+      "Users": {
+        "assignments": 3,
+        "branches": 4,
+        "conditions": 0
+      },
+      "Cities": {
+        "assignments": 1,
+        "branches": 1,
+        "conditions": 0
+      },
+      "User": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "City": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SamplesDao": {
+        "assignments": 0,
+        "branches": 1,
+        "conditions": 0
+      }
+    },
+    "chains": [
+      [
+        "org",
+        "IntIdTable",
+        "Users"
+      ],
+      [
+        "org",
+        "IntIdTable",
+        "Cities"
+      ],
+      [
+        "IntIdTable",
+        "Users"
+      ],
+      [
+        "IntIdTable",
+        "Cities"
+      ],
+      [
+        "Entity",
+        "IntEntity",
+        "User"
+      ],
+      [
+        "Entity",
+        "IntEntity",
+        "City"
+      ],
+      [
+        "IntEntity",
+        "User"
+      ],
+      [
+        "IntEntity",
+        "City"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "Users",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "Cities",
+        "overrides": 0,
+        "properties": 1
+      },
+      {
+        "name": "User",
+        "overrides": 0,
+        "properties": 3
+      },
+      {
+        "name": "City",
+        "overrides": 0,
+        "properties": 2
+      },
+      {
+        "name": "SamplesDao",
+        "overrides": 0,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 1.8
+    }
+  },
+  {
+    "package": "org.jetbrains.exposed.sql.tests",
+    "ABC": {
+      "\u003cglobal\u003e": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "TestDB": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "SpecifiedMySQLContainer": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "DatabaseTestsBase": {
+        "assignments": 6,
+        "branches": 40,
+        "conditions": 8
+      },
+      "RepeatableTest": {
+        "assignments": 0,
+        "branches": 0,
+        "conditions": 0
+      },
+      "RepeatableStatement": {
+        "assignments": 0,
+        "branches": 3,
+        "conditions": 1
+      },
+      "RepeatableTestRule": {
+        "assignments": 1,
+        "branches": 3,
+        "conditions": 2
+      }
+    },
+    "chains": [
+      [
+        "MySQLContainer",
+        "SpecifiedMySQLContainer"
+      ],
+      [
+        "Statement",
+        "RepeatableStatement"
+      ],
+      [
+        "TestRule",
+        "RepeatableTestRule"
+      ]
+    ],
+    "classesUsages": [
+      {
+        "name": "TestDB",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "SpecifiedMySQLContainer",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "DatabaseTestsBase",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RepeatableTest",
+        "overrides": 0,
+        "properties": 0
+      },
+      {
+        "name": "RepeatableStatement",
+        "overrides": 1,
+        "properties": 0
+      },
+      {
+        "name": "RepeatableTestRule",
+        "overrides": 1,
+        "properties": 0
+      }
+    ],
+    "avgClassesUsages": {
+      "overrides": 0.3333333333333333,
+      "properties": 0.0
+    }
+  }
+]
