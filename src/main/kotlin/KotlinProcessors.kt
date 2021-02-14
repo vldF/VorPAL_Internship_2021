@@ -6,10 +6,7 @@ import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
 import simpleTree.RootNode
 import simpleTree.SimpleTreeBuilder
 import statistics.MetricsReport
-import utils.abcToPrettyTest
-import utils.appendTextWithOffset
-import utils.chainsToPrettyText
-import utils.classInfoToPrettyText
+import utils.*
 import java.io.File
 import java.io.FileNotFoundException
 
@@ -24,13 +21,16 @@ fun processProjectDir(projectPath: String, outputPath: String?) {
         for ((packageName, treeRoot) in tree) {
             val report = MetricsReport(treeRoot)
             metrics.add(report)
-            val abc = report.abc
             appendTextWithOffset("package: $packageName", 0)
             appendTextWithOffset(chainsToPrettyText(report.inheritanceChains), 4)
             appendTextWithOffset(classInfoToPrettyText(report.classInfo), 4)
             appendTextWithOffset("ABC metric", 4)
-            appendTextWithOffset(abcToPrettyTest(abc, treeRoot.globalABC), 4)
+            appendTextWithOffset(abcToPrettyTest(report.abc, treeRoot.globalABC), 4)
         }
+
+        val summary = projectStatisticsSummary(metrics, tree)
+        appendLine("=".repeat(5))
+        appendLine(summary)
     }
 
     print(reportText)

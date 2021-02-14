@@ -45,9 +45,17 @@ class MetricsReport(
                     add(JsonObject().apply {
                         addProperty("name", it.classNode.name)
                         addProperty("overrides", it.overrides)
-                        addProperty("properties", it.propertiesCount)
+                        addProperty("properties", it.properties)
                     })
                 }
+            })
+            add("avgClassesUsages", JsonObject().apply {
+                val denominator = if (classInfo.isNotEmpty()) classInfo.size else 1
+                val overrides = classInfo.sumBy { it.overrides } * 1.0 / denominator
+                val properties = classInfo.sumBy { it.properties } * 1.0 / denominator
+
+                addProperty("overrides", overrides)
+                addProperty("properties", properties)
             })
         }
     }

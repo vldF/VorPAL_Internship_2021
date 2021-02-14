@@ -20,5 +20,5 @@ class ClassInfoCollector : BasicSimpleTreeVisitor<Set<ClassUsage>>() {
 data class ClassUsage(
     val classNode: ClassDeclarationNode,
     val overrides: Int,
-    val propertiesCount: Int
+    val properties: Int
 )

@@ -13,6 +13,8 @@ class ABCCollector : KotlinParserBaseVisitor<ABCMetric>() {
             KotlinLexer.DISJ,
             KotlinLexer.EXCL_WS,
             KotlinLexer.EXCL_NO_WS,
+            KotlinLexer.EXCL_EQ,
+            KotlinLexer.EXCL_EQEQ,
             KotlinLexer.EQEQ,
             KotlinLexer.EQEQEQ
         )
