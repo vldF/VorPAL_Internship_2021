@@ -12,5 +12,5 @@ script:
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
-  file: "./build/libs/vkBot.jar"
+  file: "./build/libs/VorPAL_Internship_2021-1.0-SNAPSHOT.jar"
   skip_cleanup: true
