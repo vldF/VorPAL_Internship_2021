@@ -41,3 +41,15 @@ tasks.withType<AntlrTask> {
     arguments.add("-package")
     arguments.add("org.jetbrains.kotlin.spec.grammar.parser")
 }
+
+val jar by tasks.getting(Jar::class) {
+    manifest {
+        attributes["Main-Class"] = "MainKt"
+    }
+
+    from(configurations
+        .runtimeClasspath
+        .get()
+        .files
+        .map { if (it.isDirectory) it else zipTree(it) })
+}
