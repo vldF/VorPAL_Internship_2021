@@ -4,7 +4,7 @@ install: true
 os: linux
 dist: trusty
 sudo: required
-jdk: oraclejdk12
+jdk: oraclejdk8
 
 script:
   - chmod 777 ./gradlew
