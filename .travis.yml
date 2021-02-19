@@ -3,6 +3,7 @@ install: true
 
 os: linux
 dist: trusty
+sudo: required
 jdk: oraclejdk12
 
 script:
