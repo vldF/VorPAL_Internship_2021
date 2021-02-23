@@ -1,9 +1,9 @@
 package statistics
 
-import simpleTree.BasicSimpleTreeVisitorVoid
-import simpleTree.ClassDeclarationNode
-import simpleTree.SimpleTreeNode
-import simpleTree.UnresolvedClass
+import simpletree.BasicSimpleTreeVisitorVoid
+import simpletree.ClassDeclarationNode
+import simpletree.SimpleTreeNode
+import simpletree.UnresolvedClass
 
 class InheritanceHierarchy : BasicSimpleTreeVisitorVoid() {
     private val hierarchy = mutableMapOf<ClassDeclarationNode, MutableList<ClassDeclarationNode>>()

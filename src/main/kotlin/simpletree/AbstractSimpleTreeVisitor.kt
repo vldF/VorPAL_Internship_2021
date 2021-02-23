@@ -1,4 +1,4 @@
-package simpleTree
+package simpletree
 
 abstract class AbstractSimpleTreeVisitor<T> {
     abstract fun visitSimpleTreeNode(node: SimpleTreeNode): T

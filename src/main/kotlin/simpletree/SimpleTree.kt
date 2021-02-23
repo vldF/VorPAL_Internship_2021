@@ -1,4 +1,4 @@
-package simpleTree
+package simpletree
 
 import com.google.gson.JsonArray
 import com.google.gson.JsonElement

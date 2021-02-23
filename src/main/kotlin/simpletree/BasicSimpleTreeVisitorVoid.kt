@@ -1,4 +1,4 @@
-package simpleTree
+package simpletree
 
 open class BasicSimpleTreeVisitorVoid : BasicSimpleTreeVisitor<Unit>() {
     override fun visitRootNode(node: RootNode) {

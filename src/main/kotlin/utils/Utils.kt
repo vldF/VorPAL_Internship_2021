@@ -1,7 +1,7 @@
 package utils
 
-import simpleTree.ClassDeclarationNode
-import simpleTree.RootNode
+import simpletree.ClassDeclarationNode
+import simpletree.RootNode
 import statistics.ABCMetric
 import statistics.ClassUsage
 import statistics.MetricsReport

@@ -1,9 +1,9 @@
 package statistics
 
-import simpleTree.BasicSimpleTreeVisitor
-import simpleTree.ClassDeclarationNode
-import simpleTree.OverrideFunctionNode
-import simpleTree.PropertyNode
+import simpletree.BasicSimpleTreeVisitor
+import simpletree.ClassDeclarationNode
+import simpletree.OverrideFunctionNode
+import simpletree.PropertyNode
 
 class ClassInfoCollector : BasicSimpleTreeVisitor<Set<ClassUsage>>() {
     override fun visitClassDeclarationNode(node: ClassDeclarationNode): Set<ClassUsage> {

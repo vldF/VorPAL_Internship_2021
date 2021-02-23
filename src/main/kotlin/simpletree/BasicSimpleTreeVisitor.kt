@@ -1,4 +1,4 @@
-package simpleTree
+package simpletree
 
 abstract class BasicSimpleTreeVisitor<T> : AbstractSimpleTreeVisitor<T>() {
     override fun visitSimpleTreeNode(node: SimpleTreeNode): T {

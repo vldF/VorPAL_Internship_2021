@@ -9,6 +9,10 @@
       }
     },
     "chains": [],
-    "classesUsages": []
+    "classesUsages": [],
+    "avgClassesUsages": {
+      "overrides": 0.0,
+      "properties": 0.0
+    }
   }
 ]

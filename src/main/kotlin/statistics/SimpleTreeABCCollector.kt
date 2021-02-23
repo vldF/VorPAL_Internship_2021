@@ -1,8 +1,8 @@
 package statistics
 
 
-import simpleTree.BasicSimpleTreeVisitor
-import simpleTree.ClassDeclarationNode
+import simpletree.BasicSimpleTreeVisitor
+import simpletree.ClassDeclarationNode
 
 object SimpleTreeABCCollector : BasicSimpleTreeVisitor<Map<ClassDeclarationNode, ABCMetric>>() {
     override fun visitClassDeclarationNode(node: ClassDeclarationNode): Map<ClassDeclarationNode, ABCMetric> {

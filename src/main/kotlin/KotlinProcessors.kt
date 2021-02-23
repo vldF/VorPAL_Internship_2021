@@ -3,8 +3,8 @@ import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.CommonTokenStream
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinLexer
 import org.jetbrains.kotlin.spec.grammar.parser.KotlinParser
-import simpleTree.RootNode
-import simpleTree.SimpleTreeBuilder
+import simpletree.RootNode
+import simpletree.SimpleTreeBuilder
 import statistics.MetricsReport
 import utils.*
 import java.io.File
